@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shweta Gupta · Product Portfolio</title>
+<meta property="og:title" content="Shweta Gupta · Product Portfolio">
+<meta property="og:description" content="Senior Product Manager, B2C growth and subscriptions. 12+ years across Condé Nast, Victoria's Secret and Oneindia.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A7A64">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="description" content="Senior Product Manager, B2C growth and subscriptions. 12+ years across Condé Nast, Victoria's Secret and Oneindia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column with a sticky section bar. The consumer funnel (acquire → renew) is the spine the work hangs on. */
+:root{
+  --bg:#F3F6F5; --surface:#FFFFFF; --sunk:#E8EEEC; --ink:#10201C; --muted:#566A65; --line:#D6E0DD;
+  --accent:#0A7A64; --accent-ink:#FFFFFF; --accent-soft:#DCF0EA; --accent-deep:#075847;
+  --warn:#B4532A; --warn-soft:#F7E6DC; --mid:#B88A12; --mid-soft:#F6EDD2;
+  --shadow:0 1px 2px rgba(16,32,28,.06),0 8px 24px rgba(16,32,28,.06);
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --r:14px; --r-sm:9px; --max:1160px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0C1513; --surface:#13201D; --sunk:#0F1A18; --ink:#E5EEEB; --muted:#98ABA6; --line:#243631;
+  --accent:#48C7AA; --accent-ink:#06231C; --accent-soft:#123A31; --accent-deep:#7FDCC6;
+  --warn:#F0956B; --warn-soft:#3A2219; --mid:#E5BE52; --mid-soft:#352C12;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0C1513; --surface:#13201D; --sunk:#0F1A18; --ink:#E5EEEB; --muted:#98ABA6; --line:#243631;
+  --accent:#48C7AA; --accent-ink:#06231C; --accent-soft:#123A31; --accent-deep:#7FDCC6;
+  --warn:#F0956B; --warn-soft:#3A2219; --mid:#E5BE52; --mid-soft:#352C12;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (max-width:900px){html{scroll-padding-top:110px}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent-deep)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- top bar ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{font-family:var(--f-display);font-weight:750;font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.brand .mark{width:28px;height:28px;border-radius:8px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:14px}
+.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{font-size:14.5px;font-weight:500;color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:999px;white-space:nowrap}
+.nav a:hover{color:var(--ink);background:var(--sunk)}
+.nav a.on{color:var(--ink);background:var(--accent-soft)}
+.bar .cta{flex:none}
+@media (max-width:900px){.bar .wrap{flex-wrap:wrap;height:auto;padding-block:10px 6px;row-gap:6px}.nav{order:3;width:100%;margin-left:-8px;margin-right:-8px;width:calc(100% + 16px)}.bar .cta{margin-left:auto}}
+
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--f-body);padding:12px 18px;border-radius:999px;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s,background .15s}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{background:var(--accent-deep);color:var(--accent-ink)}
+:root[data-theme="dark"] .btn.primary:hover{color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{background:var(--surface);color:var(--ink)}
+.btn.small{padding:8px 14px;font-size:14px}
+.btn:active{transform:translateY(1px)}
+
+/* ---------- hero ---------- */
+.hero{padding-block:56px 40px}
+.hero .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(36px,5.2vw,62px);font-weight:750;margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .lede{font-size:18.5px;color:var(--muted);margin-top:18px;max-width:58ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.who{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14.5px;color:var(--muted)}
+.who b{color:var(--ink);font-weight:600}
+.phones{position:relative;width:100%;max-width:480px;margin:0 auto 34px;aspect-ratio:1/1.04}
+.phone{position:absolute;width:44%;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.18);background:#111;border:1px solid var(--line)}
+.phone img{width:100%;height:auto}
+.phone.p1{left:2%;top:40px;transform:rotate(-6deg)}
+.phone.p2{left:28%;top:0;z-index:2}
+.phone.p3{right:0;top:52px;transform:rotate(6deg)}
+.phones figcaption{position:absolute;bottom:-30px;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+@media (max-width:900px){.hero .hero-grid{grid-template-columns:1fr}.phones{max-width:400px}}
+
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-top:44px;overflow:hidden}
+.stat{padding:20px 22px;border-left:1px solid var(--line);min-width:0}
+.stat:first-child{border-left:0}
+.stat .v{font-family:var(--f-display);font-weight:750;font-size:clamp(22px,2.3vw,32px);color:var(--accent);line-height:1.05;white-space:nowrap}
+.stat .l{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.35}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.stat{border-left:0;border-top:1px solid var(--line)}.stat:nth-child(-n+2){border-top:0}.stat:nth-child(even){border-left:1px solid var(--line)}.stat:last-child{grid-column:1/-1;border-left:0}}
+
+.logos{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;margin-top:26px;font-family:var(--f-mono);font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+.logos span.co{font-family:var(--f-display);font-size:16px;font-weight:650;color:var(--ink);letter-spacing:0}
+
+/* ---------- sections ---------- */
+section.block{padding-block:72px}
+section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
+.head{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:34px;max-width:760px}
+.head h2{font-size:clamp(28px,3.6vw,42px);font-weight:750}
+.head p{color:var(--muted);font-size:17.5px}
+
+/* ---------- funnel explorer ---------- */
+.stages{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:20px}
+.stage{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:14px 14px 16px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line);position:relative;transition:border-color .15s,background .15s}
+.stage .n{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.stage .t{font-family:var(--f-display);font-weight:650;font-size:16px;line-height:1.2}
+.stage::after{content:"";position:absolute;left:14px;right:14px;bottom:8px;height:3px;border-radius:3px;background:var(--line)}
+.stage:hover{border-color:var(--accent)}
+.stage[aria-selected="true"]{background:var(--accent-soft);border-color:var(--accent)}
+.stage[aria-selected="true"]::after{background:var(--accent)}
+.stage:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:900px){.stages{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.stages{grid-template-columns:repeat(2,1fr)}}
+.stage-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.stage-need{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:20px}
+.stage-need h3{font-size:24px}
+.stage-need p{color:var(--muted)}
+.wins{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:12px}
+@media (max-width:1000px){.wins{grid-template-columns:repeat(2,1fr)}.wins > .win:last-child:nth-child(odd){grid-column:1/-1}}
+@media (max-width:560px){.wins{grid-template-columns:1fr}}
+.win{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.win .m{font-family:var(--f-display);font-weight:750;font-size:26px;color:var(--accent);line-height:1.05}
+.win .w{font-weight:600;line-height:1.35}
+.win .d{font-size:14.5px;color:var(--muted);line-height:1.5}
+.win .co{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:auto;padding-top:6px}
+.win a.more{font-size:14px;font-weight:600;text-decoration:none}
+.win a.more::after{content:" →"}
+
+/* ---------- case studies ---------- */
+.case-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+@media (max-width:640px){#cases .case-tabs,#wfTabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}#cases .case-tabs .chip,#wfTabs .chip{flex:none}}
+.chip{all:unset;cursor:pointer;font-size:14.5px;font-weight:600;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);transition:background .15s,border-color .15s}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-selected="true"],.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.case-top{padding:30px 30px 24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;border-bottom:1px solid var(--line)}
+.case-top h3{font-size:clamp(24px,2.8vw,34px);font-weight:750;margin-top:8px}
+.case-top .sub{color:var(--muted);margin-top:8px;max-width:62ch}
+.kpis{display:flex;gap:10px;flex-wrap:wrap}
+.kpi{background:var(--accent-soft);border-radius:var(--r-sm);padding:12px 16px;min-width:130px}
+.kpi .v{font-family:var(--f-display);font-weight:750;font-size:26px;color:var(--accent-deep);line-height:1}
+.kpi .l{font-size:13px;color:var(--ink);margin-top:5px;line-height:1.3;max-width:18ch}
+@media (max-width:820px){.case-top{grid-template-columns:1fr;padding:22px}}
+.case-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.case-body > div{padding:26px 30px;min-width:0}
+.case-body > div + div{border-left:1px solid var(--line);background:var(--bg)}
+@media (max-width:820px){.case-body{grid-template-columns:1fr}.case-body > div{padding:22px}.case-body > div + div{border-left:0;border-top:1px solid var(--line)}}
+.story{display:grid;gap:20px}
+.story h4{font-family:var(--f-mono);font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.story ul{margin:0;padding-left:18px;display:grid;gap:5px}
+.story li::marker{color:var(--accent)}
+.note{border-left:3px solid var(--accent);padding:10px 14px;background:var(--accent-soft);border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:15px}
+.note.warm{border-color:var(--warn);background:var(--warn-soft)}
+.visual-cap{font-size:13.5px;color:var(--muted);margin-top:10px}
+.shot{border-radius:var(--r-sm);border:1px solid var(--line);overflow:hidden;background:#fff;cursor:zoom-in}
+.shot img{width:100%;height:auto}
+
+/* propensity demo */
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.demo-title{font-family:var(--f-display);font-weight:650;font-size:17px;margin-bottom:4px}
+.presets{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.preset{all:unset;cursor:pointer;font-size:13.5px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
+.preset:hover,.preset.on{border-color:var(--accent);background:var(--accent-soft)}
+.preset:focus-visible{outline:2px solid var(--accent)}
+.range-row{display:flex;align-items:center;gap:12px;margin:6px 0 4px}
+.range-row input{flex:1;accent-color:var(--accent);min-width:0}
+.range-row output{font-family:var(--f-mono);font-size:14px;min-width:3ch;text-align:right}
+.scale{display:grid;grid-template-columns:35fr 35fr 30fr;font-family:var(--f-mono);font-size:11.5px;color:var(--muted);gap:4px}
+.scale span{border-top:3px solid var(--line);padding-top:4px}
+.scale span.on{border-color:var(--accent);color:var(--ink)}
+.mock{margin-top:14px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--bg);padding:14px;position:relative;overflow:hidden;min-height:214px}
+.mock .lines i{display:block;height:8px;border-radius:4px;background:var(--line);margin:8px 0}
+.mock .lines i:nth-child(1){width:70%;height:12px;background:var(--muted);opacity:.5}
+.mock .lines i:nth-child(3){width:92%}.mock .lines i:nth-child(4){width:84%}
+.unit{margin-top:12px;border-radius:var(--r-sm);padding:14px;border:1px solid var(--line);background:var(--surface);transition:all .25s}
+.unit .k{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.unit .h{font-weight:700;margin-top:4px}
+.unit .s{font-size:13.5px;color:var(--muted);margin-top:2px}
+.unit.ads{border-style:dashed}
+.unit.ads .k{color:var(--muted)}
+.unit.reg{border-color:var(--mid);background:var(--mid-soft)}
+.unit.reg .k{color:var(--mid)}
+.unit.pay{border-color:var(--accent);background:var(--accent-soft)}
+.unit.pay .k{color:var(--accent-deep)}
+.unit .fake{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;padding:7px 12px;border-radius:999px;background:var(--ink);color:var(--bg)}
+
+/* bars */
+.bars{display:grid;gap:12px;margin-top:6px}
+.bar-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;font-size:14px}
+.bar-track{height:30px;background:var(--sunk);border-radius:6px;position:relative;overflow:hidden}
+.bar-fill{position:absolute;inset:0 auto 0 0;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-weight:700;font-family:var(--f-mono);font-size:13px}
+.bar-fill.old{background:var(--line);color:var(--ink)}
+.bar-fill.new{background:var(--accent);color:var(--accent-ink)}
+.axis{display:grid;grid-template-columns:150px 1fr;gap:12px;font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.axis div:last-child{display:flex;justify-content:space-between}
+@media (max-width:480px){.bar-row,.axis{grid-template-columns:96px 1fr}}
+
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.seg > div{border:1px solid var(--line);border-radius:var(--r-sm);padding:14px;background:var(--surface);min-width:0}
+.seg .k{font-family:var(--f-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.seg .h{font-weight:700;margin:4px 0}
+.seg p{font-size:14px;color:var(--muted)}
+@media (max-width:480px){.seg{grid-template-columns:1fr}}
+
+/* layers */
+.layers{display:grid;gap:8px}
+.layer{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;border:1px solid var(--line);background:var(--surface);border-radius:var(--r-sm);padding:12px 14px;cursor:pointer;transition:border-color .15s,transform .15s}
+.layer:hover,.layer.on{border-color:var(--accent)}
+.layer.on{background:var(--accent-soft)}
+.layer .k{font-family:var(--f-display);font-weight:650}
+.layer .d{font-size:14px;color:var(--muted)}
+.layer:nth-child(2){margin-left:14px}.layer:nth-child(3){margin-left:28px}.layer:nth-child(4){margin-left:42px}
+@media (max-width:480px){.layer{grid-template-columns:1fr;gap:2px}.layer:nth-child(n){margin-left:0}}
+.layer-detail{margin-top:12px;font-size:14.5px;min-height:3em}
+.thumbs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+
+/* flow */
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0 6px}
+.flow span{font-size:13.5px;font-weight:600;padding:8px 12px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line)}
+.flow i{font-style:normal;color:var(--muted)}
+.events{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.events code{font-family:var(--f-mono);font-size:12.5px;padding:5px 9px;border-radius:6px;background:var(--sunk);color:var(--ink)}
+
+/* ---------- gallery ---------- */
+.gal-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:20px}
+.gallery{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(190px,220px);gap:16px;overflow-x:auto;padding-bottom:14px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.gallery figure{margin:0;scroll-snap-align:start}
+.gallery button{all:unset;cursor:zoom-in;display:block;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#111;box-shadow:var(--shadow)}
+.gallery button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.gallery img{width:100%;height:auto;transition:transform .3s}
+.gallery button:hover img{transform:scale(1.02)}
+.gallery figcaption{font-size:14px;margin-top:10px;line-height:1.4}
+.gallery figcaption b{display:block;font-weight:600}
+.gallery figcaption span{color:var(--muted);font-size:13px}
+
+/* ---------- earlier roles ---------- */
+.role{display:grid;grid-template-columns:300px 1fr;gap:40px;padding-block:44px;border-top:1px solid var(--line)}
+.role:first-of-type{border-top:0;padding-top:0}
+.role-meta h3{font-size:28px;font-weight:750}
+.role-meta .t{font-weight:600;margin-top:6px}
+.role-meta .y{font-family:var(--f-mono);font-size:13px;color:var(--muted);margin-top:4px}
+.role-meta p.ctx{color:var(--muted);font-size:15px;margin-top:12px}
+.role-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.role-metrics div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px}
+.role-metrics .v{font-family:var(--f-display);font-weight:750;font-size:22px;color:var(--accent);line-height:1.05}
+.role-metrics .l{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.3}
+.role-links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:16px;font-size:14.5px;font-weight:600}
+@media (max-width:900px){.role{grid-template-columns:1fr;gap:24px}}
+.role-main{min-width:0;display:grid;gap:18px}
+.role-main > p{max-width:64ch}
+
+/* bundle builder */
+.builder{display:grid;grid-template-columns:1fr 240px;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.builder .steps{padding:20px;min-width:0}
+.builder .summary{padding:20px;background:var(--bg);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
+@media (max-width:700px){.builder{grid-template-columns:1fr}.builder .summary{border-left:0;border-top:1px solid var(--line)}}
+.progress{display:flex;gap:6px;margin-bottom:16px}
+.progress span{flex:1;height:5px;border-radius:3px;background:var(--line);transition:background .2s}
+.progress span.done{background:var(--accent)}
+.bstep{margin-bottom:16px}
+.bstep .lbl{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;justify-content:space-between}
+.bstep .lbl b{color:var(--accent);font-weight:500}
+.opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media (max-width:420px){.opts{grid-template-columns:1fr}}
+.opt{all:unset;cursor:pointer;border:1px solid var(--line);border-radius:var(--r-sm);padding:10px;display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600;background:var(--bg);transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--accent)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.opt:focus-visible{outline:2px solid var(--accent)}
+.swatch{width:22px;height:30px;border-radius:5px 5px 7px 7px;flex:none;border:1px solid rgba(0,0,0,.1)}
+.opt .tiny{display:block;font-size:12px;color:var(--muted);font-weight:500}
+.summary .line{display:flex;justify-content:space-between;gap:8px;font-size:14px}
+.summary .line span:last-child{color:var(--muted);text-align:right}
+.summary .line.ok span:last-child{color:var(--ink);font-weight:600}
+.summary button[disabled]{opacity:.45;cursor:not-allowed}
+.toast{font-size:13.5px;color:var(--accent);font-weight:600;min-height:1.4em}
+
+/* oneindia */
+.oi{display:grid;grid-template-columns:1fr 250px;gap:22px;align-items:start}
+@media (max-width:700px){.oi{grid-template-columns:1fr}}
+.oi-feats{display:grid;gap:6px}
+.feat{all:unset;cursor:pointer;display:grid;grid-template-columns:1fr;padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--surface);transition:border-color .15s,background .15s}
+.feat b{font-weight:600}
+.feat span{font-size:14px;color:var(--muted)}
+.feat:hover{border-color:var(--accent)}
+.feat[aria-selected="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.feat:focus-visible{outline:2px solid var(--accent)}
+.oi-phone{border-radius:24px;overflow:hidden;border:6px solid #1b1b1b;background:#1b1b1b;box-shadow:var(--shadow);max-width:250px;margin:0 auto}
+.oi-phone img{width:100%;height:auto}
+.toggle{display:flex;justify-content:center;gap:6px;margin-top:10px}
+
+/* ---------- AI ---------- */
+.ai-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;align-items:start}
+@media (max-width:960px){.ai-grid{grid-template-columns:1fr}}
+.karta{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;min-width:0}
+.karta h3{font-size:28px;font-weight:750}
+.pain{display:grid;gap:8px;margin:16px 0}
+.pain div{display:grid;grid-template-columns:24px 1fr;gap:8px;font-size:15px}
+.pain div::before{content:"!";width:20px;height:20px;border-radius:50%;background:var(--warn-soft);color:var(--warn);font-weight:700;font-size:12px;display:grid;place-items:center;margin-top:2px}
+.wf-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 12px}
+.ask{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;font-size:15px}
+.ask .who{margin:0;font-family:var(--f-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);flex:none;padding-top:3px}
+.ticks{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:0;position:relative}
+.ticks li{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:8px 0;opacity:.42;transition:opacity .3s}
+.ticks li.done,.ticks li.now{opacity:1}
+.ticks .dot{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-family:var(--f-mono);font-size:12px;background:var(--surface);position:relative;z-index:1}
+.ticks li.done .dot{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.ticks li.now .dot{border-color:var(--accent);color:var(--accent)}
+.ticks li.gate .dot{border-color:var(--mid)}
+.ticks li.gate.done .dot{background:var(--mid);border-color:var(--mid);color:#1d1600}
+.ticks b{display:block;font-weight:600;font-size:15px}
+.ticks span{font-size:14px;color:var(--muted)}
+.ticks::before{content:"";position:absolute;left:12px;top:20px;bottom:20px;width:2px;background:var(--line)}
+.wf-controls{display:flex;gap:8px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.wf-result{font-size:14.5px;margin-top:10px;min-height:1.5em}
+.gov{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.gov span{font-size:13px;padding:6px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-deep);font-weight:600}
+.side-cards{display:grid;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;min-width:0}
+.card h3{font-size:21px;font-weight:700}
+.card .tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.card p{font-size:15px;margin-top:8px}
+.card .m{font-family:var(--f-display);font-weight:750;color:var(--accent);font-size:22px;margin-top:10px}
+
+/* ---------- how I work ---------- */
+.loop{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:s}
+.loop > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;position:relative;min-width:0}
+.loop > div::before{counter-increment:s;content:counter(s);font-family:var(--f-mono);font-size:12px;color:var(--accent);border:1px solid var(--accent);border-radius:50%;width:24px;height:24px;display:grid;place-items:center;margin-bottom:12px}
+.loop h3{font-size:19px;font-weight:700}
+.loop p{font-size:14.5px;color:var(--muted);margin-top:6px}
+.loop .eg{font-size:13.5px;margin-top:10px;color:var(--ink);border-top:1px dashed var(--line);padding-top:10px}
+@media (max-width:900px){.loop{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.loop{grid-template-columns:1fr}}
+.lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+@media (max-width:900px){.lessons{grid-template-columns:1fr}}
+.lesson{border-radius:var(--r);padding:20px;border:1px solid var(--line);background:var(--bg);min-width:0}
+.lesson .k{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn)}
+.lesson h3{font-size:18px;font-weight:700;margin:6px 0 8px}
+.lesson p{font-size:14.5px;color:var(--muted)}
+.lesson p b{color:var(--ink);font-weight:600}
+
+.kit{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+@media (max-width:900px){.kit{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.kit{grid-template-columns:1fr}}
+.kit > div{min-width:0}
+.kit h4{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:8px}
+.kit ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.kit li{font-size:13.5px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+
+/* timeline */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:8px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
+.timeline a{display:block;padding:16px 18px;text-decoration:none;color:var(--ink);border-left:1px solid var(--line);min-width:0}
+.timeline a:first-child{border-left:0}
+.timeline a:hover{background:var(--accent-soft)}
+.timeline .y{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.timeline .c{font-family:var(--f-display);font-weight:650;font-size:18px;margin-top:4px}
+.timeline .r{font-size:13.5px;color:var(--muted)}
+@media (max-width:760px){.timeline{grid-template-columns:1fr 1fr}.timeline a:nth-child(3){border-left:0}.timeline a:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.contact h2{font-size:clamp(30px,4vw,48px);font-weight:750}
+.contact-list{display:grid;gap:10px}
+.contact-item{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:14px 16px;min-width:0}
+.contact-item .k{font-family:var(--f-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.contact-item .v{font-weight:600;overflow-wrap:anywhere;user-select:all}
+footer{padding-block:30px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,980px);max-height:92vh}
+dialog.lb::backdrop{background:rgba(5,12,10,.82)}
+dialog.lb img{max-height:84vh;width:auto;max-width:100%;border-radius:12px;margin:0 auto}
+dialog.lb p{color:#e8efed;text-align:center;font-size:14px;margin-top:10px}
+dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));background:#fff;color:#111;border:0;border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer}
+
+button.zoom{padding:0;font:inherit;color:inherit;cursor:zoom-in;appearance:none;-webkit-appearance:none}
+button.shot{display:block;width:100%}
+.reveal{animation:rise .5s ease both}
+@keyframes rise{from{transform:translateY(8px)}to{transform:none}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">SG</span>Shweta Gupta</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#funnel">Impact</a>
+      <a href="#cases">Case studies</a>
+      <a href="#shipped">Shipped screens</a>
+      <a href="#earlier">Earlier roles</a>
+      <a href="#ai">AI products</a>
+      <a href="#how">How I work</a>
+    </nav>
+    <a class="btn primary small cta" href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Senior Product Manager · B2C Growth &amp; Subscriptions</div>
+      <h1>I grow consumer subscription products, <em>from first visit to renewal.</em></h1>
+      <p class="lede">12+ years building B2C products at Condé Nast, Victoria's Secret and Oneindia. I use user research and behavioural data to find where people drop off, run experiments to prove the fix, and ship it across web and mobile.</p>
+      <div class="actions">
+        <a class="btn primary" href="#funnel">See the impact</a>
+        <a class="btn ghost" href="#cases">Read case studies</a>
+      </div>
+      <div class="who">
+        <span><b>Based in</b> Bangalore, India</span>
+        <span><b>Works</b> remote, with global teams</span>
+        <span><b>Led</b> 2 squads of 15+ people</span>
+      </div>
+    </div>
+    <figure class="phones" aria-label="Screens from subscription products I owned">
+      <button class="phone p1 zoom" data-src="img/cn-vogue-paywall.jpg" data-cap="Vogue article paywall, mobile web" aria-label="Enlarge Vogue paywall screen"><img src="img/cn-vogue-paywall.jpg" alt="Vogue paywall on a phone: Vogue Runway is exclusive to subscribers, start free trial" width="540" height="1061"></button>
+      <button class="phone p2 zoom" data-src="img/cn-tny-offer.gif" data-cap="The New Yorker offer page after the Checkout 2.0 redesign" aria-label="Enlarge New Yorker offer page"><img src="img/cn-tny-offer.gif" alt="The New Yorker offer page with three plans and one clear call to action" width="778" height="1530"></button>
+      <button class="phone p3 zoom" data-src="img/cn-confirmation.jpg" data-cap="Vogue order confirmation page, after the revamp" aria-label="Enlarge confirmation page"><img src="img/cn-confirmation.jpg" alt="Vogue confirmation page: thanks for subscribing, continue to Vogue Business" width="540" height="987"></button>
+      <figcaption>Live screens from products I owned · tap to enlarge</figcaption>
+    </figure>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="v num">12+ yrs</div><div class="l">building B2C consumer products</div></div>
+      <div class="stat"><div class="v num">~$100M</div><div class="l">subscription business owned end to end</div></div>
+      <div class="stat"><div class="v num">3×</div><div class="l">year-on-year growth in new subscribers</div></div>
+      <div class="stat"><div class="v num">2.2M</div><div class="l">active subscribers on the platform I led</div></div>
+      <div class="stat"><div class="v num">9+ / 12+</div><div class="l">brands / markets served by one platform</div></div>
+    </div>
+    <div class="logos" aria-label="Companies">
+      <span>WORKED AT</span>
+      <span class="co">Condé Nast</span>
+      <span class="co">Victoria's Secret</span>
+      <span class="co">Oneindia</span>
+      <span class="co">Inuxu</span>
+      <span>· BRANDS: Vogue, The New Yorker, GQ, WIRED, Vanity Fair, AD, Condé Nast Traveler, Bon Appétit, Pitchfork</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FUNNEL ================= -->
+<section class="block alt" id="funnel">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Impact across the consumer journey</div>
+      <h2>Results at every stage of the funnel</h2>
+      <p>Pick a stage to see what users needed there, what I shipped, and what moved. All numbers come from A/B tests or before-and-after launch data.</p>
+    </div>
+    <div class="stages" role="tablist" aria-label="Funnel stages" id="stages"></div>
+    <div class="stage-panel" role="tabpanel" id="stagePanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= CASE STUDIES ================= -->
+<section class="block" id="cases">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Condé Nast · 2021 – 2026</div>
+      <h2>Case studies</h2>
+      <p>Five deep dives from Condé Nast's subscription business. Each one shows the problem, the decision I made, what I owned, and the result.</p>
+    </div>
+    <div class="case-tabs" role="tablist" aria-label="Case studies">
+      <button class="chip" role="tab" aria-selected="true" aria-controls="c-checkout" id="t-checkout">Checkout 2.0</button>
+      <button class="chip" role="tab" aria-selected="false" aria-controls="c-propensity" id="t-propensity">Dynamic monetisation</button>
+      <button class="chip" role="tab" aria-selected="false" aria-controls="c-cart" id="t-cart">Abandoned-cart win-back</button>
+      <button class="chip" role="tab" aria-selected="false" aria-controls="c-platform" id="t-platform">Self-serve growth platform</button>
+      <button class="chip" role="tab" aria-selected="false" aria-controls="c-partner" id="t-partner">Partner platform</button>
+    </div>
+
+    <!-- Checkout -->
+    <article class="case" id="c-checkout" role="tabpanel" aria-labelledby="t-checkout">
+      <div class="case-top">
+        <div>
+          <div class="eyebrow">Acquisition · Product lead, end to end · INMA Award, Best Product Iteration</div>
+          <h3>Checkout 2.0: clarity beat persuasion</h3>
+          <p class="sub">A rebuild of the offer page and payment flow across every brand, based on what users needed to know before buying.</p>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="v num">+28%</div><div class="l">checkout conversion</div></div>
+          <div class="kpi"><div class="v num">+16%</div><div class="l">post-purchase revenue</div></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="story">
+          <div><h4>The problem</h4><p><b>46% of users never scrolled far enough to see the call to action.</b> The pages repeated the same benefits, had more than one button competing for attention, and left real questions unanswered. Every brand had a different journey.</p></div>
+          <div><h4>What research showed</h4><p>Interviews and behaviour data pointed to the same cause: people were confused, not unconvinced. One New Yorker reader didn't know why we asked for a mailing address. It was for a free tote bag, but nothing said so.</p></div>
+          <div><h4>What I did</h4>
+            <ul>
+              <li>Cut the offer page down to what makes each plan different, with one call to action always on screen.</li>
+              <li>Added an FAQ built from real support questions.</li>
+              <li>Simplified payment: slim order summary, email asked earlier, autofill and address lookup, and a review step before charging.</li>
+              <li>Rebuilt it all as reusable components, so every brand gets the fix.</li>
+            </ul></div>
+          <div><h4>What I owned</h4><p>Finding the opportunity in the data, running the user research, designing the A/B tests, getting every stakeholder aligned, and the launch plan, training and docs.</p></div>
+          <div class="note warm"><b>What I'd do differently:</b> we changed the whole journey at once. It shipped as one clean experience, but it was slower and harder to tell which change did what. Next time: smaller releases, one change at a time.</div>
+        </div>
+        <div>
+          <div class="kpis" style="margin-bottom:16px">
+            <div class="kpi"><div class="v num">+164%</div><div class="l">benefits seen on the offer page</div></div>
+            <div class="kpi"><div class="v num">+54%</div><div class="l">FAQ readers moving forward vs non-readers</div></div>
+            <div class="kpi"><div class="v num">+55%</div><div class="l">subscriptions recovered from abandoned carts</div></div>
+            <div class="kpi"><div class="v num">+19%</div><div class="l">credit card conversion</div></div>
+          </div>
+          <button class="shot zoom" data-src="img/cn-checkout2.gif" data-cap="Offer page before and after, with the three tested changes" aria-label="Enlarge before and after animation"><img src="img/cn-checkout2.gif" alt="Animated before and after of The New Yorker offer page: less repeated content, one visible call to action, and a new FAQ" loading="lazy" width="1920" height="1087"></button>
+          <p class="visual-cap">Before and after, on The New Yorker. For that brand alone: new subscribers +26%, revenue +18%.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Propensity -->
+    <article class="case" id="c-propensity" role="tabpanel" aria-labelledby="t-propensity" hidden>
+      <div class="case-top">
+        <div>
+          <div class="eyebrow">Personalisation · Product lead, end to end</div>
+          <h3>Dynamic monetisation: the right ask for each visitor</h3>
+          <p class="sub">A machine-learning score that decides, per visitor, whether to ask for a subscription, a free sign-up, or nothing at all.</p>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="v num">+8%</div><div class="l">direct revenue</div></div>
+          <div class="kpi"><div class="v num">3</div><div class="l">revenue lines measured together</div></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="story">
+          <div><h4>The problem</h4><p>AI search summaries were cutting page views, and every visitor saw the same paywall. Ask a one-time reader to subscribe and they leave, so we earn nothing, when an ad would have earned something.</p></div>
+          <div><h4>How it works</h4><p>Behaviour and content signals score each consented, non-subscribed visitor. The score picks the experience: <b>low intent</b> sees ads only, <b>medium intent</b> gets a free registration gate, <b>high intent</b> sees the paywall. Scores are computed ahead of time, with a safe fallback if scoring is down.</p></div>
+          <div><h4>What I owned</h4>
+            <ul>
+              <li>Which signals the score uses: content category, visit frequency, page depth and traffic source.</li>
+              <li>Success metrics across subscriptions, ads and sign-ups, and the dashboard to watch them.</li>
+              <li>The fallback path if the model behaved unexpectedly.</li>
+              <li>Agreement across subscription, advertising and engagement leads, so no team gained at another's cost.</li>
+            </ul></div>
+          <div class="note"><b>Scope call:</b> cross-device matching existed in-house but I kept it out of the first release. That removed a dependency on another team and got us to market faster.</div>
+          <p class="muted" style="font-size:14.5px">The lift was proven against a parallel campaign with identical targeting but no score-based decisions, so the +8% is attributable.</p>
+        </div>
+        <div>
+          <div class="demo" id="propDemo">
+            <div class="demo-title">Try it: how the score changes the page</div>
+            <p class="muted" style="font-size:14px">Pick a visitor, or drag the slider.</p>
+            <div class="presets">
+              <button class="preset" data-v="18">First visit, from social</button>
+              <button class="preset" data-v="52">Weekly reader, 3 pages deep</button>
+              <button class="preset" data-v="86">Daily reader, from newsletter</button>
+            </div>
+            <label class="range-row" for="propRange"><span class="muted" style="font-size:13.5px">Likelihood to subscribe</span><input type="range" id="propRange" min="0" max="100" value="52"><output id="propOut" class="num">52</output></label>
+            <div class="scale" aria-hidden="true"><span data-t="ads">Low · ads</span><span data-t="reg">Medium · sign-up</span><span data-t="pay">High · paywall</span></div>
+            <div class="mock">
+              <div class="lines"><i></i><i></i><i></i><i></i></div>
+              <div class="unit" id="propUnit"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Abandoned cart -->
+    <article class="case" id="c-cart" role="tabpanel" aria-labelledby="t-cart" hidden>
+      <div class="case-top">
+        <div>
+          <div class="eyebrow">Personalisation · Retention of intent · Product lead</div>
+          <h3>Bringing back people who left checkout</h3>
+          <p class="sub">A native, on-site win-back experience for users who started checkout and dropped off, replacing a third-party vendor that was being switched off.</p>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="v num">24% → 39%</div><div class="l">conversion contribution vs the vendor</div></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="story">
+          <div><h4>The problem</h4><p>A vendor tool drove about 24% of its conversions through an abandoned-cart banner. The vendor was being removed. Without a native version, we would lose that revenue and the ability to test or personalise it.</p></div>
+          <div><h4>What I did</h4>
+            <ul>
+              <li>Built a native banner, nav button ("Complete order") and in-article unit for users in the abandoned-cart segment.</li>
+              <li>Split users by behaviour: people who only looked get a simple reminder; people who changed or progressed an offer are sent straight back to that exact offer.</li>
+              <li>Kept discounts for high-intent users only, with a countdown. Most people convert without one, so a blanket discount would waste margin.</li>
+              <li>Tagged every link with a source so conversions were measured correctly.</li>
+            </ul></div>
+          <div class="note"><b>Data behind the split:</b> about 90% of abandoned users (91% for The New Yorker, 89% for WIRED) only viewed an offer. The high-intent group was small, so targeted discounts carried little risk.</div>
+        </div>
+        <div>
+          <div class="demo">
+            <div class="demo-title">Conversion contribution</div>
+            <p class="muted" style="font-size:14px">Share of conversions driven by the abandoned-cart unit</p>
+            <div class="bars" style="margin-top:14px">
+              <div class="bar-row"><span>Vendor tool</span><div class="bar-track"><div class="bar-fill old" style="width:48%">24%</div></div></div>
+              <div class="bar-row"><span><b>Native, mine</b></span><div class="bar-track"><div class="bar-fill new" style="width:78%">39%</div></div></div>
+              <div class="axis" aria-hidden="true"><div></div><div><span>0%</span><span>25%</span><span>50%</span></div></div>
+            </div>
+            <div class="seg">
+              <div><div class="k">Low intent · ~90%</div><div class="h">Viewed an offer, then left</div><p>Plain reminder to the offer page. No discount.</p></div>
+              <div><div class="k">High intent · ~10%</div><div class="h">Changed or progressed an offer</div><p>Deep link back to that offer. Countdown discount when it runs out.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Platform -->
+    <article class="case" id="c-platform" role="tabpanel" aria-labelledby="t-platform" hidden>
+      <div class="case-top">
+        <div>
+          <div class="eyebrow">Platform · Product lead, 0 to 1</div>
+          <h3>One self-serve growth platform for 9+ brands</h3>
+          <p class="sub">A configurable platform for paywalls, offers and checkout that non-technical teams run themselves, across every brand and market.</p>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="v num">2 wks → mins</div><div class="l">to launch a campaign</div></div>
+          <div class="kpi"><div class="v num">~2 mo → 1 wk</div><div class="l">to launch a new market</div></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="story">
+          <div><h4>The problem</h4><p>We weren't serving one customer. Each of 10+ brands and 12+ markets had its own rules, look and marketing plan. On the old vendor platform, every campaign change needed engineering.</p></div>
+          <div><h4>What I did</h4><p>Split every requirement into layers. Define a rule once, and every layer below inherits it. Partner teams could then change placement, gating, pricing and design on their own.</p></div>
+          <div><h4>Connected end to end</h4><p>Chargebee subscriptions, Stripe and PayPal payments, Sailthru email and in-house entitlements, so every purchase ran automatically from offer to access.</p></div>
+          <div><h4>Result</h4><p>Served millions of site visitors a day, supporting 2.2M active subscribers and about $100M in revenue.</p></div>
+        </div>
+        <div>
+          <div class="demo">
+            <div class="demo-title">How the layers work</div>
+            <p class="muted" style="font-size:14px">Select a layer to see what it controls.</p>
+            <div class="layers" id="layers" style="margin-top:12px">
+              <div class="layer on" tabindex="0" role="button" data-d="Shared business rules for every brand: payment methods, entitlements, legal renewal notices and design tokens."><span class="k">Platform</span><span class="d">Shared business rules</span></div>
+              <div class="layer" tabindex="0" role="button" data-d="Each brand's own setup: branding, which content is gated, how many free articles a month, and brand-level tags."><span class="k">Brand</span><span class="d">Brand-specific rules</span></div>
+              <div class="layer" tabindex="0" role="button" data-d="What each country needs: currency, language, tax, privacy terms and customer care numbers."><span class="k">Market</span><span class="d">Legal, language, currency</span></div>
+              <div class="layer" tabindex="0" role="button" data-d="The campaign a visitor actually sees: offer, copy, placement and audience, picked in real time by matching signals like region, subscriber status and content type."><span class="k">Experience</span><span class="d">Campaigns and offers</span></div>
+            </div>
+            <p class="layer-detail" id="layerDetail">Shared business rules for every brand: payment methods, entitlements, legal renewal notices and design tokens.</p>
+            <div class="thumbs">
+              <button class="shot zoom" data-src="img/cn-journey-campaigns.jpg" data-cap="Campaign list in the self-serve platform" aria-label="Enlarge campaign list"><img src="img/cn-journey-campaigns.jpg" alt="Campaign list screen in the internal platform" loading="lazy"></button>
+              <button class="shot zoom" data-src="img/cn-journey-checkout.jpg" data-cap="Checkout flows configured per brand and market" aria-label="Enlarge checkout flows"><img src="img/cn-journey-checkout.jpg" alt="Checkout flows list in the internal platform" loading="lazy"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Partner -->
+    <article class="case" id="c-partner" role="tabpanel" aria-labelledby="t-partner" hidden>
+      <div class="case-top">
+        <div>
+          <div class="eyebrow">Revenue · Product lead, 0 to 1</div>
+          <h3>Partner platform: build once, onboard many</h3>
+          <p class="sub">Selling subscriptions inside a partner's own checkout, like Klarna or Verizon, instead of handing out coupon codes.</p>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="v num">$5M+</div><div class="l">partner pipeline unblocked</div></div>
+          <div class="kpi"><div class="v num">~12 wks → days</div><div class="l">target time to add a partner</div></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <div class="story">
+          <div><h4>The problem</h4><p>Partners were ready to sell bundles, but onboarding ran on manual coupons and redemption links. Buyers had to redeem a link and enter card details a second time. Each new partner took about 12 weeks of custom work.</p></div>
+          <div><h4>What I owned</h4>
+            <ul>
+              <li>Research on how others sell bundles through partner sites.</li>
+              <li>The full buyer journey, and where to draw the first-release line.</li>
+              <li>The event design: what data we need, and which subscription states we act on.</li>
+              <li>Requirements for security and duplicate-proof events. Engineering chose the exact mechanism.</li>
+              <li>Partner and engineering conversations, test plan and launch timeline.</li>
+            </ul></div>
+          <div class="note warm"><b>Trade-off I made:</b> removing manual redemption also removed a consent step on our side, which limits post-purchase marketing. I accepted that to get to revenue faster.</div>
+        </div>
+        <div>
+          <div class="demo">
+            <div class="demo-title">How a partner sale flows</div>
+            <div class="flow" style="margin-top:12px"><span>Partner sale</span><i>→</i><span>Signed event</span><i>→</i><span>Subscription created</span><i>→</i><span>Access granted</span></div>
+            <p class="muted" style="font-size:14px;margin-top:10px">No coupon and no second payment step for the buyer. Only the minimum data crosses between companies, agreed with legal.</p>
+            <div class="events"><code>subscription.created</code><code>subscription.renewed</code><code>subscription.paused</code><code>subscription.resumed</code><code>subscription.cancelled</code></div>
+            <div class="note" style="margin-top:16px">Designed for partners we had not signed yet. Every decision had to hold for the next partner, not just the pilot.</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="block alt" id="shipped">
+  <div class="wrap">
+    <div class="gal-head">
+      <div class="head" style="margin:0">
+        <div class="eyebrow">Shipped screens</div>
+        <h2>The subscription journey, as users see it</h2>
+        <p>Touchpoints I owned at Condé Nast, from the first paywall to the welcome email. Tap any screen to enlarge.</p>
+      </div>
+      <div class="case-tabs" role="group" aria-label="Filter screens" id="galFilter" style="margin:0">
+        <button class="chip on" data-f="all">All</button>
+        <button class="chip" data-f="pre">Before purchase</button>
+        <button class="chip" data-f="post">After purchase</button>
+      </div>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<!-- ================= EARLIER ROLES ================= -->
+<section class="block" id="earlier">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Before Condé Nast</div>
+      <h2>E-commerce and consumer apps</h2>
+      <p>Shopping journeys at a global retailer, and a multilingual news app used across India.</p>
+    </div>
+    <div class="timeline" aria-label="Career timeline">
+      <a href="#cases"><div class="y">2021 – 2026</div><div class="c">Condé Nast</div><div class="r">Senior PM, subscriptions</div></a>
+      <a href="#vs"><div class="y">2018 – 2021</div><div class="c">Victoria's Secret</div><div class="r">PM, e-commerce</div></a>
+      <a href="#oneindia"><div class="y">2015 – 2018</div><div class="c">Oneindia</div><div class="r">Senior PM, mobile &amp; web</div></a>
+      <a href="#inuxu"><div class="y">2014 – 2015</div><div class="c">Inuxu</div><div class="r">PM, ad platform</div></a>
+    </div>
+
+    <div style="margin-top:48px">
+    <div class="role" id="vs">
+      <div class="role-meta">
+        <h3>Victoria's Secret</h3>
+        <div class="t">Product Manager, E-commerce</div>
+        <div class="y">Mar 2018 – Jan 2021 · Bangalore</div>
+        <p class="ctx">Owned the front-end shopping experience from concept to launch: product listing pages, product pages and add-to-bag.</p>
+        <div class="role-metrics">
+          <div><div class="v num">15%</div><div class="l">faster bundle completion</div></div>
+          <div><div class="v num">+9%</div><div class="l">bundle-to-cart rate</div></div>
+        </div>
+        <div class="role-links">
+          <a href="https://www.victoriassecret.com/us/vs/beauty/bundle" target="_blank" rel="noopener">Bundle page (live) ↗</a>
+          <a href="https://www.victoriassecret.com/us/vs/sleepwear-and-lingerie-catalog/5000008347" target="_blank" rel="noopener">Product page (live) ↗</a>
+        </div>
+      </div>
+      <div class="role-main">
+        <p><b>Guided bundle builder.</b> Shoppers building a beauty bundle had to hunt across pages for each item. I launched a guided tool that walks them through one choice at a time, shows progress, and adds the whole bundle to the bag in one tap.</p>
+        <div class="builder" id="builder">
+          <div class="steps">
+            <div class="progress" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="bstep">
+              <div class="lbl">Step 1 · Choose a fragrance <b id="b1s"></b></div>
+              <div class="opts" data-step="frag">
+                <button class="opt" aria-pressed="false" data-name="Rose eau de parfum"><span class="swatch" style="background:#E7A6B4"></span><span>Rose<span class="tiny">Eau de parfum</span></span></button>
+                <button class="opt" aria-pressed="false" data-name="Vanilla eau de parfum"><span class="swatch" style="background:#E9D3A6"></span><span>Vanilla<span class="tiny">Eau de parfum</span></span></button>
+                <button class="opt" aria-pressed="false" data-name="Amber eau de parfum"><span class="swatch" style="background:#C98A4B"></span><span>Amber<span class="tiny">Eau de parfum</span></span></button>
+              </div>
+            </div>
+            <div class="bstep">
+              <div class="lbl">Step 2 · Choose a matching lotion <b id="b2s"></b></div>
+              <div class="opts" data-step="lot">
+                <button class="opt" aria-pressed="false" data-name="Rose body lotion"><span class="swatch" style="background:#F3CCD5"></span><span>Rose<span class="tiny">Body lotion</span></span></button>
+                <button class="opt" aria-pressed="false" data-name="Vanilla body lotion"><span class="swatch" style="background:#F3E6C8"></span><span>Vanilla<span class="tiny">Body lotion</span></span></button>
+                <button class="opt" aria-pressed="false" data-name="Amber body lotion"><span class="swatch" style="background:#E2B98E"></span><span>Amber<span class="tiny">Body lotion</span></span></button>
+              </div>
+            </div>
+            <div class="bstep" style="margin:0">
+              <div class="lbl">Step 3 · Gift bag <b>Included</b></div>
+              <p class="muted" style="font-size:14px">The bag is added automatically, so there is nothing else to find.</p>
+            </div>
+          </div>
+          <div class="summary" aria-live="polite">
+            <div class="demo-title">Your bundle</div>
+            <div class="line" id="sumF"><span>Fragrance</span><span>Not chosen</span></div>
+            <div class="line" id="sumL"><span>Lotion</span><span>Not chosen</span></div>
+            <div class="line ok"><span>Gift bag</span><span>Included</span></div>
+            <button class="btn primary small" id="addBundle" disabled style="justify-content:center;margin-top:6px">Add bundle to bag</button>
+            <div class="toast" id="bundleToast"></div>
+            <p class="muted" style="font-size:12.5px">Illustration of the pattern. Product names are placeholders.</p>
+          </div>
+        </div>
+        <div class="note">On product pages I worked on the core shopping modules: image gallery, ratings, price and pay-later options, colour and size pickers, add to bag, and delivery and returns info.</div>
+      </div>
+    </div>
+
+    <div class="role" id="oneindia">
+      <div class="role-meta">
+        <h3>Oneindia</h3>
+        <div class="t">Senior Product Manager, Mobile &amp; Web</div>
+        <div class="y">Jul 2015 – Feb 2018 · Bangalore</div>
+        <p class="ctx">India's leading multilingual news portal, in 14+ regional languages. I rebuilt the native Android and iOS apps and managed two product managers.</p>
+        <div class="role-metrics">
+          <div><div class="v num">60%+</div><div class="l">new user growth</div></div>
+          <div><div class="v num">+153%</div><div class="l">user retention</div></div>
+          <div><div class="v num">250%+</div><div class="l">growth in monthly page views</div></div>
+          <div><div class="v num">#130 → Top 3</div><div class="l">Play Store ranking</div></div>
+        </div>
+        <div class="role-links">
+          <a href="https://www.60secondsnow.com/app/#features" target="_blank" rel="noopener">60secondsnow app ↗</a>
+        </div>
+      </div>
+      <div class="role-main">
+        <p><b>60secondsnow: news you can read in a minute.</b> A short-news app built for India's mobile users: every story in 60 to 70 words, in nine languages, light on data, and readable offline. I also rolled out PWA and AMP pages with personalised article delivery across 14 languages.</p>
+        <div class="oi">
+          <div class="oi-feats" role="tablist" aria-label="App features" id="oiFeats"></div>
+          <div>
+            <div class="oi-phone"><img id="oiImg" src="img/oi-shortnews.jpg" alt="" width="273" height="484"></div>
+            <div class="toggle" id="oiMode">
+              <button class="chip on" data-m="day" style="padding:6px 12px;font-size:13px">Day</button>
+              <button class="chip" data-m="night" style="padding:6px 12px;font-size:13px">Night</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="role" id="inuxu">
+      <div class="role-meta">
+        <h3>Inuxu Digital Media</h3>
+        <div class="t">Product Manager</div>
+        <div class="y">Jan 2014 – Jul 2015 · Pune</div>
+      </div>
+      <div class="role-main">
+        <p>One of India's largest multilingual native ad platforms. I launched dynamic remarketing that showed people ads based on what they had already looked at.</p>
+        <div class="role-metrics" style="max-width:340px;margin:0"><div><div class="v num">2×</div><div class="l">advertiser conversion rate</div></div></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI ================= -->
+<section class="block alt" id="ai">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">AI products</div>
+      <h2>Building with AI, with people in control</h2>
+      <p>I lead AI work that starts from a real bottleneck, not from wanting to use AI. And I build myself, so I know what the tools can and can't do.</p>
+    </div>
+    <div class="ai-grid">
+      <div class="karta">
+        <div class="tag eyebrow">Condé Nast · Product lead, 0 to 1</div>
+        <h3 style="margin-top:8px">Karta: an AI agent platform for operations</h3>
+        <p class="muted" style="margin-top:8px">Takes a business request through to an approved, recorded action, without people hopping across systems. Built on MCP with narrowly scoped tools.</p>
+        <div class="pain">
+          <div><span><b>Refunds:</b> one duplicate-charge check took 4 manual steps across the subscription, billing and payment systems, repeated for every case.</span></div>
+          <div><span><b>Win-back offers:</b> finding lapsed subscribers meant one dashboard, then building the offer in a separate system.</span></div>
+          <div><span><b>Campaign setup:</b> marketers had to piece together a campaign's scattered settings by hand to understand or debug it.</span></div>
+        </div>
+        <div class="demo-title">See a workflow run</div>
+        <div class="wf-tabs" role="tablist" aria-label="Karta workflows" id="wfTabs">
+          <button class="chip" role="tab" aria-selected="true" data-w="refund">Refund check</button>
+          <button class="chip" role="tab" aria-selected="false" data-w="winback">Win-back offer</button>
+          <button class="chip" role="tab" aria-selected="false" data-w="campaign">Campaign setup check</button>
+        </div>
+        <div class="ask"><span class="who">Request</span><span id="wfAsk"></span></div>
+        <ol class="ticks" id="wfSteps"></ol>
+        <div class="wf-controls">
+          <button class="btn primary small" id="wfPlay">Run workflow</button>
+          <button class="btn ghost small" id="wfReset">Reset</button>
+        </div>
+        <p class="wf-result" id="wfResult" aria-live="polite"></p>
+        <p class="muted" style="font-size:12.5px">Example requests, simplified.</p>
+        <div class="gov" aria-label="Governance rules I defined">
+          <span>Scoped tools, no raw system access</span><span>Rules from a governed knowledge base</span><span>Human approval before any change</span><span>Every run logged for audit</span><span>Unsure? Hand to a person</span>
+        </div>
+      </div>
+      <div class="side-cards">
+        <div class="card">
+          <div class="tag">Karta · Results</div>
+          <ul style="margin:10px 0 0;padding-left:18px;display:grid;gap:6px;font-size:15px">
+            <li>Built end to end and tested on live data with early users.</li>
+            <li>Correctly flagged refund eligibility on every case tested.</li>
+            <li>Win-back offers: two manual steps became one approved flow.</li>
+            <li>Campaign summaries delivered for setup checks and debugging.</li>
+            <li>Owned model choice per use case, weighing quality, speed and cost.</li>
+            <li>Presented to the Executive Leadership Team.</li>
+          </ul>
+          <p class="muted" style="font-size:13.5px;margin-top:12px">My role: use cases, requirements for each layer, and the governance model. The engineering lead built the orchestrator and tools; I reviewed and tested the design throughout.</p>
+          <button class="shot zoom" style="margin-top:14px" data-src="img/karta.gif" data-cap="Karta user guide: settings, workflows and agents" aria-label="Enlarge Karta screens"><img src="img/karta.gif" alt="Karta screens: settings, workflow editor, and agent list" loading="lazy" width="1920" height="995"></button>
+        </div>
+        <div class="card">
+          <div class="tag">Side project · Built solo</div>
+          <h3 style="margin-top:6px">FirstLight Careers</h3>
+          <p>A Next.js app on the Claude API that scores how well a CV matches a job, flags gaps and suggests rewrites. It runs its own MCP server, connected to Claude.ai as a custom tool.</p>
+          <div class="m">Shipped in about 4 days</div>
+          <p class="muted" style="font-size:13.5px">Built with Cursor, with no prior coding background.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Partnership</div>
+          <h3 style="margin-top:6px">Paywall for AI-browser traffic</h3>
+          <p>With Perplexity, designed a paywall strategy for readers arriving through its Comet browser, with a bigger free allowance, plus a commercial deal around it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW I WORK ================= -->
+<section class="block" id="how">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">How I work</div>
+      <h2>Find the gap, prove the fix, then scale it</h2>
+      <p>The same loop runs through all of my work, from a paywall test to a new platform.</p>
+    </div>
+    <div class="loop">
+      <div><h3>Find the gap</h3><p>Funnel data, session behaviour, user interviews, support tickets and reviews.</p><p class="eg">46% never saw the button, so the fix was clarity, not more copy.</p></div>
+      <div><h3>Decide what matters</h3><p>Size the opportunity, agree success metrics, and cut scope to what proves the idea.</p><p class="eg">Kept cross-device matching out of v1 to remove a team dependency.</p></div>
+      <div><h3>Prove it</h3><p>A/B tests with a clean control, and guardrails so one metric doesn't win at another's cost.</p><p class="eg">Measured subscriptions, ads and sign-ups together.</p></div>
+      <div><h3>Ship and scale</h3><p>Reusable components and self-serve tools, so one win reaches every brand and market.</p><p class="eg">Campaign launches went from 2 weeks to minutes.</p></div>
+    </div>
+
+    <h3 style="font-size:24px;margin-top:48px">What didn't work, and what I learned</h3>
+    <div class="lessons">
+      <div class="lesson"><div class="k">Reversed in production</div><h3>Pay button first on the paywall</h3><p>We put Apple Pay and Google Pay as the first thing users saw. Drop-off went up: people needed to know what they were buying. <b>We put the value first and payment second, and mobile conversion rose 21%.</b></p></div>
+      <div class="lesson"><div class="k">Stopped</div><h3>Consent or pay</h3><p>We let readers share data instead of paying. Users disliked it, drop-offs rose, and it didn't make up the lost revenue. <b>The idea was built well; the assumption behind it was wrong, and data showed that fast.</b></p></div>
+      <div class="lesson"><div class="k">Trade-off</div><h3>Gift subscriptions before the holidays</h3><p>International print gifting would have put the launch date at risk. Data showed it was a small group. <b>I launched without it, sent those users to a working legacy path, and the launch made $600K in about 8 weeks.</b></p></div>
+    </div>
+
+    <div class="kit">
+      <div><h4>Growth &amp; experimentation</h4><ul><li>A/B testing</li><li>Funnel analysis</li><li>Personalisation</li><li>Pricing &amp; bundles</li><li>Retention &amp; churn</li><li>Lifecycle email</li></ul></div>
+      <div><h4>Data &amp; analytics</h4><ul><li>Firebase</li><li>Treasure Data (CDP)</li><li>Databricks</li><li>Behavioural segments</li><li>Propensity models</li></ul></div>
+      <div><h4>Subscriptions &amp; payments</h4><ul><li>Chargebee</li><li>Stripe</li><li>PayPal</li><li>Apple Pay / Google Pay</li><li>Sailthru</li><li>Iterable</li></ul></div>
+      <div><h4>AI &amp; building</h4><ul><li>MCP</li><li>Claude API</li><li>AI agents</li><li>Cursor</li><li>Codex</li><li>Figma Make</li><li>Replit</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="block alt" id="contact">
+  <div class="wrap contact">
+    <div>
+      <div class="eyebrow">Let's talk</div>
+      <h2 style="margin-top:12px">Looking for a PM who owns the whole consumer journey?</h2>
+      <p class="muted" style="margin-top:14px;font-size:17.5px;max-width:52ch">I'm happy to walk through any of this work in more detail, including the parts that didn't go to plan.</p>
+      <p class="muted" style="margin-top:14px;font-size:14.5px">Also: Best Partner to Consumer Revenue Organisation award at Condé Nast · MBA, IT &amp; Marketing (Silver Medalist) · B.E., Information Science</p>
+    </div>
+    <div class="contact-list">
+      <div class="contact-item"><div style="min-width:0"><div class="k">Email</div><div class="v" id="emailText">shwets.gpt1011@gmail.com</div></div><button class="btn ghost small" id="copyEmail">Copy</button></div>
+      <div class="contact-item"><div style="min-width:0"><div class="k">LinkedIn</div><div class="v">shweta-gupta-5619b555</div></div><a class="btn ghost small" href="https://www.linkedin.com/in/shweta-gupta-5619b555/" target="_blank" rel="noopener">Open ↗</a></div>
+      <div class="contact-item"><div style="min-width:0"><div class="k">GitHub</div><div class="v">shwetaguptagit</div></div><a class="btn ghost small" href="https://github.com/shwetaguptagit" target="_blank" rel="noopener">Open ↗</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Shweta Gupta · Bangalore, India</span><span>Screens shown are from live products I worked on.</span></div></footer>
+
+<dialog class="lb" id="lb"><button id="lbClose">Close</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+
+<script>
+(function(){
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* ---------- Funnel stages ---------- */
+const STAGES=[
+ {t:"Acquisition",need:"Need: more new users and new subscribers",wins:[
+  {m:"+28%",w:"Checkout conversion",d:"Rebuilt the offer page and payment flow around what users needed to know.",co:"Condé Nast",link:"checkout"},
+  {m:"+21%",w:"Mobile paywall conversion",d:"Value first, then one-tap Apple Pay, Google Pay and PayPal as a second step.",co:"Condé Nast"},
+  {m:"+55%",w:"Subscriptions recovered from abandoned carts",d:"Asked for email earlier in checkout so drop-offs could be followed up.",co:"Condé Nast",link:"checkout"},
+  {m:"60%+",w:"New user growth",d:"Rebuilt Android and iOS apps. Play Store rank went from #130 to Top 3.",co:"Oneindia",anchor:"oneindia"}]},
+ {t:"Activation",need:"Need: show the value right after sign-up, and build engagement",wins:[
+  {m:"28.8% → 76%",w:"Click-through after purchase",d:"Revamped the confirmation page so new subscribers start using what they paid for. Bounce fell from 61% to 27%.",co:"Condé Nast"},
+  {m:"Owned",w:"Post-purchase emails",d:"Trigger logic, design and setup for purchase, trial and renewal emails, reminding people what they unlocked.",co:"Condé Nast"},
+  {m:"+153%",w:"User retention",d:"Short news, nine languages, offline reading and day/night modes built a daily reading habit.",co:"Oneindia",anchor:"oneindia"},
+  {m:"250%+",w:"Monthly page views",d:"Personalised article delivery across 14 languages on app, PWA and AMP.",co:"Oneindia",anchor:"oneindia"}]},
+ {t:"Personalisation",need:"Need: adaptive, data-led experiences for each user",wins:[
+  {m:"+8%",w:"Revenue from a propensity score",d:"Each visitor gets the right ask: ads, a free sign-up, or the paywall.",co:"Condé Nast",link:"propensity"},
+  {m:"24% → 39%",w:"Abandoned-cart conversion contribution",d:"Native retargeting from behaviour segments, beating the vendor it replaced.",co:"Condé Nast",link:"cart"},
+  {m:"2×",w:"Advertiser conversion",d:"Dynamic remarketing based on what people had already viewed.",co:"Inuxu",anchor:"inuxu"}]},
+ {t:"Retention & LTV",need:"Need: lower churn and higher order value",wins:[
+  {m:"7%",w:"Failed-payment subscribers kept",d:"A legally compliant auto-downgrade moved them to a lower tier instead of cancelling.",co:"Condé Nast"},
+  {m:"Live",w:"Retention flow for cancellations",d:"Integrated Chargebee Retention to offer the right save option to people about to cancel.",co:"Condé Nast"},
+  {m:"+28.7%",w:"Average order value",d:"An All Access bundle across brands, offered at the point of sale.",co:"Condé Nast"},
+  {m:"Approved",w:"Email verification business case",d:"Used failed-send logs to justify adding an email checker, so renewal and trial notices reach people.",co:"Condé Nast"}]},
+ {t:"Revenue",need:"Need: higher revenue per user, and new revenue streams",wins:[
+  {m:"$600K",w:"Gift subscriptions, in about 8 weeks",d:"A new digital and print gifting path, launched ahead of the holiday season.",co:"Condé Nast"},
+  {m:"$5M+",w:"Partner pipeline unblocked",d:"Klarna and Verizon could sell subscriptions inside their own checkout.",co:"Condé Nast",link:"partner"},
+  {m:"+16%",w:"Post-purchase revenue",d:"Upsell and cross-sell right after the first purchase.",co:"Condé Nast"},
+  {m:"−40%",w:"Discount abuse",d:"Blocked people from cycling through intro offers across brands, protecting 14% of at-risk revenue.",co:"Condé Nast"}]},
+ {t:"AI products",need:"Need: AI that does real work, safely",wins:[
+  {m:"3 workflows",w:"Karta agent platform",d:"Refund checks, win-back offers and campaign setup checks, with a person approving every change.",co:"Condé Nast",anchor:"ai"},
+  {m:"~4 days",w:"FirstLight Careers",d:"A Claude API app with a scoring engine and its own MCP server, built and shipped solo.",co:"Side project",anchor:"ai"}]}
+];
+const stagesEl=$("#stages"), panel=$("#stagePanel");
+STAGES.forEach((s,i)=>{
+  const b=document.createElement("button");
+  b.className="stage"; b.setAttribute("role","tab"); b.id="st"+i;
+  b.setAttribute("aria-selected",i===0?"true":"false"); b.setAttribute("aria-controls","stagePanel");
+  b.innerHTML=`<span class="n">0${i+1}</span><span class="t">${esc(s.t)}</span>`;
+  b.addEventListener("click",()=>showStage(i));
+  stagesEl.appendChild(b);
+});
+stagesEl.addEventListener("keydown",e=>{
+  const tabs=$$(".stage",stagesEl), i=tabs.indexOf(document.activeElement);
+  if(i<0)return;
+  if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();const n=(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[n].focus();showStage(n);}
+});
+function showStage(i){
+  $$(".stage",stagesEl).forEach((b,j)=>{b.setAttribute("aria-selected",j===i?"true":"false");b.tabIndex=j===i?0:-1});
+  const s=STAGES[i];
+  panel.setAttribute("aria-labelledby","st"+i);
+  panel.innerHTML=`<div class="stage-need"><h3>${esc(s.t)}</h3><p>${esc(s.need)}</p></div>
+  <div class="wins" style="--cols:${s.wins.length}">${s.wins.map(w=>`<div class="win reveal"><div class="m num">${esc(w.m)}</div><div class="w">${esc(w.w)}</div><div class="d">${esc(w.d)}</div>${w.link?`<a class="more" href="#cases" data-case="${w.link}">Read the case study</a>`:w.anchor?`<a class="more" href="#${w.anchor}">See the work</a>`:""}<div class="co">${esc(w.co)}</div></div>`).join("")}</div>`;
+  $$("a[data-case]",panel).forEach(a=>a.addEventListener("click",()=>openCase(a.dataset.case)));
+}
+showStage(0);
+
+/* ---------- Case tabs ---------- */
+const caseTabs=$$('#cases [role="tab"]');
+function openCase(key){
+  caseTabs.forEach(t=>{const on=t.id==="t-"+key;t.setAttribute("aria-selected",on?"true":"false");t.tabIndex=on?0:-1;$("#"+t.getAttribute("aria-controls")).hidden=!on;});
+}
+caseTabs.forEach((t,i)=>{
+  t.addEventListener("click",()=>openCase(t.id.slice(2)));
+  t.addEventListener("keydown",e=>{
+    if(e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
+    e.preventDefault();const n=(i+(e.key==="ArrowRight"?1:-1)+caseTabs.length)%caseTabs.length;caseTabs[n].focus();openCase(caseTabs[n].id.slice(2));
+  });
+});
+openCase("checkout");
+
+/* ---------- Propensity demo ---------- */
+const range=$("#propRange"), out=$("#propOut"), unit=$("#propUnit");
+const TIERS={
+  ads:{k:"Low intent · Ads only",h:"No paywall. Keep reading.",s:"This reader is unlikely to pay, so we earn from ads instead of pushing them away.",btn:""},
+  reg:{k:"Medium intent · Free sign-up",h:"Sign up free to keep reading",s:"A newsletter sign-up keeps them reading and builds a relationship we can convert later.",btn:"Sign up with email"},
+  pay:{k:"High intent · Paywall",h:"Subscribe for unlimited access",s:"This reader is ready. Show the subscription offer, with quick pay as the next step.",btn:"See offers"}
+};
+function setProp(v){
+  v=+v; range.value=v; out.value=v; out.textContent=v;
+  const t=v<35?"ads":v<70?"reg":"pay", d=TIERS[t];
+  unit.className="unit "+t;
+  unit.innerHTML=`<div class="k">${d.k}</div><div class="h">${d.h}</div><div class="s">${d.s}</div>${d.btn?`<span class="fake">${d.btn}</span>`:""}`;
+  $$("#propDemo .scale span").forEach(s=>s.classList.toggle("on",s.dataset.t===t));
+  $$("#propDemo .preset").forEach(p=>p.classList.toggle("on",+p.dataset.v===v));
+}
+range.addEventListener("input",e=>setProp(e.target.value));
+$$("#propDemo .preset").forEach(p=>p.addEventListener("click",()=>setProp(p.dataset.v)));
+setProp(52);
+
+/* ---------- Layers ---------- */
+$$("#layers .layer").forEach(l=>{
+  const act=()=>{$$("#layers .layer").forEach(x=>x.classList.toggle("on",x===l));$("#layerDetail").textContent=l.dataset.d;};
+  l.addEventListener("click",act);
+  l.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();act();}});
+});
+
+/* ---------- Gallery ---------- */
+const SHOTS=[
+ {f:"pre",src:"img/cn-vogue-paywall.jpg",t:"Article paywall",s:"Vogue · mobile web"},
+ {f:"pre",src:"img/cn-vogue-offer.jpg",t:"Offer page with free trial",s:"Vogue · digital vs print + digital"},
+ {f:"pre",src:"img/cn-tny-offer.gif",t:"Offer page, Checkout 2.0",s:"The New Yorker · one clear CTA"},
+ {f:"pre",src:"img/cn-tny-paywall.jpg",t:"Contextual paywall",s:"The New Yorker · \"Your window is closing\""},
+ {f:"pre",src:"img/cn-vogue-home.jpg",t:"Homepage entry point",s:"Vogue · subscribe in the nav"},
+ {f:"pre",src:"img/cn-tny-article.jpg",t:"Article page",s:"The New Yorker · listen and subscribe"},
+ {f:"pre",src:"img/cn-tny-app.jpg",t:"Mobile app",s:"The New Yorker · iOS app"},
+ {f:"pre",src:"img/cn-tny-renew.jpg",t:"Renewal prompt in app",s:"The New Yorker · annual vs monthly"},
+ {f:"pre",src:"img/cn-tny-renew-expired.jpg",t:"Expired subscription",s:"The New Yorker · time to renew"},
+ {f:"post",src:"img/cn-upsell.jpg",t:"Post-purchase upsell",s:"Vogue · one-tap upgrade, +16% revenue"},
+ {f:"post",src:"img/cn-confirmation.jpg",t:"Confirmation page",s:"Vogue · click-through 28.8% → 76%"},
+ {f:"post",src:"img/cn-orders.jpg",t:"Membership details",s:"Vogue · what's included, app, podcast"},
+ {f:"post",src:"img/cn-email.jpg",t:"Welcome email",s:"Vogue Business · membership details"}
+];
+const gal=$("#gallery");
+function renderGal(f){
+  gal.innerHTML=SHOTS.filter(s=>f==="all"||s.f===f).map(s=>`<figure><button class="zoom" data-src="${s.src}" data-cap="${esc(s.t+" · "+s.s)}" aria-label="Enlarge ${esc(s.t)}"><img src="${s.src}" alt="${esc(s.t+", "+s.s)}" loading="lazy"></button><figcaption><b>${esc(s.t)}</b><span>${esc(s.s)}</span></figcaption></figure>`).join("");
+  gal.scrollLeft=0;
+}
+$$("#galFilter .chip").forEach(c=>c.addEventListener("click",()=>{$$("#galFilter .chip").forEach(x=>x.classList.toggle("on",x===c));renderGal(c.dataset.f);}));
+renderGal("all");
+
+/* ---------- Lightbox ---------- */
+const lb=$("#lb");
+document.addEventListener("click",e=>{
+  const z=e.target.closest(".zoom"); if(!z)return;
+  $("#lbImg").src=z.dataset.src; $("#lbImg").alt=z.dataset.cap||""; $("#lbCap").textContent=z.dataset.cap||"";
+  if(lb.showModal)lb.showModal();
+});
+$("#lbClose").addEventListener("click",()=>lb.close());
+lb.addEventListener("click",e=>{if(e.target===lb)lb.close();});
+
+/* ---------- Bundle builder ---------- */
+const pick={frag:null,lot:null};
+$$("#builder .opts").forEach(g=>{
+  $$(".opt",g).forEach(o=>o.addEventListener("click",()=>{
+    $$(".opt",g).forEach(x=>x.setAttribute("aria-pressed",x===o?"true":"false"));
+    pick[g.dataset.step]=o.dataset.name; updBundle();
+  }));
+});
+function updBundle(){
+  const sf=$("#sumF"), sl=$("#sumL");
+  sf.lastElementChild.textContent=pick.frag||"Not chosen"; sf.classList.toggle("ok",!!pick.frag);
+  sl.lastElementChild.textContent=pick.lot||"Not chosen"; sl.classList.toggle("ok",!!pick.lot);
+  $("#b1s").textContent=pick.frag?"Done":""; $("#b2s").textContent=pick.lot?"Done":"";
+  const n=(pick.frag?1:0)+(pick.lot?1:0)+(pick.frag&&pick.lot?1:0);
+  $$("#builder .progress span").forEach((s,i)=>s.classList.toggle("done",i<n));
+  $("#addBundle").disabled=!(pick.frag&&pick.lot);
+  $("#bundleToast").textContent="";
+}
+$("#addBundle").addEventListener("click",()=>{$("#bundleToast").textContent="Bundle added to bag. 3 items, one tap.";});
+
+/* ---------- Oneindia ---------- */
+const OI=[
+ {t:"Short news",d:"Every story in 60 to 70 words, read in under a minute.",day:"oi-shortnews.jpg",night:"oi-shortnews-dark.jpg"},
+ {t:"Nine languages",d:"English, Hindi, Bengali, Gujarati, Kannada, Malayalam, Marathi, Tamil, Telugu.",day:"oi-multilanguage-dark.jpg",night:"oi-multilanguage-dark.jpg"},
+ {t:"Multi-language alerts",d:"Notifications in more than one language, across several states.",day:"oi-multilanguage-notification.jpg",night:"oi-multilanguage-notification.jpg"},
+ {t:"Read the full story",d:"Tap \"Read more\" for the detailed article.",day:"oi-read-more.jpg",night:"oi-read-more.jpg"},
+ {t:"Offline reading and video",d:"Stories saved for no-signal moments, plus short video stories.",day:"oi-offline.jpg",night:"oi-video-dark.jpg"}
+];
+let oiI=0, oiM="day";
+const oiF=$("#oiFeats");
+OI.forEach((f,i)=>{const b=document.createElement("button");b.className="feat";b.setAttribute("role","tab");b.setAttribute("aria-selected",i===0?"true":"false");b.innerHTML=`<b>${esc(f.t)}</b><span>${esc(f.d)}</span>`;b.addEventListener("click",()=>{oiI=i;updOI();});oiF.appendChild(b);});
+$$("#oiMode .chip").forEach(c=>c.addEventListener("click",()=>{oiM=c.dataset.m;$$("#oiMode .chip").forEach(x=>x.classList.toggle("on",x===c));updOI();}));
+function updOI(){
+  $$(".feat",oiF).forEach((b,i)=>b.setAttribute("aria-selected",i===oiI?"true":"false"));
+  const f=OI[oiI]; const img=$("#oiImg"); img.src="img/"+f[oiM]; img.alt="60secondsnow app: "+f.t;
+}
+updOI();
+
+/* ---------- Karta workflows ---------- */
+const WF={
+ refund:{ask:"A customer says they were charged twice for Vogue. Should we refund?",steps:[
+  ["Check policy","Pulls the duplicate-charge refund policy from the knowledge base."],
+  ["Pull live data","Gets the customer's subscription and payment history."],
+  ["Reason over it","Compares the charges against the policy. Two charges, same day, same plan."],
+  ["Prepare action","Drafts the refund, but does not run it."],
+  ["Person approves","A support agent reviews the evidence and approves.",1],
+  ["Run and record","Refund issued. Who approved, and why, is logged."]],
+  res:"Result: 4 manual lookups across three systems became one request and one approval."},
+ winback:{ask:"Create a Vogue 20% digital win-back offer for lapsed subscribers.",steps:[
+  ["Check policy","Pulls the definition of \"lapsed\" and the discount rules."],
+  ["Pull live data","Finds the eligible lapsed subscribers and their count."],
+  ["Reason over it","Checks the discount is allowed and the audience size makes sense."],
+  ["Prepare action","Builds the offer, ready to create."],
+  ["Person approves","The marketing owner confirms the offer and audience.",1],
+  ["Run and record","Offer created in the subscription system. Run logged."]],
+  res:"Result: checking a dashboard, then building the offer elsewhere, became one approved flow."},
+ campaign:{ask:"Summarise the Vogue member-exclusive campaign and check its setup.",steps:[
+  ["Check policy","Pulls how campaign targeting and priority rules work."],
+  ["Pull live data","Collects the campaign's scattered settings: region, audience, content, traffic source, dates."],
+  ["Reason over it","Writes a plain summary, e.g. US only, members-only content, visitors from social media."],
+  ["Prepare action","Flags settings that don't match what the campaign is meant to do."],
+  ["Person approves","The campaign owner decides what to change.",1],
+  ["Run and record","Summary and decision saved with the run."]],
+  res:"Result: no more piecing together scattered settings by hand to understand or debug a campaign."}
+};
+let wfKey="refund", wfTimer=null, wfAt=-1;
+const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function renderWF(){
+  const w=WF[wfKey]; $("#wfAsk").textContent=w.ask;
+  $("#wfSteps").innerHTML=w.steps.map((s,i)=>`<li class="${s[2]?"gate":""} ${i<wfAt?"done":i===wfAt?"now":""}"><span class="dot">${i<wfAt?"✓":i+1}</span><div><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div></li>`).join("");
+  $("#wfResult").textContent=wfAt>=w.steps.length?w.res:"";
+  $("#wfPlay").textContent=wfAt>=w.steps.length?"Run again":wfTimer?"Running…":"Run workflow";
+}
+function stopWF(){clearInterval(wfTimer);wfTimer=null;}
+function playWF(){
+  stopWF(); const n=WF[wfKey].steps.length;
+  if(reduce){wfAt=n;renderWF();return;}
+  wfAt=0; renderWF();
+  wfTimer=setInterval(()=>{wfAt++; if(wfAt>=n){stopWF();} renderWF();},850);
+}
+$("#wfPlay").addEventListener("click",playWF);
+$("#wfReset").addEventListener("click",()=>{stopWF();wfAt=-1;renderWF();});
+$$("#wfTabs .chip").forEach(c=>c.addEventListener("click",()=>{
+  $$("#wfTabs .chip").forEach(x=>x.setAttribute("aria-selected",x===c?"true":"false"));
+  wfKey=c.dataset.w; stopWF(); wfAt=-1; renderWF();
+}));
+renderWF();
+
+/* ---------- Copy email ---------- */
+$("#copyEmail").addEventListener("click",function(){
+  const t=$("#emailText").textContent, btn=this;
+  const done=m=>{btn.textContent=m;setTimeout(()=>btn.textContent="Copy",1600);};
+  try{navigator.clipboard.writeText(t).then(()=>done("Copied"),()=>{selectText();done("Selected");});}
+  catch(e){selectText();done("Selected");}
+  function selectText(){const r=document.createRange();r.selectNodeContents($("#emailText"));const s=getSelection();s.removeAllRanges();s.addRange(r);}
+});
+
+/* ---------- Active nav ---------- */
+const links=$$(".nav a");
+if("IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id));}});},{rootMargin:"-45% 0px -50% 0px"});
+  ["funnel","cases","shipped","earlier","ai","how"].forEach(id=>{const el=document.getElementById(id);if(el)io.observe(el);});
+}
+})();
+</script>
+</body>
+</html>
