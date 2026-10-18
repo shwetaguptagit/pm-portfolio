@@ -403,7 +403,7 @@ button.shot{display:block;width:100%}
 .tech span{font-size:13px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
 
 /* ---------- how I work ---------- */
-.loop{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:s}
+.loop{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;counter-reset:s}
 .loop > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
 .loop > div::before{counter-increment:s;content:counter(s);font-family:var(--f-mono);font-size:12px;color:var(--accent);border:1px solid var(--accent);border-radius:50%;width:24px;height:24px;display:grid;place-items:center;margin-bottom:12px}
 .loop h3{font-size:19px;font-weight:700}
@@ -474,10 +474,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .pipe span{font-size:clamp(12px,1.5cqi,20px);font-weight:600;padding:1.1cqi 1.6cqi;border-radius:1cqi;background:var(--accent-soft);color:var(--accent-deep)}
 .pipe span.gate{background:var(--mid-soft);color:var(--mid);outline:1.5px solid var(--mid)}
 .pipe i{font-style:normal;color:var(--muted);font-size:clamp(12px,1.6cqi,22px)}
-.cycle{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4cqi;width:100%;position:relative}
+.cycle{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:1.4cqi;width:100%;position:relative}
 .cycle div{border:1px solid var(--line);background:var(--bg);border-radius:1.4cqi;padding:2cqi;min-width:0;position:relative}
-.cycle div:nth-child(-n+3)::after{content:"→";position:absolute;right:-1.3cqi;top:50%;transform:translate(50%,-50%);color:var(--accent);font-size:clamp(14px,2cqi,26px);z-index:1}
-.cycle b{font-family:var(--f-display);font-size:clamp(15px,2.1cqi,28px);display:block;line-height:1.15}
+.cycle div:not(:nth-last-child(2))::after{content:"→";position:absolute;right:-1.3cqi;top:50%;transform:translate(50%,-50%);color:var(--accent);font-size:clamp(14px,2cqi,26px);z-index:1}
+.cycle b{font-family:var(--f-display);font-size:clamp(14px,1.75cqi,25px);display:block;line-height:1.15}
+.cycle em{display:block;font-style:normal;font-size:clamp(11px,1.2cqi,17px);color:var(--ink);margin-top:1cqi;padding-top:.8cqi;border-top:1px dashed var(--line);line-height:1.35}
 .cycle span{font-size:clamp(11.5px,1.4cqi,19px);color:var(--muted);display:block;margin-top:.6cqi}
 .cycle .n{font-family:var(--f-mono);font-size:max(10.5px,1.1cqi);color:var(--accent);display:block;margin-bottom:.6cqi}
 .loopback{grid-column:1/-1;text-align:center;font-family:var(--f-mono);font-size:max(11px,1.2cqi);color:var(--muted);border-top:1.5px dashed var(--line);padding-top:1cqi}
@@ -497,18 +498,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .days div{border-top:3px solid var(--accent);padding-top:1cqi;font-size:clamp(12px,1.45cqi,20px)}
 .days b{font-family:var(--f-mono);font-size:max(11px,1.2cqi);color:var(--accent);display:block;letter-spacing:.06em}
 .slide .stack{display:grid;gap:2cqi;width:100%}
-.p-funnel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:3cqi;width:100%;align-items:center}
-.p-funnel .funnel{gap:.6cqi}
-.p-funnel .fl{min-height:6.2cqi;padding:.8cqi 10%}
-.p-funnel .fl .s{font-size:clamp(13px,1.8cqi,24px)}
-.p-funnel .fl .k{font-size:max(10.5px,1.15cqi)}
-.p-detail{min-width:0}
-.p-detail h3{font-size:clamp(18px,2.6cqi,36px)}
-.p-detail .need{color:var(--muted);font-size:clamp(12px,1.5cqi,20px);margin-top:.6cqi}
-.p-detail ul{list-style:none;margin:2cqi 0 0;padding:0;display:grid;gap:1.4cqi}
-.p-detail li{border-left:3px solid var(--accent);padding-left:1.4cqi;font-size:clamp(12.5px,1.55cqi,21px)}
-.p-detail li b{font-family:var(--f-display);color:var(--accent);font-size:clamp(16px,2.4cqi,32px);display:block;line-height:1.1}
-.p-detail li span{color:var(--muted)}
 .title-slide{justify-content:center}
 .title-slide h1{font-size:clamp(34px,6.4cqi,92px);font-weight:750;margin-top:1.2cqi}
 .title-slide .sub{font-size:clamp(16px,2.3cqi,32px);color:var(--ink);max-width:30ch}
@@ -533,7 +522,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   .slide{position:relative;inset:auto;padding:22px 20px 26px}
   .slide h2{font-size:24px}.slide .sub{font-size:15px}
   .slide .body{margin-top:18px}
-  .s-cols,.p-funnel{grid-template-columns:1fr;gap:18px}
+  .s-cols{grid-template-columns:1fr;gap:18px}
   .tiles{grid-template-columns:1fr 1fr}
   .tile{padding:12px;border-radius:12px}.tile .v{font-size:22px}.tile .l{font-size:13px}
   .big{font-size:56px}.big-l{font-size:15px}
@@ -544,14 +533,171 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   .journey .pr{margin:0;font-size:13px}.journey .pr b{font-size:17px}
   .days{grid-template-columns:1fr;gap:10px;margin-top:16px}.days div{font-size:14px}
   .pipe span{padding:8px 11px;font-size:13.5px;border-radius:8px}
-  .p-funnel .fl{min-height:56px}.p-funnel .fl .s{font-size:15px}
-  .p-detail h3{font-size:20px}.p-detail li{font-size:14px}.p-detail li b{font-size:19px}
   .hbar{font-size:13px;grid-template-columns:40% 1fr}.hbar .t{height:26px}.hbar .f{font-size:12px}
   .title-slide h1{font-size:40px}.title-slide .sub{font-size:18px}
   .contact-row span{font-size:14px;padding:8px 14px}
   .slide .foot{font-size:12.5px}
 }
 
+/* ---------- presentation: funnel hub ---------- */
+.slide.hub{padding:3.4cqi 4.6cqi 2.6cqi}
+.hub h2{font-size:clamp(20px,3cqi,42px);margin-top:.6cqi;max-width:none}
+.hub-sub{font-size:clamp(12px,1.3cqi,18px);color:var(--muted);margin-top:.6cqi}
+.hub-sub button{all:unset;cursor:pointer;color:var(--accent);font-weight:600;white-space:nowrap}
+.hub-sub button:hover{text-decoration:underline;text-underline-offset:3px}
+.hub-sub button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hub-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:3.6cqi;margin-top:2.2cqi;flex:1;min-height:0;align-items:start}
+.hfun{display:grid;gap:.55cqi}
+.band{all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1cqi;padding:.6cqi 2.6cqi;min-height:5cqi;clip-path:polygon(0 0,100% 0,calc(100% - 1.3cqi) 100%,1.3cqi 100%);transition:opacity .2s,transform .2s,filter .2s}
+.band .bn{font-family:var(--f-display);font-weight:700;font-size:clamp(12.5px,1.55cqi,22px);line-height:1.1;white-space:nowrap}
+.band .bn i{font-style:normal;font-family:var(--f-mono);font-weight:500;font-size:.68em;opacity:.8;margin-right:.7cqi}
+.band .bm{font-family:var(--f-mono);font-size:max(10px,1.05cqi);text-align:right;white-space:nowrap;opacity:.95}
+.band:nth-child(1){background:var(--f1);color:var(--f-ink-light)}
+.band:nth-child(2){background:var(--f2);color:var(--f-ink-light);margin-inline:1.3cqi}
+.band:nth-child(3){background:var(--f3);color:var(--f-ink-light);margin-inline:2.6cqi}
+.band:nth-child(4){background:var(--f4);color:var(--f-ink-dark);margin-inline:3.9cqi}
+.band:nth-child(5){background:var(--f5);color:var(--f-ink-dark);margin-inline:5.2cqi}
+.band.ai{clip-path:none;background:var(--surface);color:var(--ink);border:1.5px dashed var(--accent);border-radius:1cqi;margin-top:.9cqi}
+.band.ai .bm{color:var(--accent)}
+.hfun.sel .band[aria-selected="false"]{opacity:.62}
+.band:hover{opacity:1!important;filter:brightness(1.05)}
+.band[aria-selected="true"]{transform:scale(1.03)}
+.band.ai[aria-selected="true"]{background:var(--accent-soft);border-style:solid}
+.band:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.hpanel{min-width:0;display:grid;gap:1cqi;align-content:start}
+.hpanel .pn{font-family:var(--f-mono);font-size:max(10.5px,1.05cqi);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.hpanel h3{font-size:clamp(18px,2.5cqi,36px)}
+.hpanel .need{color:var(--muted);font-size:clamp(12px,1.35cqi,19px);margin-top:-.5cqi}
+.hpanel .reveal{animation:none}
+.cap{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:1.2cqi;border:1px solid var(--line);background:var(--bg);border-radius:2.4cqi;padding:1cqi 1.1cqi 1cqi 2cqi;min-width:0;transition:border-color .15s,background .15s,transform .15s}
+.cap > span:first-child{min-width:0}
+.cap .ct{display:block;font-size:clamp(11.5px,1.25cqi,18px);color:var(--ink);line-height:1.3}
+.cap .cm{display:block;font-family:var(--f-display);font-weight:700;color:var(--accent);font-size:clamp(13px,1.65cqi,23px);line-height:1.2;margin-top:.2cqi}
+.cap .go{flex:none;width:2.8cqi;height:2.8cqi;min-width:22px;min-height:22px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:max(11px,1.3cqi);font-weight:700}
+button.cap{cursor:pointer}
+button.cap:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateX(2px)}
+button.cap:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.cap.visited .go{background:var(--ok);color:var(--surface)}
+.cap.static{border-style:dashed;padding-right:2cqi}
+.cap.static .cm{color:var(--muted)}
+
+/* ---------- presentation: career and Condé intro ---------- */
+.career{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6cqi;width:100%;position:relative}
+.career::before{content:"";position:absolute;left:.9cqi;right:0;top:4.4cqi;height:2px;background:linear-gradient(90deg,var(--f5),var(--f1))}
+.stop{position:relative;min-width:0;display:flex;flex-direction:column}
+.stop .dom{align-self:flex-start;font-family:var(--f-mono);font-size:max(10px,1cqi);letter-spacing:.06em;text-transform:uppercase;padding:.3cqi .9cqi;border-radius:999px;background:var(--accent-soft);color:var(--accent-deep);margin-bottom:3.2cqi;white-space:nowrap}
+.stop::before{content:"";position:absolute;top:3.6cqi;left:0;width:1.8cqi;height:1.8cqi;min-width:12px;min-height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent);box-sizing:border-box}
+.stop.now::before{background:var(--accent)}
+.stop .y{font-family:var(--f-mono);font-size:max(10.5px,1.05cqi);color:var(--muted)}
+.stop .c{font-family:var(--f-display);font-weight:750;font-size:clamp(15px,2cqi,28px);line-height:1.15;margin-top:.3cqi}
+.stop .r{font-size:clamp(11.5px,1.2cqi,17px);color:var(--muted)}
+.stop .w{margin-top:1.4cqi;border-top:1px dashed var(--line);padding-top:1cqi}
+.stop .w b{display:block;font-family:var(--f-display);font-weight:750;color:var(--accent);font-size:clamp(16px,2.2cqi,30px);line-height:1.1}
+.stop .w span{display:block;font-size:clamp(11.5px,1.2cqi,17px);margin-top:.3cqi;line-height:1.35}
+.stop.now .c{color:var(--accent-deep)}
+.cn-grid{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:3.6cqi;align-items:center;width:100%}
+.cn-logos img{width:100%;max-height:30cqi;object-fit:contain;border-radius:1.4cqi}
+.cn-role{border-left:3px solid var(--accent);padding:.4cqi 0 .4cqi 1.6cqi;font-size:clamp(13px,1.5cqi,21px);line-height:1.45}
+.jgroups{display:grid;grid-template-columns:2fr 3fr;gap:1.6cqi;font-family:var(--f-mono);font-size:max(10.5px,1.05cqi);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.jgroups span{border-top:3px solid var(--f2);padding-top:.6cqi}
+.jgroups span:last-child{border-color:var(--f4)}
+.jstrip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1.6cqi;width:100%;align-items:end}
+.jstrip figure{margin:0;text-align:center;min-width:0}
+.jstrip img{height:23cqi;width:auto;max-width:100%;margin:0 auto;border-radius:1.4cqi;border:1px solid var(--line);box-shadow:var(--shadow);object-fit:cover;object-position:top;background:#fff}
+.jstrip figcaption{margin-top:.8cqi}
+.jstrip figcaption b{display:block;font-size:clamp(12px,1.35cqi,19px)}
+.jstrip figcaption span{display:block;font-size:max(10.5px,1.05cqi);color:var(--muted)}
+@media (max-width:760px){
+  .slide.hub{padding:20px 18px 24px}
+  .hub h2{font-size:23px}.hub-sub{font-size:13.5px}
+  .hub-grid{grid-template-columns:minmax(0,1fr);gap:16px;margin-top:16px}
+  .band{min-height:50px;padding:7px 22px;flex-direction:column;justify-content:center;gap:1px;text-align:center}
+  .band .bn{font-size:15px}.band .bm{font-size:11.5px;text-align:center}
+  .band:nth-child(2){margin-inline:10px}.band:nth-child(3){margin-inline:20px}.band:nth-child(4){margin-inline:30px}.band:nth-child(5){margin-inline:40px}
+  .band.ai{border-radius:10px}
+  .hpanel{gap:8px}.hpanel h3{font-size:20px}.hpanel .pn{font-size:11.5px}.hpanel .need{font-size:14px;margin:0}
+  .career{grid-template-columns:1fr;gap:14px;padding-left:22px}
+  .career::before{left:5px;right:auto;top:6px;bottom:6px;width:2px;height:auto;background:linear-gradient(180deg,var(--f5),var(--f1))}
+  .stop .dom{margin-bottom:4px;font-size:10.5px;padding:2px 8px}
+  .stop::before{top:4px;left:-22px;width:12px;height:12px}
+  .stop .y{font-size:11.5px}.stop .c{font-size:18px}.stop .r{font-size:13px}
+  .stop .w{margin-top:6px;padding-top:6px}.stop .w b{font-size:18px}.stop .w span{font-size:13px}
+  .cn-grid{grid-template-columns:1fr;gap:16px}
+  .cn-logos img{max-height:240px}
+  .cn-role{font-size:14.5px;padding-left:12px}
+  .jgroups{display:none}
+  .jstrip{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:46%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;gap:12px}
+  .jstrip figure{scroll-snap-align:start}
+  .jstrip img{height:260px;border-radius:12px}
+  .jstrip figcaption b{font-size:14px}.jstrip figcaption span{font-size:12px}
+}
+
+/* ---------- presentation: story slides ---------- */
+.slide.detail{padding:3.6cqi 5cqi 3cqi}
+.detail .top{display:flex;align-items:center;gap:1.4cqi;flex-wrap:wrap}
+.detail .back{all:unset;cursor:pointer;font-size:max(12px,1.15cqi);font-weight:600;color:var(--accent);padding:.5cqi 1.3cqi;border:1px solid var(--accent);border-radius:999px;background:var(--surface);white-space:nowrap}
+.detail .back:hover{background:var(--accent-soft)}
+.detail .back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.detail h2{font-size:clamp(20px,3.2cqi,46px);margin-top:1.4cqi}
+.detail .body{margin-top:1.8cqi}
+.d-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:3.2cqi;width:100%;align-items:center}
+.slide .stack{gap:1.6cqi}
+.d-pts{list-style:none;margin:0;padding:0;display:grid;gap:.9cqi}
+.d-pts li{font-size:clamp(12.5px,1.45cqi,20px);padding-left:2cqi;position:relative;line-height:1.4}
+.d-pts li::before{content:"";position:absolute;left:0;top:.55em;width:.8cqi;height:.8cqi;min-width:6px;min-height:6px;border-radius:50%;background:var(--accent)}
+.d-pts b{font-weight:650}
+.d-img{display:flex;gap:1.2cqi;justify-content:center;align-items:flex-start;min-width:0}
+.d-img img{max-height:31cqi;width:auto;max-width:100%;min-width:0;border-radius:1cqi;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.d-img.wide img{max-height:none;width:100%}
+.d-img img:only-child{max-height:33cqi}
+.d-insight b{display:block;font-family:var(--f-display);font-weight:750;color:var(--accent);font-size:clamp(34px,6.4cqi,92px);line-height:1}
+.d-insight span{display:block;font-size:clamp(13px,1.6cqi,22px);margin-top:.6cqi;max-width:28ch}
+.d-label{font-family:var(--f-mono);font-size:max(10.5px,1.05cqi);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.d-note{font-size:clamp(12px,1.35cqi,19px);color:var(--muted);margin-top:1cqi}
+.d-seg{border:1px solid var(--line);border-left:3px solid var(--line);border-radius:.8cqi;padding:1cqi 1.4cqi;background:var(--bg)}
+.d-seg.hi{border-left-color:var(--accent);background:var(--accent-soft)}
+.d-seg b{display:block;font-size:clamp(12.5px,1.45cqi,20px)}
+.d-seg span{display:block;font-size:clamp(11.5px,1.3cqi,18px);color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.7cqi}
+.chips span{font-size:max(11px,1.15cqi);padding:.45cqi 1.1cqi;border-radius:999px;background:var(--sunk);border:1px solid var(--line)}
+.slide .tiles .tile{padding:1.5cqi}
+.detail .tile .v{font-size:clamp(17px,2.7cqi,38px)}
+.detail .tile .l{font-size:clamp(11.5px,1.25cqi,17px)}
+.slide .rubric-bar{height:3.2cqi;min-height:24px;margin-top:.6cqi;border-radius:.8cqi}
+.slide .rubric-bar span{font-size:max(10px,1cqi)}
+.layers-mini{display:grid;gap:.6cqi}
+.layers-mini div{display:grid;grid-template-columns:28% 1fr;gap:1cqi;align-items:center;border:1px solid var(--line);border-radius:.8cqi;padding:.8cqi 1.2cqi;background:var(--bg);font-size:clamp(12px,1.3cqi,18px)}
+.layers-mini div:nth-child(2){margin-left:1.4cqi}.layers-mini div:nth-child(3){margin-left:2.8cqi}.layers-mini div:nth-child(4){margin-left:4.2cqi;border-color:var(--accent);background:var(--accent-soft)}
+.layers-mini b{font-family:var(--f-display)}
+.layers-mini span{color:var(--muted)}
+#homeBtn{border-color:var(--line)}
+#homeBtn.primary{border-color:var(--accent)}
+.deck.in-detail .dots{visibility:hidden}
+@media (max-width:760px){
+  .slide.detail{padding:20px 18px 24px}
+  .detail h2{font-size:23px}
+  .detail .back{font-size:13.5px;padding:7px 14px}
+  .detail .body{margin-top:14px}
+  .d-grid{grid-template-columns:1fr;gap:18px}
+  .slide .stack{gap:14px}
+  .d-pts li{font-size:14.5px;padding-left:16px}
+  .d-img img,.d-img img:only-child{max-height:300px}
+  .d-insight b{font-size:52px}.d-insight span{font-size:15px}
+  .d-label{font-size:11.5px}.d-note{font-size:14px}
+  .d-seg{padding:10px 12px;border-radius:10px}.d-seg b{font-size:14.5px}.d-seg span{font-size:13.5px}
+  .chips span{font-size:12.5px;padding:5px 10px}
+  .detail .tile .v{font-size:21px}.detail .tile .l{font-size:12.5px}
+  .layers-mini div{font-size:13.5px;padding:8px 10px;border-radius:10px}
+  .layers-mini div:nth-child(n){margin-left:0}
+}
+
+.brand .avatar-sm{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1.5px solid var(--line);flex:none}
+.hero-id{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.hero-id img{width:72px;height:72px;border-radius:50%;object-fit:cover;box-shadow:var(--shadow);border:3px solid var(--surface);flex:none}
+.hero-id b{display:block;font-family:var(--f-display);font-weight:700;font-size:20px;line-height:1.2}
+.hero-id span{color:var(--muted);font-size:14.5px}
+.title-photo{position:absolute;right:7cqi;top:50%;transform:translateY(-50%);width:27cqi;height:27cqi;border-radius:50%;object-fit:cover;box-shadow:var(--shadow);border:.6cqi solid var(--surface)}
+@media (max-width:760px){.title-photo{position:static;transform:none;width:112px;height:112px;border-width:4px;order:-1;margin-bottom:14px}}
 /* lightbox */
 dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,980px);max-height:92vh}
 dialog.lb::backdrop{background:rgba(8,12,22,.84)}
@@ -566,7 +712,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
 
 <header class="bar">
   <div class="wrap">
-    <a class="brand" href="#top" data-view-link="portfolio"><span class="mark" aria-hidden="true">SG</span>Shweta Gupta</a>
+    <a class="brand" href="#top" data-view-link="portfolio"><img class="avatar-sm" src="img/profile-sm.jpg" alt="" width="32" height="32">Shweta Gupta</a>
     <div class="views" role="tablist" aria-label="View">
       <button role="tab" id="tab-portfolio" aria-controls="portfolio" aria-selected="true">Portfolio</button>
       <button role="tab" id="tab-present" aria-controls="present" aria-selected="false">Presentation</button>
@@ -596,6 +742,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
+      <div class="hero-id"><img src="img/profile.jpg" alt="Watercolour portrait of Shweta Gupta" width="72" height="72"><div><b>Shweta Gupta</b><span>Bangalore, India</span></div></div>
       <div class="eyebrow">Senior Product Manager · B2C Growth &amp; Subscriptions</div>
       <h1>I grow consumer subscription products, <em>from first visit to renewal.</em></h1>
       <p class="lede">12+ years building B2C products at Condé Nast, Victoria's Secret and Oneindia. I use user research and behavioural data to find where people drop off, run experiments to prove the fix, and ship it across web and mobile.</p>
@@ -604,7 +751,6 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         <button class="btn ghost" type="button" data-open-present>View the presentation</button>
       </div>
       <div class="who">
-        <span><b>Based in</b> Bangalore, India</span>
         <span><b>Works</b> remote, with global teams</span>
         <span><b>Led</b> 2 squads of 15+ people</span>
       </div>
@@ -1106,10 +1252,12 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
       <p>The same loop runs through all of my work, from a paywall test to a new platform.</p>
     </div>
     <div class="loop">
-      <div><h3>Find the gap</h3><p>Funnel data, session behaviour, user interviews, support tickets and reviews.</p><p class="eg">46% never saw the button, so the fix was clarity, not more copy.</p></div>
-      <div><h3>Decide what matters</h3><p>Size the opportunity, agree success metrics, and cut scope to what proves the idea.</p><p class="eg">Kept cross-device matching out of v1 to remove a team dependency.</p></div>
-      <div><h3>Prove it</h3><p>A/B tests with a clean control, and guardrails so one metric doesn't win at another's cost.</p><p class="eg">Measured subscriptions, ads and sign-ups together.</p></div>
-      <div><h3>Ship and scale</h3><p>Reusable components and self-serve tools, so one win reaches every brand and market.</p><p class="eg">Campaign launches went from 2 weeks to minutes.</p></div>
+      <div><h3>Find the gap</h3><p>Why build it? Funnel data, user research, support tickets and reviews.</p><p class="eg">46% never saw the button, so the fix was clarity, not more copy.</p></div>
+      <div><h3>Define &amp; design</h3><p>What problem, for whom, and how we'll measure success.</p><p class="eg">Set success metrics across subscriptions, ads and sign-ups.</p></div>
+      <div><h3>Prioritise</h3><p>Pick the MVP: weigh impact against effort, risks and dependencies.</p><p class="eg">Held back international print gifting to launch before the holidays.</p></div>
+      <div><h3>Build &amp; test</h3><p>Ship in small steps and A/B test against a clean control.</p><p class="eg">Propensity score proven against a control campaign: +8% revenue.</p></div>
+      <div><h3>Launch</h3><p>Pilot first, train teams, and coordinate go-to-market.</p><p class="eg">Partner platform piloted with Klarna and Verizon.</p></div>
+      <div><h3>Scale</h3><p>Measure, improve, and roll out with reusable, self-serve tools.</p><p class="eg">Campaign launches went from 2 weeks to minutes.</p></div>
     </div>
     <h3 style="font-size:24px;margin-top:48px">What didn't work, and what I learned</h3>
     <div class="lessons">
@@ -1150,52 +1298,199 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
     <div class="deck" id="deck" aria-roledescription="presentation">
       <div class="stage" id="stage">
 
-        <section class="slide title-slide" data-title="Introduction">
+        <!-- ================= MAIN SLIDES (linear) ================= -->
+        <section class="slide title-slide" data-main data-title="Introduction">
+          <img class="title-photo" src="img/profile.jpg" alt="Watercolour portrait of Shweta Gupta">
           <div class="tag">Senior Product Manager · B2C Growth &amp; Subscriptions</div>
           <h1>Shweta Gupta</h1>
           <p class="sub">I turn first visits into daily habits and paying subscribers.</p>
-          <div class="tiles" style="--n:4">
-            <div class="tile"><div class="v">12+ yrs</div><div class="l">B2C consumer products</div></div>
-            <div class="tile"><div class="v">~$100M</div><div class="l">subscription business owned</div></div>
-            <div class="tile"><div class="v">3×</div><div class="l">YoY new subscribers</div></div>
-            <div class="tile"><div class="v">2.2M</div><div class="l">active subscribers</div></div>
-          </div>
-          <div class="cos">CONDÉ NAST · VICTORIA'S SECRET · ONEINDIA</div>
+          <div class="cos">CONDÉ NAST · VICTORIA'S SECRET · ONEINDIA · 12+ YEARS IN B2C</div>
+          <button class="btn primary" type="button" data-go-next style="margin-top:4cqi;align-self:flex-start">Start →</button>
         </section>
 
-        <section class="slide" data-title="The journey I own" hidden>
-          <div class="tag">01 · The journey I own</div>
-          <h2>One owner, from first visit to renewal</h2>
+        <section class="slide" data-main data-title="Career journey" hidden>
+          <div class="tag">Career journey · 12+ years in B2C</div>
+          <h2>From ad tech to apps, <span style="white-space:nowrap">e-commerce</span> and subscriptions</h2>
           <div class="body">
-            <div class="p-funnel">
-              <div><div class="funnel" role="tablist" aria-label="Funnel stages" id="funnelDeck"></div></div>
-              <div class="p-detail" id="deckDetail" aria-live="polite"></div>
+            <div class="career">
+              <div class="stop"><span class="dom">Ad tech</span><span class="y">2014 – 2015</span><span class="c">Inuxu</span><span class="r">Product Manager</span><div class="w"><b>2×</b><span>advertiser conversion from dynamic remarketing</span></div></div>
+              <div class="stop"><span class="dom">Consumer apps</span><span class="y">2015 – 2018</span><span class="c">Oneindia</span><span class="r">Senior PM, mobile &amp; web</span><div class="w"><b>#130 → Top 3</b><span>Play Store rank, 60%+ new users</span></div></div>
+              <div class="stop"><span class="dom">E-commerce</span><span class="y">2018 – 2021</span><span class="c">Victoria's Secret</span><span class="r">PM, e-commerce</span><div class="w"><b>+9%</b><span>bundle-to-cart from a guided bundle builder</span></div></div>
+              <div class="stop now"><span class="dom">Subscriptions</span><span class="y">2021 – 2026</span><span class="c">Condé Nast</span><span class="r">Senior PM, subscriptions</span><div class="w"><b>3×</b><span>YoY new starts on a ~$100M business</span></div></div>
             </div>
           </div>
-          <div class="foot">Select a stage to see the proof.</div>
+          <div class="foot">Led 2 squads of 15+ · mentored an APM and a PM · MBA, IT &amp; Marketing (Silver Medalist)<br>Side project: FirstLight Careers, an AI job-prep app I built and shipped solo on the Claude API.</div>
         </section>
 
-        <section class="slide" data-title="Conversion" hidden>
-          <div class="tag">02 · Convert</div>
-          <h2>Clarity beat persuasion</h2>
+        <section class="slide" data-main data-title="Condé Nast at a glance" hidden>
+          <div class="tag">Condé Nast · 2021 – 2026</div>
+          <h2>A global media company, one subscription business</h2>
           <div class="body">
-            <div class="s-cols">
-              <div><div class="big">46%</div><p class="big-l">of users never scrolled far enough to see the button.</p><p class="sub" style="margin-top:2cqi">So we removed content instead of adding it.</p></div>
-              <div class="hbars" aria-label="Uplift after the redesign">
-                <div class="hbar"><span>Checkout conversion</span><div class="t"><div class="f" style="width:93%">+28%</div></div></div>
-                <div class="hbar"><span>Mobile paywall conversion</span><div class="t"><div class="f" style="width:70%">+21%</div></div></div>
-                <div class="hbar"><span>Card conversion</span><div class="t"><div class="f" style="width:63%">+19%</div></div></div>
-                <div class="hbar"><span>Post-purchase revenue</span><div class="t"><div class="f" style="width:53%">+16%</div></div></div>
+            <div class="cn-grid">
+              <div class="cn-logos"><img src="img/cn-brands.jpg" alt="Condé Nast brands: The New Yorker, WIRED, Bon Appétit, Epicurious, Vanity Fair, GQ, Vogue, Pitchfork, Condé Nast Traveler, AD" loading="lazy"></div>
+              <div class="stack">
+                <div class="tiles" style="--n:2">
+                  <div class="tile"><div class="v">~$100M</div><div class="l">subscription business (ARR)</div></div>
+                  <div class="tile"><div class="v">2.2M</div><div class="l">active subscribers</div></div>
+                  <div class="tile"><div class="v">9+ / 12+</div><div class="l">brands / markets</div></div>
+                  <div class="tile"><div class="v">3×</div><div class="l">YoY new starts</div></div>
+                </div>
+                <div class="cn-role"><b>My role:</b> Senior PM for subscriptions. I owned the consumer funnel, from the first paywall to renewal, across every brand.</div>
               </div>
             </div>
           </div>
-          <div class="foot">Checkout 2.0 · INMA Award, Best Product Iteration · bars to scale, 0–30%</div>
         </section>
 
-        <section class="slide" data-title="Personalisation" hidden>
-          <div class="tag">03 · Personalise</div>
-          <h2>The right ask for each user</h2>
-          <p class="sub">An ML score picks what each visitor sees.</p>
+        <section class="slide" data-main data-title="The journey I owned" hidden>
+          <div class="tag">Condé Nast · what readers see</div>
+          <h2>The subscription journey I owned</h2>
+          <div class="body">
+            <div class="stack">
+              <div class="jgroups"><span>Before purchase</span><span>After purchase</span></div>
+              <div class="jstrip">
+                <figure><img src="img/cn-vogue-paywall.jpg" alt="Vogue article paywall" loading="lazy"><figcaption><b>Paywall</b><span>Vogue</span></figcaption></figure>
+                <figure><img src="img/cn-tny-offer.gif" alt="The New Yorker offer page" loading="lazy"><figcaption><b>Offer &amp; checkout</b><span>The New Yorker</span></figcaption></figure>
+                <figure><img src="img/cn-upsell.jpg" alt="Vogue post-purchase upsell" loading="lazy"><figcaption><b>Upsell</b><span>Vogue</span></figcaption></figure>
+                <figure><img src="img/cn-confirmation.jpg" alt="Vogue confirmation page" loading="lazy"><figcaption><b>Confirmation</b><span>Vogue</span></figcaption></figure>
+                <figure><img src="img/cn-email.jpg" alt="Vogue Business welcome email" loading="lazy"><figcaption><b>Welcome email</b><span>Vogue Business</span></figcaption></figure>
+              </div>
+            </div>
+          </div>
+          <div class="foot">Every screen here sits in the funnel that follows.</div>
+        </section>
+
+        <section class="slide hub" data-main data-hub data-title="The funnel" hidden>
+          <div class="tag">Condé Nast and earlier roles · B2C growth</div>
+          <h2>Acquisition to retention &amp; revenue</h2>
+          <p class="hub-sub">~$100M subscription business · 2.2M active subscribers · 12+ markets, 9+ brands · <button type="button" data-open="platform">How the platform works →</button></p>
+          <div class="hub-grid">
+            <div class="hfun" role="tablist" aria-label="Funnel stages" id="hubFunnel"></div>
+            <div class="hpanel" id="hubPanel" role="tabpanel" aria-live="polite"></div>
+          </div>
+          <div class="foot">Pick a stage, then open a story · ↑ ↓ switch stages</div>
+        </section>
+
+        <section class="slide" data-main data-title="How I work" hidden>
+          <div class="tag">How I work</div>
+          <h2>Find the gap. Prove the fix. Scale it.</h2>
+          <div class="body">
+            <div class="cycle" style="--n:6">
+              <div><span class="n">1</span><b>Find the gap</b><span>Why build it? Data, research, reviews</span><em>46% never saw the button</em></div>
+              <div><span class="n">2</span><b>Define &amp; design</b><span>What, for whom, how we measure it</span><em>Success metrics across 3 revenue lines</em></div>
+              <div><span class="n">3</span><b>Prioritise</b><span>The MVP first: impact vs effort and risk</span><em>Held back international print gifting to make the holidays</em></div>
+              <div><span class="n">4</span><b>Build &amp; test</b><span>Small releases, A/B test against a control</span><em>+8% revenue vs the control</em></div>
+              <div><span class="n">5</span><b>Launch</b><span>Pilot, train teams, go to market</span><em>Klarna and Verizon pilots</em></div>
+              <div><span class="n">6</span><b>Scale</b><span>Measure, improve, roll out everywhere</span><em>Campaign launches: 2 weeks → minutes</em></div>
+              <p class="loopback">↺ Each launch shows the next gap</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide thanks" data-main data-title="Thank you" hidden>
+          <div class="tag">Thank you</div>
+          <div class="body" style="align-items:center">
+            <div>
+              <h2>Questions?</h2>
+              <p class="sub">Happy to go deeper on any of this.</p>
+              <div class="contact-row"><span>shwets.gpt1011@gmail.com</span><span>linkedin.com/in/shweta-gupta-5619b555</span><span>shwetaguptagit.github.io/pm-portfolio</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= DETAIL SLIDES (open from a capsule) ================= -->
+        <section class="slide detail" data-detail="checkout" data-title="Paywall &amp; checkout" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">01 Acquisition · Paywall &amp; checkout</span></div>
+          <h2>Clarity beat persuasion</h2>
+          <div class="body">
+            <div class="d-grid">
+              <div class="stack">
+                <div class="d-insight"><b>46%</b><span>of users never scrolled far enough to see the button. They were confused, not unconvinced.</span></div>
+                <ul class="d-pts">
+                  <li>Cut the offer page to what makes each plan different, with <b>one button always visible</b>.</li>
+                  <li>Added an <b>FAQ</b> built from real support questions.</li>
+                  <li>On mobile paywalls: <b>value first, quick pay second</b>.</li>
+                </ul>
+                <div class="tiles" style="--n:4">
+                  <div class="tile"><div class="v">+28%</div><div class="l">checkout conversion</div></div>
+                  <div class="tile"><div class="v">+21%</div><div class="l">mobile paywall conversion</div></div>
+                  <div class="tile"><div class="v">+164%</div><div class="l">benefits seen</div></div>
+                  <div class="tile"><div class="v">+54%</div><div class="l">FAQ readers moving on</div></div>
+                </div>
+              </div>
+              <div class="d-img wide"><img src="img/cn-checkout2.gif" alt="The New Yorker offer page before and after the redesign" loading="lazy"></div>
+            </div>
+          </div>
+          <div class="foot">INMA Award, Best Product Iteration · The New Yorker: new subscribers +26%, revenue +18%</div>
+        </section>
+
+        <section class="slide detail" data-detail="oneindia" data-title="Oneindia app rebuild" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">01 Acquisition · Oneindia app rebuild</span></div>
+          <h2>News in 60 seconds, in 9 languages</h2>
+          <div class="body">
+            <div class="d-grid">
+              <div class="stack">
+                <ul class="d-pts">
+                  <li>Rebuilt the native <b>Android and iOS</b> apps around short news: 60 to 70 words a story.</li>
+                  <li><b>Nine languages</b>, with alerts in the reader's chosen languages.</li>
+                  <li><b>Offline reading</b> and data-saving images for India's mobile users.</li>
+                </ul>
+                <div class="tiles" style="--n:2">
+                  <div class="tile"><div class="v">60%+</div><div class="l">new user growth</div></div>
+                  <div class="tile"><div class="v">#130 → 3</div><div class="l">Play Store rank</div></div>
+                  <div class="tile"><div class="v">+153%</div><div class="l">retention</div></div>
+                  <div class="tile"><div class="v">250%+</div><div class="l">monthly page views</div></div>
+                </div>
+              </div>
+              <div class="d-img"><img src="img/oi-shortnews.jpg" alt="60secondsnow short news screen" loading="lazy"><img src="img/oi-multilanguage-dark.jpg" alt="60secondsnow language picker" loading="lazy"><img src="img/oi-offline.jpg" alt="60secondsnow offline reading" loading="lazy"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide detail" data-detail="confirmation" data-title="Confirmation page revamp" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">02 Activation · Confirmation page</span></div>
+          <h2>Get new subscribers using what they paid for</h2>
+          <div class="body">
+            <div class="d-grid">
+              <div class="stack">
+                <div class="hbars">
+                  <p class="d-label">Click-through to the brand site</p>
+                  <div class="hbar"><span>Before</span><div class="t"><div class="f old" style="width:29%">28.8%</div></div></div>
+                  <div class="hbar"><span>After</span><div class="t"><div class="f" style="width:76%">76%</div></div></div>
+                  <p class="d-label">Bounce rate</p>
+                  <div class="hbar"><span>Before</span><div class="t"><div class="f old" style="width:61%">61%</div></div></div>
+                  <div class="hbar"><span>After</span><div class="t"><div class="f" style="width:27%">27%</div></div></div>
+                </div>
+                <ul class="d-pts">
+                  <li><b>One clear next step</b>, then benefits, app and podcast in one place.</li>
+                  <li><b>99% of content pulled dynamically</b>, so it stays current with little upkeep.</li>
+                </ul>
+              </div>
+              <div class="d-img"><img src="img/cn-confirmation.jpg" alt="Vogue confirmation page" loading="lazy"><img src="img/cn-orders.jpg" alt="Vogue membership details" loading="lazy"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide detail" data-detail="emails" data-title="Post-purchase emails" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">02 Activation · Post-purchase emails</span></div>
+          <h2>Emails that remind people what they unlocked</h2>
+          <div class="body">
+            <div class="d-grid">
+              <div class="stack">
+                <div class="pipe"><span>Purchase</span><i>→</i><span>Upsell</span><i>→</i><span>Trial</span><i>→</i><span class="gate">Renewal notice, 35 days before</span></div>
+                <ul class="d-pts">
+                  <li>Owned the <b>trigger logic, design and setup</b> in Sailthru and Iterable.</li>
+                  <li>Failed sends <b>retried automatically</b>; permanent failures logged.</li>
+                  <li>Those logs became the <b>approved business case</b> for email verification.</li>
+                </ul>
+              </div>
+              <div class="d-img"><img src="img/cn-email.jpg" alt="Vogue Business welcome email" loading="lazy"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide detail" data-detail="propensity" data-title="ML propensity score" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">03 Personalisation · Dynamic monetisation</span></div>
+          <h2>The right ask for each visitor</h2>
           <div class="body">
             <div class="stack">
               <div class="tiers">
@@ -1203,125 +1498,212 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
                 <div class="tier"><div class="k">Medium intent</div><div class="h">Free sign-up</div></div>
                 <div class="tier"><div class="k">High intent</div><div class="h">Subscription offer</div></div>
               </div>
-              <div class="tiles" style="--n:2">
-                <div class="tile"><div class="v">+8%</div><div class="l">revenue, proven against a control campaign</div></div>
-                <div class="tile"><div class="v">24% → 39%</div><div class="l">abandoned-cart conversion, native vs vendor</div></div>
+              <div class="d-grid" style="align-items:start">
+                <div class="stack">
+                  <p class="d-label">Signals in the score</p>
+                  <div class="chips"><span>Content category</span><span>Visit frequency</span><span>Page depth</span><span>Traffic source</span></div>
+                  <p class="d-note">Scope call: kept cross-device matching out of v1 to ship faster.</p>
+                </div>
+                <div class="tiles" style="--n:2">
+                  <div class="tile"><div class="v">+8%</div><div class="l">revenue, vs a control campaign</div></div>
+                  <div class="tile"><div class="v">3</div><div class="l">revenue lines measured, none traded off</div></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="slide" data-title="Activation and habit" hidden>
-          <div class="tag">04 · Activate &amp; engage</div>
-          <h2>Show value fast, then build the habit</h2>
+        <section class="slide detail" data-detail="cart" data-title="Abandoned-cart retargeting" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">03 Personalisation · Abandoned cart</span></div>
+          <h2>Win back people who left checkout</h2>
           <div class="body">
-            <div class="s-cols">
-              <div class="hbars">
-                <p style="font-weight:600;font-size:clamp(13px,1.6cqi,22px)">After purchase: click-through to the product</p>
-                <div class="hbar"><span>Before</span><div class="t"><div class="f old" style="width:29%">28.8%</div></div></div>
-                <div class="hbar"><span>After</span><div class="t"><div class="f" style="width:76%">76%</div></div></div>
-                <p class="muted" style="font-size:clamp(12px,1.4cqi,19px)">Bounce rate fell from 61% to 27%.</p>
+            <div class="d-grid">
+              <div class="stack">
+                <div class="hbars">
+                  <p class="d-label">Conversion contribution</p>
+                  <div class="hbar"><span>Vendor tool</span><div class="t"><div class="f old" style="width:48%">24%</div></div></div>
+                  <div class="hbar"><span>Native, mine</span><div class="t"><div class="f" style="width:78%">39%</div></div></div>
+                </div>
+                <div class="chips"><span>"Complete order" nav button</span><span>Banner</span><span>In-article unit</span></div>
               </div>
-              <div class="tiles" style="--n:2">
-                <div class="tile"><div class="v">+153%</div><div class="l">user retention</div><div class="c">Oneindia apps</div></div>
-                <div class="tile"><div class="v">60%+</div><div class="l">new user growth</div><div class="c">Oneindia apps</div></div>
-                <div class="tile"><div class="v">250%+</div><div class="l">monthly page views</div><div class="c">14 languages</div></div>
-                <div class="tile"><div class="v">#130 → 3</div><div class="l">Play Store rank</div><div class="c">Android &amp; iOS</div></div>
+              <div class="stack">
+                <div class="d-seg"><b>~90% only viewed an offer</b><span>Plain reminder. No discount.</span></div>
+                <div class="d-seg hi"><b>~10% changed or progressed an offer</b><span>Sent straight back to that offer, with a countdown discount.</span></div>
               </div>
             </div>
           </div>
+          <div class="foot">Bars to scale, 0–50%</div>
         </section>
 
-        <section class="slide" data-title="Retention and revenue" hidden>
-          <div class="tag">05 · Retain &amp; grow</div>
-          <h2>Keep subscribers, grow their value</h2>
+        <section class="slide detail" data-detail="downgrade" data-title="Auto-downgrade" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">04 Retention &amp; LTV · Involuntary churn</span></div>
+          <h2>Keep subscribers when a payment fails</h2>
           <div class="body">
-            <div class="tiles" style="--n:3">
-              <div class="tile"><div class="v">7%</div><div class="l">of failed-payment subscribers kept with auto-downgrade</div></div>
-              <div class="tile"><div class="v">+28.7%</div><div class="l">order value from a cross-brand bundle</div></div>
-              <div class="tile"><div class="v">+16%</div><div class="l">revenue from post-purchase upsell</div></div>
-              <div class="tile"><div class="v">$600K</div><div class="l">from gift subscriptions in ~8 weeks</div></div>
-              <div class="tile"><div class="v">$5M+</div><div class="l">partner pipeline (Klarna, Verizon)</div></div>
-              <div class="tile"><div class="v">−40%</div><div class="l">discount abuse from offer stacking</div></div>
+            <div class="stack">
+              <div class="pipe"><span>Payment fails</span><i>→</i><span>Retries &amp; reminders</span><i>→</i><span class="gate">Move to a lower tier</span><i>→</i><span>Subscriber kept</span></div>
+              <div class="d-grid">
+                <div class="d-insight"><b>7%</b><span>of failed-payment subscribers kept, who would otherwise have churned.</span></div>
+                <ul class="d-pts">
+                  <li>Built to meet <b>auto-renewal legal rules</b> across markets.</li>
+                  <li>Paired with <b>backup payment method</b> capture.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
-        <section class="slide" data-title="AI products" hidden>
-          <div class="tag">06 · AI products</div>
+        <section class="slide detail" data-detail="ordervalue" data-title="Bundle and upsell" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">04 Retention &amp; LTV · 05 Revenue growth</span></div>
+          <h2>Grow order value at the moment of purchase</h2>
+          <div class="body">
+            <div class="d-grid">
+              <div class="stack">
+                <div class="tiles" style="--n:2">
+                  <div class="tile"><div class="v">+28.7%</div><div class="l">order value from a cross-brand bundle</div></div>
+                  <div class="tile"><div class="v">+16%</div><div class="l">revenue from post-purchase upsell</div></div>
+                </div>
+                <ul class="d-pts">
+                  <li><b>All Access</b>: one bundle across brands, offered at checkout.</li>
+                  <li>Upsell shown <b>right after the first purchase</b>, one tap to add.</li>
+                  <li>Several items, <b>one payment</b>.</li>
+                </ul>
+              </div>
+              <div class="d-img"><img src="img/cn-upsell.jpg" alt="Vogue post-purchase upsell screen" loading="lazy"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide detail" data-detail="gift" data-title="Gift subscriptions" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">05 Revenue growth · Gift subscriptions</span></div>
+          <h2>Gifting, live before the holidays</h2>
+          <div class="body">
+            <div class="d-grid">
+              <div class="d-insight"><b>$600K</b><span>in about 8 weeks, from a new digital and print gifting path.</span></div>
+              <div class="stack">
+                <p class="d-label">The trade-off</p>
+                <div class="d-seg"><b>Fixed: the launch date</b><span>Missing the holidays means waiting a year.</span></div>
+                <div class="d-seg"><b>Cut: international print gifting</b><span>Complex tax and delivery, and data showed a small group.</span></div>
+                <div class="d-seg hi"><b>Covered: those users</b><span>Targeted campaigns, plus a working legacy path.</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide detail" data-detail="partner" data-title="Partner platform" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">05 Revenue growth · Partners</span></div>
+          <h2>Sell inside a partner's own checkout</h2>
+          <div class="body">
+            <div class="stack">
+              <div class="pipe"><span>Partner sale</span><i>→</i><span>Signed event</span><i>→</i><span>Subscription created</span><i>→</i><span>Access granted</span></div>
+              <div class="d-grid" style="align-items:start">
+                <ul class="d-pts">
+                  <li>Replaced <b>manual coupons</b> and a second card entry for buyers.</li>
+                  <li>Owned the buyer journey, the <b>event design</b> and the MVP line.</li>
+                  <li>Trade-off: dropped a consent step to <b>get to revenue faster</b>.</li>
+                </ul>
+                <div class="tiles" style="--n:2">
+                  <div class="tile"><div class="v">$5M+</div><div class="l">pipeline unblocked (Klarna, Verizon)</div></div>
+                  <div class="tile"><div class="v">12 wks → days</div><div class="l">target time to add a partner</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide detail" data-detail="stacking" data-title="Order-stacking detection" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">05 Revenue growth · Order stacking</span></div>
+          <h2>Stop people cycling through intro offers</h2>
+          <div class="body">
+            <div class="stack">
+              <div class="pipe"><span>New sign-up</span><i>→</i><span class="gate">Any Condé subscription in 18 months?</span><i>→</i><span>Yes: standard price</span><i>·</i><span>No: intro offer</span></div>
+              <div class="d-grid">
+                <p class="d-note" style="margin:0">Checks every channel: web, app stores and older platforms, so a returning subscriber can't look new.</p>
+                <div class="tiles" style="--n:2">
+                  <div class="tile"><div class="v">−40%</div><div class="l">discount abuse</div></div>
+                  <div class="tile"><div class="v">14%</div><div class="l">of at-risk revenue protected</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide detail" data-detail="karta" data-title="Karta" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">06 AI product · Karta</span></div>
           <h2>AI does the work. People approve it.</h2>
           <div class="body">
             <div class="stack">
-              <div class="pipe" aria-label="Karta workflow">
-                <span>Request</span><i>→</i><span>Check policy</span><i>→</i><span>Pull live data</span><i>→</i><span>Prepare action</span><i>→</i><span class="gate">Person approves</span><i>→</i><span>Run &amp; log</span>
-              </div>
-              <div class="s-cols" style="align-items:start">
-                <div class="tile"><div class="c" style="margin:0 0 .8cqi">Karta · agent platform on MCP</div><div class="l" style="margin:0">Refund checks, win-back offers and campaign setup checks. Tested on live data. Presented to leadership.</div></div>
-                <div class="tile"><div class="c" style="margin:0 0 .8cqi">FirstLight Careers · built solo</div><div class="l" style="margin:0">Claude API app with a rubric-based fit score and its own MCP server. Shipped in ~4 days.</div></div>
+              <div class="pipe"><span>Request</span><i>→</i><span>Check policy</span><i>→</i><span>Pull live data</span><i>→</i><span>Prepare action</span><i>→</i><span class="gate">Person approves</span><i>→</i><span>Run &amp; log</span></div>
+              <div class="d-grid">
+                <ul class="d-pts">
+                  <li><b>Refunds:</b> 4 manual steps across 3 systems became one request.</li>
+                  <li><b>Win-back offers:</b> find lapsed users and build the offer in one flow.</li>
+                  <li><b>Campaign checks:</b> scattered settings summarised for debugging.</li>
+                  <li>Tested on live data; <b>presented to leadership</b>.</li>
+                </ul>
+                <div class="d-img wide"><img src="img/karta.gif" alt="Karta screens: settings, workflows and agents" loading="lazy"></div>
               </div>
             </div>
           </div>
+          <div class="foot">My role: use cases, layer requirements and governance. Engineering built the orchestrator and tools.</div>
         </section>
 
-        <section class="slide" data-title="How I work" hidden>
-          <div class="tag">07 · How I work</div>
-          <h2>Find the gap. Prove the fix. Scale it.</h2>
+        <section class="slide detail" data-detail="firstlight" data-title="FirstLight Careers" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">06 AI product · FirstLight Careers</span></div>
+          <h2>Built and shipped solo in ~4 days</h2>
           <div class="body">
-            <div class="cycle">
-              <div><span class="n">1</span><b>Find the gap</b><span>Data, interviews, reviews</span></div>
-              <div><span class="n">2</span><b>Decide</b><span>Size it, set metrics, cut scope</span></div>
-              <div><span class="n">3</span><b>Prove</b><span>A/B test with guardrails</span></div>
-              <div><span class="n">4</span><b>Scale</b><span>Reusable, self-serve</span></div>
-              <p class="loopback">↺ repeat · e.g. reversed "pay first" on the paywall → +21% mobile conversion</p>
+            <div class="d-grid">
+              <div class="stack">
+                <div class="pipe"><span>CV + job</span><i>→</i><span>Fit score /100</span><i>→</i><span>Gaps by severity</span><i>→</i><span>Prep package</span></div>
+                <div>
+                  <p class="d-label">Scoring rubric</p>
+                  <div class="rubric-bar" role="img" aria-label="Rubric: skills 40, experience 25, domain 20, project relevance 15"><span style="width:40%">40</span><span style="width:25%">25</span><span style="width:20%">20</span><span style="width:15%">15</span></div>
+                  <p class="d-note" style="margin-top:.6cqi">Skills 40 · Experience 25 · Domain 20 · Project relevance 15</p>
+                </div>
+                <div class="chips"><span>Next.js</span><span>Claude API</span><span>Own MCP server</span><span>Cursor</span></div>
+              </div>
+              <div class="d-img"><img src="img/fl-fit-score.jpg" alt="FirstLight fit score screen" loading="lazy"><img src="img/fl-prep-package.jpg" alt="FirstLight preparation package screen" loading="lazy"></div>
             </div>
           </div>
         </section>
 
-        <section class="slide" data-title="Applying this to a learning app" hidden>
-          <div class="tag">08 · Applying this to a learning app</div>
-          <h2>Same journey, new learners</h2>
+        <section class="slide detail" data-detail="platform" data-title="Self-serve growth platform" hidden>
+          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">Platform · 0 to 1</span></div>
+          <h2>One self-serve platform for 9+ brands</h2>
           <div class="body">
-            <div class="stack">
-              <div class="journey">
-                <div><div class="st">Discover</div><div class="pr"><b>60%+</b><span>new users from an app rebuild</span></div></div>
-                <div><div class="st">First win</div><div class="pr"><b>28.8% → 76%</b><span>users taking the next step</span></div></div>
-                <div><div class="st">Daily practice</div><div class="pr"><b>+153%</b><span>retention from a daily habit</span></div></div>
-                <div><div class="st">Subscribe</div><div class="pr"><b>+28%</b><span>conversion from a clearer paywall</span></div></div>
-                <div><div class="st">Keep progressing</div><div class="pr"><b>+8%</b><span>revenue from personalised paths</span></div></div>
+            <div class="d-grid">
+              <div class="stack">
+                <div class="layers-mini">
+                  <div><b>Platform</b><span>Shared rules, payments, legal</span></div>
+                  <div><b>Brand</b><span>Branding, gating, free articles</span></div>
+                  <div><b>Market</b><span>Currency, language, tax</span></div>
+                  <div><b>Experience</b><span>The campaign each visitor sees</span></div>
+                </div>
+                <p class="d-note" style="margin:0">Define a rule once; every layer below inherits it. Non-technical teams run it themselves.</p>
               </div>
-              <div class="days">
-                <div><b>FIRST 30 DAYS</b>Learn the data and talk to learners.</div>
-                <div><b>BY 60</b>Find the biggest drop-off and test fixes.</div>
-                <div><b>BY 90</b>Scale wins with personalisation and AI.</div>
+              <div class="tiles" style="--n:2">
+                <div class="tile"><div class="v">2.2M</div><div class="l">active subscribers supported</div></div>
+                <div class="tile"><div class="v">~$100M</div><div class="l">revenue handled</div></div>
+                <div class="tile"><div class="v">2 wks → mins</div><div class="l">to launch a campaign</div></div>
+                <div class="tile"><div class="v">2 mo → 1 wk</div><div class="l">to launch a market</div></div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="slide thanks" data-title="Thank you" hidden>
-          <div class="tag">Thank you</div>
-          <div class="body" style="align-items:center">
-            <div>
-              <h2>Questions?</h2>
-              <p class="sub">Happy to go deeper on any of this, including what didn't work.</p>
-              <div class="contact-row"><span>shwets.gpt1011@gmail.com</span><span>linkedin.com/in/shweta-gupta-5619b555</span><span>shwetaguptagit.github.io/pm-portfolio</span></div>
             </div>
           </div>
         </section>
 
       </div>
       <div class="controls">
-        <div class="ctrl-group">
+        <div class="ctrl-group" id="mainCtrls">
           <button class="btn ghost small" id="prevSlide" aria-label="Previous slide">← Prev</button>
-          <span class="counter" id="counter" aria-live="polite">1 / 9</span>
+          <span class="counter" id="counter" aria-live="polite">1 / 5</span>
           <button class="btn primary small" id="nextSlide" aria-label="Next slide">Next →</button>
         </div>
         <div class="dots" id="dots" aria-label="Slides"></div>
         <div class="ctrl-group">
+          <button class="btn small" id="homeBtn" type="button">⌂ Funnel</button>
           <button class="btn ghost small" id="fsBtn" type="button">Full screen</button>
         </div>
       </div>
-      <p class="deck-hint">Use ← → keys to move between slides. Press F for full screen.</p>
+      <p class="deck-hint">← → move between slides · on a story slide, ← or Esc goes back to the funnel · F for full screen</p>
     </div>
   </div>
 </main>
@@ -1410,15 +1792,6 @@ function showStage(i){
 buildFunnel(fMain,showStage);
 aiBand.addEventListener("click",()=>showStage(-1));
 showStage(3);
-
-/* Deck funnel */
-const fDeck=$("#funnelDeck"), deckDetail=$("#deckDetail");
-function showDeckStage(i){
-  markFunnel(fDeck,i); const s=STAGES[i];
-  deckDetail.innerHTML=`<h3>${esc(s.t)}</h3><p class="need">${esc(s.need)}</p><ul>${s.wins.filter(w=>w.key).map(w=>`<li><b>${esc(w.m)}</b>${esc(w.w)} <span>· ${esc(w.co)}</span></li>`).join("")}</ul>`;
-}
-buildFunnel(fDeck,showDeckStage);
-showDeckStage(0);
 
 /* ---------- Case tabs ---------- */
 const caseTabs=$$('#cases [role="tab"]');
@@ -1604,7 +1977,7 @@ function setView(v,opts={}){
     else if(location.hash==="#present"){history.replaceState(null,"",location.pathname+location.search);}
   }
   if(!opts.noScroll)window.scrollTo(0,0);
-  if(v==="present")go(cur,true);
+  if(v==="present")render(false);
 }
 viewTabs.portfolio.addEventListener("click",()=>setView("portfolio"));
 viewTabs.present.addEventListener("click",()=>setView("present"));
@@ -1618,24 +1991,52 @@ $$('[data-view-link="portfolio"], .nav a').forEach(a=>a.addEventListener("click"
 }));
 
 /* ---------- Presentation ---------- */
-const slides=$$("#stage .slide"), dots=$("#dots"); let cur=0;
-slides.forEach((s,i)=>{
-  s.setAttribute("aria-roledescription","slide"); s.setAttribute("aria-label",(i+1)+" of "+slides.length+": "+s.dataset.title);
+/* Main slides run in order. Story slides open only from a capsule on the funnel, and always lead back to it. */
+const deck=$("#deck"), stage=$("#stage"), dots=$("#dots");
+const mainSlides=$$("#stage .slide[data-main]");
+const details={}; $$("#stage .slide[data-detail]").forEach(s=>{details[s.dataset.detail]=s;});
+const HUB=mainSlides.findIndex(s=>s.hasAttribute("data-hub"));
+let cur=0, detail=null, lastCap=null;
+const visited=new Set();
+$$("#stage .slide").forEach(s=>{s.setAttribute("aria-roledescription","slide");s.setAttribute("aria-label",s.dataset.title);});
+mainSlides.forEach((s,i)=>{
   const d=document.createElement("button"); d.setAttribute("aria-label","Go to slide "+(i+1)+": "+s.dataset.title); d.title=s.dataset.title;
   d.addEventListener("click",()=>go(i)); dots.appendChild(d);
 });
-function go(i,silent){
-  cur=Math.max(0,Math.min(slides.length-1,i));
-  slides.forEach((s,j)=>{s.hidden=j!==cur;});
-  $$("button",dots).forEach((d,j)=>d.setAttribute("aria-current",j===cur?"true":"false"));
-  $("#counter").textContent=(cur+1)+" / "+slides.length;
-  $("#prevSlide").disabled=cur===0; $("#nextSlide").disabled=cur===slides.length-1;
-  /* on phones the slide can be taller than the screen: bring its top back into view */
-  if(!silent){const top=$("#stage").getBoundingClientRect().top; if(top<0)window.scrollBy(0,top-90);}
+function render(scroll){
+  $$("#stage .slide").forEach(s=>{s.hidden=true;});
+  (detail?details[detail]:mainSlides[cur]).hidden=false;
+  deck.classList.toggle("in-detail",!!detail);
+  $$("button",dots).forEach((d,j)=>d.setAttribute("aria-current",!detail&&j===cur?"true":"false"));
+  $("#mainCtrls").style.visibility=detail?"hidden":"visible";
+  $("#counter").textContent=(cur+1)+" / "+mainSlides.length;
+  $("#prevSlide").disabled=cur===0; $("#nextSlide").disabled=cur===mainSlides.length-1;
+  const home=$("#homeBtn");
+  home.hidden=!detail&&cur===HUB;
+  home.textContent=detail?"← Back to funnel":"⌂ Funnel";
+  home.classList.toggle("primary",!!detail); home.classList.toggle("ghost",!detail);
+  /* on phones a slide can be taller than the screen: bring its top back into view */
+  if(scroll){const top=stage.getBoundingClientRect().top; if(top<0)window.scrollBy(0,top-90);}
 }
+function go(i){detail=null;cur=Math.max(0,Math.min(mainSlides.length-1,i));render(true);}
+function openDetail(key,from){
+  if(!details[key])return;
+  detail=key; lastCap=from||null; visited.add(key);
+  $$('[data-open="'+key+'"]').forEach(c=>{c.classList.add("visited");const g=$(".go",c);if(g)g.textContent="✓";});
+  render(true);
+  const b=$(".back",details[key]); if(b)b.focus({preventScroll:true});
+}
+function backToHub(){
+  const k=detail; detail=null; cur=HUB; showHubStage(hubSel); render(true);
+  const c=k&&($('#hubPanel [data-open="'+k+'"]')||$('.hub-sub [data-open="'+k+'"]'));
+  (c||lastCap||{focus(){}}).focus({preventScroll:true});
+}
+stage.addEventListener("click",e=>{const c=e.target.closest("[data-open]");if(c&&stage.contains(c))openDetail(c.dataset.open,c);});
+$$("#stage .back").forEach(b=>b.addEventListener("click",backToHub));
+$$("#stage [data-go-next]").forEach(b=>b.addEventListener("click",()=>go(cur+1)));
+$("#homeBtn").addEventListener("click",()=>{if(detail)backToHub();else go(HUB);});
 $("#prevSlide").addEventListener("click",()=>go(cur-1));
 $("#nextSlide").addEventListener("click",()=>go(cur+1));
-const deck=$("#deck");
 function toggleFS(){
   try{
     if(document.fullscreenElement){document.exitFullscreen();}
@@ -1649,17 +2050,65 @@ document.addEventListener("keydown",e=>{
   if(view!=="present"||e.altKey||e.ctrlKey||e.metaKey)return;
   if(e.target.closest("input,textarea,select"))return;
   const k=e.key;
+  if(detail){
+    if(k==="ArrowLeft"||k==="Escape"||k==="Backspace"||k==="Home"){e.preventDefault();backToHub();}
+    else if(k==="f"||k==="F"){e.preventDefault();toggleFS();}
+    return;
+  }
+  if(cur===HUB&&(k==="ArrowDown"||k==="ArrowUp")){e.preventDefault();showHubStage((hubSel+(k==="ArrowDown"?1:-1)+HUBS.length)%HUBS.length,true);return;}
   if(k==="ArrowRight"||k==="PageDown"||(k===" "&&!e.target.closest("button"))){e.preventDefault();go(cur+1);}
   else if(k==="ArrowLeft"||k==="PageUp"){e.preventDefault();go(cur-1);}
   else if(k==="Home"){e.preventDefault();go(0);}
-  else if(k==="End"){e.preventDefault();go(slides.length-1);}
+  else if(k==="End"){e.preventDefault();go(mainSlides.length-1);}
   else if(k==="f"||k==="F"){e.preventDefault();toggleFS();}
 });
-/* swipe on touch screens */
+/* swipe on touch screens; on a story slide, swiping right goes back to the funnel */
 let tx=null;
-$("#stage").addEventListener("touchstart",e=>{tx=e.touches[0].clientX;},{passive:true});
-$("#stage").addEventListener("touchend",e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>60)go(cur+(dx<0?1:-1));tx=null;});
-go(0,true);
+stage.addEventListener("touchstart",e=>{tx=e.touches[0].clientX;},{passive:true});
+stage.addEventListener("touchend",e=>{
+  if(tx===null)return; const dx=e.changedTouches[0].clientX-tx; tx=null;
+  if(Math.abs(dx)<60)return;
+  if(detail){if(dx>0)backToHub();}
+  else go(cur+(dx<0?1:-1));
+});
+/* Funnel screen: six bands, one headline each; the selected band lists its stories */
+const HUBS=[
+ {n:"01",t:"Acquisition",m:"+28% checkout CVR",need:"New users, new starts",caps:[
+  ["Paywall & checkout","Checkout CVR +28% · Mobile paywall +21%","checkout"],
+  ["Oneindia app rebuild, Android & iOS","60%+ new users · Play Store #130 → Top 3","oneindia"]]},
+ {n:"02",t:"Activation",m:"CTR 28.8% → 76%",need:"Reiterate value, increase engagement",caps:[
+  ["Confirmation page revamp","CTR 28.8% → 76% · Bounce 61% → 27%","confirmation"],
+  ["Post-purchase emails: trigger logic, design and setup","Purchase, trial and renewal","emails"]]},
+ {n:"03",t:"Personalisation",m:"+8% revenue",need:"Adaptive, ML-led paths",caps:[
+  ["ML propensity score: dynamic monetisation","+8% revenue","propensity"],
+  ["Native abandoned-cart retargeting from behavioural segments","CVR 24% → 39% vs the vendor it replaced","cart"]]},
+ {n:"04",t:"Retention & LTV",m:"AOV +28.7%",need:"Lower churn, higher AOV",caps:[
+  ["Auto-downgrade for involuntary churn","7% of failed-payment subscribers kept","downgrade"],
+  ["Retention platform for voluntary churn","Chargebee Retention integrated",null],
+  ["Cross-brand bundle at point of sale","AOV +28.7%","ordervalue"]]},
+ {n:"05",t:"Revenue growth",m:"$5M+ partner pipeline",need:"ARPU, new starts",caps:[
+  ["Gift subscriptions","$600K in 8 weeks","gift"],
+  ["Partners: Klarna, Verizon","$5M+ pipeline","partner"],
+  ["Post-purchase upsell","+16% revenue","ordervalue"],
+  ["Order-stacking detection","Discount abuse −40%","stacking"]]},
+ {n:"06",t:"AI product",m:"Karta · FirstLight",need:"AI agents and LLM apps, across the funnel",ai:1,caps:[
+  ["Karta: MCP agents with scoped tools and human approval","Refunds, win-back offers, campaign checks","karta"],
+  ["FirstLight Careers: Claude API app with a scoring engine","Built and shipped solo in about 4 days","firstlight"]]}
+];
+const hubFunnel=$("#hubFunnel"), hubPanel=$("#hubPanel"); let hubSel=0;
+hubFunnel.innerHTML=HUBS.map((h,i)=>`<button class="band${h.ai?" ai":""}" role="tab" type="button" aria-selected="false" data-i="${i}"><span class="bn"><i>${h.n}</i>${esc(h.t)}</span><span class="bm">${esc(h.m)}</span></button>`).join("");
+$$(".band",hubFunnel).forEach((b,i)=>b.addEventListener("click",()=>showHubStage(i,true)));
+function showHubStage(i,focus){
+  hubSel=i; const h=HUBS[i];
+  hubFunnel.classList.add("sel");
+  $$(".band",hubFunnel).forEach((b,j)=>{b.setAttribute("aria-selected",j===i?"true":"false");b.tabIndex=j===i?0:-1;});
+  hubPanel.innerHTML=`<div class="pn">${h.n} · ${h.ai?"Across the funnel":"Stage "+(i+1)+" of 5"}</div><h3>${esc(h.t)}</h3><p class="need">Need: ${esc(h.need)}</p>`+
+    h.caps.map(c=>c[2]?`<button class="cap${visited.has(c[2])?" visited":""}" type="button" data-open="${c[2]}"><span><span class="ct">${esc(c[0])}</span><span class="cm">${esc(c[1])}</span></span><span class="go" aria-hidden="true">${visited.has(c[2])?"✓":"→"}</span></button>`
+      :`<div class="cap static"><span><span class="ct">${esc(c[0])}</span><span class="cm">${esc(c[1])}</span></span></div>`).join("");
+  if(focus)$$(".band",hubFunnel)[i].focus({preventScroll:true});
+}
+showHubStage(0);
+render(false);
 
 /* ---------- Active nav ---------- */
 const links=$$(".nav a");
