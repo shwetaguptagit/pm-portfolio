@@ -503,6 +503,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .title-slide .sub{font-size:clamp(16px,2.3cqi,32px);color:var(--ink);max-width:30ch}
 .title-slide .tiles{margin-top:4cqi}
 .title-slide .cos{font-family:var(--f-mono);font-size:max(11px,1.2cqi);color:var(--muted);margin-top:3cqi;letter-spacing:.06em}
+.name-ipa{display:flex;align-items:center;gap:.8cqi;margin-top:.4cqi;margin-bottom:1.2cqi;font-family:var(--f-mono);font-size:max(12px,1.35cqi);color:var(--muted)}
+.say{all:unset;cursor:pointer;display:grid;place-items:center;width:max(28px,2.8cqi);height:max(28px,2.8cqi);border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--accent)}
+.say:hover{border-color:var(--accent)}
+.say:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.say svg{width:55%;height:55%}
+.say.on{background:var(--accent-soft)}
 .thanks h2{font-size:clamp(30px,6cqi,86px)}
 .contact-row{display:flex;flex-wrap:wrap;gap:1.4cqi;margin-top:3cqi}
 .contact-row span{border:1px solid var(--line);border-radius:999px;padding:1cqi 2cqi;font-size:clamp(12px,1.6cqi,22px);background:var(--bg);user-select:all}
@@ -1303,6 +1309,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
           <img class="title-photo" src="img/profile-present.jpg" alt="Photo of Shweta Gupta">
           <div class="tag">Senior Product Manager · B2C Growth &amp; Subscriptions</div>
           <h1>Shweta Gupta</h1>
+          <p class="name-ipa"><span lang="hi-Latn">/ˈʃʋeːt̪aː ˈɡʊpt̪aː/</span><button class="say" type="button" id="sayName" aria-label="Hear how to say Shweta Gupta" title="Hear it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button></p>
           <p class="sub">I turn first visits into daily habits and paying subscribers.</p>
           <div class="cos">CONDÉ NAST · VICTORIA'S SECRET · ONEINDIA · 12+ YEARS IN B2C</div>
           <button class="btn primary" type="button" data-go-next style="margin-top:4cqi;align-self:flex-start">Start →</button>
@@ -2109,6 +2116,27 @@ function showHubStage(i,focus){
 }
 showHubStage(0);
 render(false);
+
+/* ---------- Say my name: a short clip recorded in macOS's Indian English voice (Tara), so it sounds the same on every device ---------- */
+const sayBtn=$("#sayName");
+if(sayBtn){
+  const clip=new Audio("img/name-pronunciation.m4a"); clip.preload="auto";
+  const on=b=>sayBtn.classList.toggle("on",b);
+  clip.addEventListener("playing",()=>on(true));
+  clip.addEventListener("ended",()=>on(false));
+  clip.addEventListener("pause",()=>on(false));
+  /* if the clip can't play, fall back to the browser's own Indian voice */
+  const speak=()=>{
+    if(!("speechSynthesis" in window))return;
+    const vs=speechSynthesis.getVoices(), v=vs.find(x=>/^en[-_]IN/i.test(x.lang)&&/tara|veena|female/i.test(x.name))||vs.find(x=>/^en[-_]IN/i.test(x.lang));
+    const u=new SpeechSynthesisUtterance("Shweta Gupta");
+    u.lang="en-IN"; if(v)u.voice=v; u.rate=.85;
+    speechSynthesis.speak(u);
+  };
+  sayBtn.addEventListener("click",()=>{
+    try{clip.currentTime=0;const pr=clip.play();if(pr&&pr.catch)pr.catch(speak);}catch(e){speak();}
+  });
+}
 
 /* ---------- Active nav ---------- */
 const links=$$(".nav a");
