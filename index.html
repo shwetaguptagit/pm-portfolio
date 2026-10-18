@@ -4,44 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shweta Gupta · Product Portfolio</title>
+<meta name="description" content="Senior Product Manager, B2C growth and subscriptions. 12+ years across Condé Nast, Victoria's Secret and Oneindia.">
 <meta property="og:title" content="Shweta Gupta · Product Portfolio">
 <meta property="og:description" content="Senior Product Manager, B2C growth and subscriptions. 12+ years across Condé Nast, Victoria's Secret and Oneindia.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0A7A64">
-<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<meta name="description" content="Senior Product Manager, B2C growth and subscriptions. 12+ years across Condé Nast, Victoria's Secret and Oneindia.">
+<meta name="theme-color" content="#2C5BD6">
+<script>
+/* Apply a saved theme before first paint, so there is no flash. */
+(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: one reading column with a sticky section bar. The consumer funnel (acquire → renew) is the spine the work hangs on. */
+/* Layout: one reading column with a sticky bar that switches between the portfolio and a slide presentation.
+   The consumer funnel (acquire → retain) is the spine the work hangs on; a blue ramp encodes funnel depth. */
 :root{
-  --bg:#F3F6F5; --surface:#FFFFFF; --sunk:#E8EEEC; --ink:#10201C; --muted:#566A65; --line:#D6E0DD;
-  --accent:#0A7A64; --accent-ink:#FFFFFF; --accent-soft:#DCF0EA; --accent-deep:#075847;
-  --warn:#B4532A; --warn-soft:#F7E6DC; --mid:#B88A12; --mid-soft:#F6EDD2;
-  --shadow:0 1px 2px rgba(16,32,28,.06),0 8px 24px rgba(16,32,28,.06);
+  --bg:#F7F9FC; --surface:#FFFFFF; --sunk:#EEF2F8; --ink:#162033; --muted:#5A657A; --line:#DFE5EF;
+  --accent:#2C5BD6; --accent-ink:#FFFFFF; --accent-soft:#E8EEFC; --accent-deep:#1D44AE;
+  --warm:#C8553D; --warm-soft:#FBEBE6; --mid:#A86A12; --mid-soft:#FBF0DC; --ok:#2F7D55; --ok-soft:#E3F3EA;
+  --f1:#1E3F9E; --f2:#2C5BD6; --f3:#4A78E4; --f4:#7C9EEE; --f5:#AFC4F6; --f-ink-dark:#0F1F4A; --f-ink-light:#FFFFFF;
+  --shadow:0 1px 2px rgba(22,32,51,.05),0 10px 30px rgba(22,32,51,.07);
   --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
   --f-body:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
-  --r:14px; --r-sm:9px; --max:1160px;
+  --r:16px; --r-sm:10px; --max:1160px;
+  color-scheme:light;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0C1513; --surface:#13201D; --sunk:#0F1A18; --ink:#E5EEEB; --muted:#98ABA6; --line:#243631;
-  --accent:#48C7AA; --accent-ink:#06231C; --accent-soft:#123A31; --accent-deep:#7FDCC6;
-  --warn:#F0956B; --warn-soft:#3A2219; --mid:#E5BE52; --mid-soft:#352C12;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}}
+  --bg:#0F141D; --surface:#161D2A; --sunk:#121925; --ink:#E6EBF4; --muted:#9BA7BD; --line:#273144;
+  --accent:#7EA2FF; --accent-ink:#0B1530; --accent-soft:#1D2A49; --accent-deep:#AFC5FF;
+  --warm:#F09A84; --warm-soft:#3A241E; --mid:#E5B65E; --mid-soft:#352A14; --ok:#72CF9B; --ok-soft:#173326;
+  --f1:#2A4BB5; --f2:#3A5FD0; --f3:#5277E0; --f4:#7493EC; --f5:#93AEF4; --f-ink-dark:#0B1530; --f-ink-light:#FFFFFF;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.28); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0C1513; --surface:#13201D; --sunk:#0F1A18; --ink:#E5EEEB; --muted:#98ABA6; --line:#243631;
-  --accent:#48C7AA; --accent-ink:#06231C; --accent-soft:#123A31; --accent-deep:#7FDCC6;
-  --warn:#F0956B; --warn-soft:#3A2219; --mid:#E5BE52; --mid-soft:#352C12;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25); color-scheme:dark}
+  --bg:#0F141D; --surface:#161D2A; --sunk:#121925; --ink:#E6EBF4; --muted:#9BA7BD; --line:#273144;
+  --accent:#7EA2FF; --accent-ink:#0B1530; --accent-soft:#1D2A49; --accent-deep:#AFC5FF;
+  --warm:#F09A84; --warm-soft:#3A241E; --mid:#E5B65E; --mid-soft:#352A14; --ok:#72CF9B; --ok-soft:#173326;
+  --f1:#2A4BB5; --f2:#3A5FD0; --f3:#5277E0; --f4:#7493EC; --f5:#93AEF4; --f-ink-dark:#0B1530; --f-ink-light:#FFFFFF;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.28); color-scheme:dark}
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-@media (max-width:900px){html{scroll-padding-top:110px}}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (max-width:900px){html{scroll-padding-top:116px}}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .2s,color .2s}
 img{max-width:100%;display:block}
+[hidden]{display:none!important}
 a{color:var(--accent);text-underline-offset:3px}
 a:hover{color:var(--accent-deep)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
@@ -51,89 +60,120 @@ p{margin:0}
 .eyebrow{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:500}
 .muted{color:var(--muted)}
 .num{font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ---------- top bar ---------- */
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
-.bar .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:14px;height:64px}
 .brand{font-family:var(--f-display);font-weight:750;font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:10px}
-.brand .mark{width:28px;height:28px;border-radius:8px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:14px}
-.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.brand:hover{color:var(--ink)}
+.brand .mark{width:30px;height:30px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:13.5px}
+.views{display:flex;background:var(--sunk);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;flex:none}
+.views button{all:unset;cursor:pointer;font-size:14px;font-weight:600;padding:7px 14px;border-radius:999px;color:var(--muted);white-space:nowrap}
+.views button:hover{color:var(--ink)}
+.views button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.views button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none;min-width:0}
 .nav::-webkit-scrollbar{display:none}
-.nav a{font-size:14.5px;font-weight:500;color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:999px;white-space:nowrap}
+.nav a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;padding:7px 10px;border-radius:999px;white-space:nowrap}
 .nav a:hover{color:var(--ink);background:var(--sunk)}
 .nav a.on{color:var(--ink);background:var(--accent-soft)}
-.bar .cta{flex:none}
-@media (max-width:900px){.bar .wrap{flex-wrap:wrap;height:auto;padding-block:10px 6px;row-gap:6px}.nav{order:3;width:100%;margin-left:-8px;margin-right:-8px;width:calc(100% + 16px)}.bar .cta{margin-left:auto}}
+.bar-actions{display:flex;gap:8px;align-items:center;margin-left:auto;flex:none}
+.nav + .bar-actions{margin-left:0}
+.icon-btn{all:unset;cursor:pointer;width:38px;height:38px;border-radius:999px;display:grid;place-items:center;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.icon-btn:hover{border-color:var(--accent)}
+.icon-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.icon-btn svg{width:18px;height:18px}
+.theme-dark-icon{display:none}
+:root[data-theme="dark"] .theme-dark-icon{display:block}
+:root[data-theme="dark"] .theme-light-icon{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .theme-dark-icon{display:block}:root:not([data-theme="light"]) .theme-light-icon{display:none}}
+body.presenting .nav{display:none}
+@media (max-width:1060px){.nav{display:none}}
+@media (max-width:620px){
+  .bar .wrap{flex-wrap:wrap;height:auto;padding-block:10px;row-gap:10px}
+  .views{order:3;width:100%}
+  .views button{flex:1;text-align:center}
+  .bar .contact-btn{display:none}
+}
 
-.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--f-body);padding:12px 18px;border-radius:999px;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s,background .15s}
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 15px/1 var(--f-body);padding:12px 18px;border-radius:999px;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:transform .15s,background .15s;color:inherit;background:none}
 .btn.primary{background:var(--accent);color:var(--accent-ink)}
 .btn.primary:hover{background:var(--accent-deep);color:var(--accent-ink)}
-:root[data-theme="dark"] .btn.primary:hover{color:var(--bg)}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn.ghost:hover{background:var(--surface);color:var(--ink)}
+.btn.ghost:hover{background:var(--surface);color:var(--ink);border-color:var(--accent)}
 .btn.small{padding:8px 14px;font-size:14px}
 .btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
 
 /* ---------- hero ---------- */
 .hero{padding-block:56px 40px}
-.hero .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(36px,5.2vw,62px);font-weight:750;margin-top:14px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(36px,5.2vw,60px);font-weight:750;margin-top:14px}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero .lede{font-size:18.5px;color:var(--muted);margin-top:18px;max-width:58ch}
 .hero .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
 .who{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14.5px;color:var(--muted)}
 .who b{color:var(--ink);font-weight:600}
 .phones{position:relative;width:100%;max-width:480px;margin:0 auto 34px;aspect-ratio:1/1.04}
-.phone{position:absolute;width:44%;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.18);background:#111;border:1px solid var(--line)}
+.phone{position:absolute;width:44%;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(15,25,50,.18);background:#111;border:1px solid var(--line)}
 .phone img{width:100%;height:auto}
 .phone.p1{left:2%;top:40px;transform:rotate(-6deg)}
 .phone.p2{left:28%;top:0;z-index:2}
 .phone.p3{right:0;top:52px;transform:rotate(6deg)}
 .phones figcaption{position:absolute;bottom:-30px;left:0;right:0;text-align:center;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
-@media (max-width:900px){.hero .hero-grid{grid-template-columns:1fr}.phones{max-width:400px}}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}.phones{max-width:400px}}
 
-.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-top:44px;overflow:hidden}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-top:44px;overflow:hidden;box-shadow:var(--shadow)}
 .stat{padding:20px 22px;border-left:1px solid var(--line);min-width:0}
 .stat:first-child{border-left:0}
 .stat .v{font-family:var(--f-display);font-weight:750;font-size:clamp(22px,2.3vw,32px);color:var(--accent);line-height:1.05;white-space:nowrap}
 .stat .l{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.35}
 @media (max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}.stat{border-left:0;border-top:1px solid var(--line)}.stat:nth-child(-n+2){border-top:0}.stat:nth-child(even){border-left:1px solid var(--line)}.stat:last-child{grid-column:1/-1;border-left:0}}
-
 .logos{display:flex;flex-wrap:wrap;align-items:center;gap:10px 26px;margin-top:26px;font-family:var(--f-mono);font-size:12.5px;color:var(--muted);letter-spacing:.04em}
 .logos span.co{font-family:var(--f-display);font-size:16px;font-weight:650;color:var(--ink);letter-spacing:0}
 
 /* ---------- sections ---------- */
 section.block{padding-block:72px}
 section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
-.head{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:34px;max-width:760px}
+.head{display:grid;gap:12px;margin-bottom:34px;max-width:760px}
 .head h2{font-size:clamp(28px,3.6vw,42px);font-weight:750}
 .head p{color:var(--muted);font-size:17.5px}
 
-/* ---------- funnel explorer ---------- */
-.stages{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:20px}
-.stage{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:14px 14px 16px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line);position:relative;transition:border-color .15s,background .15s}
-.stage .n{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
-.stage .t{font-family:var(--f-display);font-weight:650;font-size:16px;line-height:1.2}
-.stage::after{content:"";position:absolute;left:14px;right:14px;bottom:8px;height:3px;border-radius:3px;background:var(--line)}
-.stage:hover{border-color:var(--accent)}
-.stage[aria-selected="true"]{background:var(--accent-soft);border-color:var(--accent)}
-.stage[aria-selected="true"]::after{background:var(--accent)}
-.stage:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-@media (max-width:900px){.stages{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:520px){.stages{grid-template-columns:repeat(2,1fr)}}
-.stage-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:26px}
-.stage-need{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:20px}
+/* ---------- funnel ---------- */
+.funnel-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:28px;align-items:start}
+@media (max-width:900px){.funnel-wrap{grid-template-columns:1fr}}
+.funnel{display:flex;flex-direction:column;align-items:center;gap:6px}
+.fl{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:74px;padding:10px 12%;clip-path:polygon(0 0,100% 0,94% 100%,6% 100%);transition:transform .2s,filter .2s,opacity .2s}
+.fl .s{font-family:var(--f-display);font-weight:700;font-size:17px;line-height:1.15}
+.fl .k{font-family:var(--f-mono);font-size:12.5px;margin-top:3px;opacity:.9}
+.fl:nth-child(1){width:100%;background:var(--f1);color:var(--f-ink-light)}
+.fl:nth-child(2){width:90%;background:var(--f2);color:var(--f-ink-light)}
+.fl:nth-child(3){width:80%;background:var(--f3);color:var(--f-ink-light)}
+.fl:nth-child(4){width:70%;background:var(--f4);color:var(--f-ink-dark)}
+.fl:nth-child(5){width:60%;background:var(--f5);color:var(--f-ink-dark)}
+.funnel.has-sel .fl[aria-selected="false"]{opacity:.62}
+.fl:hover{opacity:1!important;filter:brightness(1.06)}
+.fl[aria-selected="true"]{transform:scale(1.03)}
+.fl:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.ai-band{all:unset;box-sizing:border-box;cursor:pointer;margin-top:12px;width:100%;border:1.5px dashed var(--accent);border-radius:var(--r-sm);padding:12px 14px;display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--ink);background:var(--surface)}
+.ai-band b{font-family:var(--f-display);font-weight:700}
+.ai-band span{font-size:13.5px;color:var(--muted)}
+.ai-band[aria-selected="true"]{background:var(--accent-soft);border-style:solid}
+.ai-band:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.funnel-hint{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+.stage-panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);min-width:0}
+.stage-need{margin-bottom:18px}
 .stage-need h3{font-size:24px}
-.stage-need p{color:var(--muted)}
-.wins{display:grid;grid-template-columns:repeat(var(--cols,4),1fr);gap:12px}
-@media (max-width:1000px){.wins{grid-template-columns:repeat(2,1fr)}.wins > .win:last-child:nth-child(odd){grid-column:1/-1}}
+.stage-need p{color:var(--muted);margin-top:4px}
+.wins{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 @media (max-width:560px){.wins{grid-template-columns:1fr}}
-.win{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.win .m{font-family:var(--f-display);font-weight:750;font-size:26px;color:var(--accent);line-height:1.05}
+.win{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.win .m{font-family:var(--f-display);font-weight:750;font-size:24px;color:var(--accent);line-height:1.05}
 .win .w{font-weight:600;line-height:1.35}
-.win .d{font-size:14.5px;color:var(--muted);line-height:1.5}
-.win .co{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:auto;padding-top:6px}
-.win a.more{font-size:14px;font-weight:600;text-decoration:none}
+.win .d{font-size:14px;color:var(--muted);line-height:1.5}
+.win .co{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:auto;padding-top:6px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.win a.more{font-family:var(--f-body);text-transform:none;letter-spacing:0;font-size:13.5px;font-weight:600;text-decoration:none}
 .win a.more::after{content:" →"}
 
 /* ---------- case studies ---------- */
@@ -141,9 +181,9 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 @media (max-width:640px){#cases .case-tabs,#wfTabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}#cases .case-tabs .chip,#wfTabs .chip{flex:none}}
 .chip{all:unset;cursor:pointer;font-size:14.5px;font-weight:600;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);transition:background .15s,border-color .15s}
 .chip:hover{border-color:var(--accent)}
-.chip[aria-selected="true"],.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip[aria-selected="true"],.chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.case{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
 .case-top{padding:30px 30px 24px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;border-bottom:1px solid var(--line)}
 .case-top h3{font-size:clamp(24px,2.8vw,34px);font-weight:750;margin-top:8px}
 .case-top .sub{color:var(--muted);margin-top:8px;max-width:62ch}
@@ -152,7 +192,7 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 .kpi .v{font-family:var(--f-display);font-weight:750;font-size:26px;color:var(--accent-deep);line-height:1}
 .kpi .l{font-size:13px;color:var(--ink);margin-top:5px;line-height:1.3;max-width:18ch}
 @media (max-width:820px){.case-top{grid-template-columns:1fr;padding:22px}}
-.case-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.case-body{display:grid;grid-template-columns:1fr 1fr}
 .case-body > div{padding:26px 30px;min-width:0}
 .case-body > div + div{border-left:1px solid var(--line);background:var(--bg)}
 @media (max-width:820px){.case-body{grid-template-columns:1fr}.case-body > div{padding:22px}.case-body > div + div{border-left:0;border-top:1px solid var(--line)}}
@@ -161,12 +201,14 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 .story ul{margin:0;padding-left:18px;display:grid;gap:5px}
 .story li::marker{color:var(--accent)}
 .note{border-left:3px solid var(--accent);padding:10px 14px;background:var(--accent-soft);border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:15px}
-.note.warm{border-color:var(--warn);background:var(--warn-soft)}
+.note.warm{border-color:var(--warm);background:var(--warm-soft)}
 .visual-cap{font-size:13.5px;color:var(--muted);margin-top:10px}
 .shot{border-radius:var(--r-sm);border:1px solid var(--line);overflow:hidden;background:#fff;cursor:zoom-in}
 .shot img{width:100%;height:auto}
+button.zoom{padding:0;font:inherit;color:inherit;cursor:zoom-in;appearance:none;-webkit-appearance:none}
+button.shot{display:block;width:100%}
 
-/* propensity demo */
+/* demo widgets */
 .demo{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
 .demo-title{font-family:var(--f-display);font-weight:650;font-size:17px;margin-bottom:4px}
 .presets{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
@@ -179,9 +221,9 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 .scale{display:grid;grid-template-columns:35fr 35fr 30fr;font-family:var(--f-mono);font-size:11.5px;color:var(--muted);gap:4px}
 .scale span{border-top:3px solid var(--line);padding-top:4px}
 .scale span.on{border-color:var(--accent);color:var(--ink)}
-.mock{margin-top:14px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--bg);padding:14px;position:relative;overflow:hidden;min-height:214px}
+.mock{margin-top:14px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--bg);padding:14px;min-height:214px}
 .mock .lines i{display:block;height:8px;border-radius:4px;background:var(--line);margin:8px 0}
-.mock .lines i:nth-child(1){width:70%;height:12px;background:var(--muted);opacity:.5}
+.mock .lines i:nth-child(1){width:70%;height:12px;background:var(--muted);opacity:.45}
 .mock .lines i:nth-child(3){width:92%}.mock .lines i:nth-child(4){width:84%}
 .unit{margin-top:12px;border-radius:var(--r-sm);padding:14px;border:1px solid var(--line);background:var(--surface);transition:all .25s}
 .unit .k{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
@@ -194,28 +236,23 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 .unit.pay{border-color:var(--accent);background:var(--accent-soft)}
 .unit.pay .k{color:var(--accent-deep)}
 .unit .fake{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;padding:7px 12px;border-radius:999px;background:var(--ink);color:var(--bg)}
-
-/* bars */
-.bars{display:grid;gap:12px;margin-top:6px}
+.bars{display:grid;gap:12px}
 .bar-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;font-size:14px}
 .bar-track{height:30px;background:var(--sunk);border-radius:6px;position:relative;overflow:hidden}
-.bar-fill{position:absolute;inset:0 auto 0 0;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-weight:700;font-family:var(--f-mono);font-size:13px}
+.bar-fill{position:absolute;inset:0 auto 0 0;border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-weight:700;font-family:var(--f-mono);font-size:13px;white-space:nowrap}
 .bar-fill.old{background:var(--line);color:var(--ink)}
 .bar-fill.new{background:var(--accent);color:var(--accent-ink)}
 .axis{display:grid;grid-template-columns:150px 1fr;gap:12px;font-family:var(--f-mono);font-size:11px;color:var(--muted)}
 .axis div:last-child{display:flex;justify-content:space-between}
 @media (max-width:480px){.bar-row,.axis{grid-template-columns:96px 1fr}}
-
 .seg{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
 .seg > div{border:1px solid var(--line);border-radius:var(--r-sm);padding:14px;background:var(--surface);min-width:0}
 .seg .k{font-family:var(--f-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .seg .h{font-weight:700;margin:4px 0}
 .seg p{font-size:14px;color:var(--muted)}
 @media (max-width:480px){.seg{grid-template-columns:1fr}}
-
-/* layers */
 .layers{display:grid;gap:8px}
-.layer{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;border:1px solid var(--line);background:var(--surface);border-radius:var(--r-sm);padding:12px 14px;cursor:pointer;transition:border-color .15s,transform .15s}
+.layer{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center;border:1px solid var(--line);background:var(--surface);border-radius:var(--r-sm);padding:12px 14px;cursor:pointer;transition:border-color .15s}
 .layer:hover,.layer.on{border-color:var(--accent)}
 .layer.on{background:var(--accent-soft)}
 .layer .k{font-family:var(--f-display);font-weight:650}
@@ -224,8 +261,6 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 @media (max-width:480px){.layer{grid-template-columns:1fr;gap:2px}.layer:nth-child(n){margin-left:0}}
 .layer-detail{margin-top:12px;font-size:14.5px;min-height:3em}
 .thumbs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
-
-/* flow */
 .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0 6px}
 .flow span{font-size:13.5px;font-weight:600;padding:8px 12px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line)}
 .flow i{font-style:normal;color:var(--muted)}
@@ -259,9 +294,15 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 @media (max-width:900px){.role{grid-template-columns:1fr;gap:24px}}
 .role-main{min-width:0;display:grid;gap:18px}
 .role-main > p{max-width:64ch}
-
-/* bundle builder */
-.builder{display:grid;grid-template-columns:1fr 240px;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);margin-top:8px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
+.timeline a{display:block;padding:16px 18px;text-decoration:none;color:var(--ink);border-left:1px solid var(--line);min-width:0}
+.timeline a:first-child{border-left:0}
+.timeline a:hover{background:var(--accent-soft);color:var(--ink)}
+.timeline .y{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.timeline .c{font-family:var(--f-display);font-weight:650;font-size:18px;margin-top:4px}
+.timeline .r{font-size:13.5px;color:var(--muted)}
+@media (max-width:760px){.timeline{grid-template-columns:1fr 1fr}.timeline a:nth-child(3){border-left:0}.timeline a:nth-child(n+3){border-top:1px solid var(--line)}}
+.builder{display:grid;grid-template-columns:1fr 240px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .builder .steps{padding:20px;min-width:0}
 .builder .summary{padding:20px;background:var(--bg);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:10px}
 @media (max-width:700px){.builder{grid-template-columns:1fr}.builder .summary{border-left:0;border-top:1px solid var(--line)}}
@@ -282,14 +323,11 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 .summary .line{display:flex;justify-content:space-between;gap:8px;font-size:14px}
 .summary .line span:last-child{color:var(--muted);text-align:right}
 .summary .line.ok span:last-child{color:var(--ink);font-weight:600}
-.summary button[disabled]{opacity:.45;cursor:not-allowed}
 .toast{font-size:13.5px;color:var(--accent);font-weight:600;min-height:1.4em}
-
-/* oneindia */
 .oi{display:grid;grid-template-columns:1fr 250px;gap:22px;align-items:start}
 @media (max-width:700px){.oi{grid-template-columns:1fr}}
 .oi-feats{display:grid;gap:6px}
-.feat{all:unset;cursor:pointer;display:grid;grid-template-columns:1fr;padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--surface);transition:border-color .15s,background .15s}
+.feat{all:unset;cursor:pointer;display:grid;padding:12px 14px;border-radius:var(--r-sm);border:1px solid var(--line);background:var(--surface);transition:border-color .15s,background .15s}
 .feat b{font-weight:600}
 .feat span{font-size:14px;color:var(--muted)}
 .feat:hover{border-color:var(--accent)}
@@ -302,22 +340,22 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 /* ---------- AI ---------- */
 .ai-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;align-items:start}
 @media (max-width:960px){.ai-grid{grid-template-columns:1fr}}
-.karta{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;min-width:0}
+.karta{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:24px;min-width:0;box-shadow:var(--shadow)}
 .karta h3{font-size:28px;font-weight:750}
 .pain{display:grid;gap:8px;margin:16px 0}
 .pain div{display:grid;grid-template-columns:24px 1fr;gap:8px;font-size:15px}
-.pain div::before{content:"!";width:20px;height:20px;border-radius:50%;background:var(--warn-soft);color:var(--warn);font-weight:700;font-size:12px;display:grid;place-items:center;margin-top:2px}
+.pain div::before{content:"!";width:20px;height:20px;border-radius:50%;background:var(--warm-soft);color:var(--warm);font-weight:700;font-size:12px;display:grid;place-items:center;margin-top:2px}
 .wf-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 12px}
 .ask{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;font-size:15px}
-.ask .who{margin:0;font-family:var(--f-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);flex:none;padding-top:3px}
-.ticks{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:0;position:relative}
+.ask .who{font-family:var(--f-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);flex:none;padding-top:3px}
+.ticks{list-style:none;margin:12px 0 0;padding:0;display:grid;position:relative}
 .ticks li{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:8px 0;opacity:.42;transition:opacity .3s}
 .ticks li.done,.ticks li.now{opacity:1}
 .ticks .dot{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-family:var(--f-mono);font-size:12px;background:var(--surface);position:relative;z-index:1}
 .ticks li.done .dot{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .ticks li.now .dot{border-color:var(--accent);color:var(--accent)}
 .ticks li.gate .dot{border-color:var(--mid)}
-.ticks li.gate.done .dot{background:var(--mid);border-color:var(--mid);color:#1d1600}
+.ticks li.gate.done .dot{background:var(--mid);border-color:var(--mid);color:var(--surface)}
 .ticks b{display:block;font-weight:600;font-size:15px}
 .ticks span{font-size:14px;color:var(--muted)}
 .ticks::before{content:"";position:absolute;left:12px;top:20px;bottom:20px;width:2px;background:var(--line)}
@@ -326,15 +364,47 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 .gov{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 .gov span{font-size:13px;padding:6px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-deep);font-weight:600}
 .side-cards{display:grid;gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;min-width:0;box-shadow:var(--shadow)}
 .card h3{font-size:21px;font-weight:700}
 .card .tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .card p{font-size:15px;margin-top:8px}
-.card .m{font-family:var(--f-display);font-weight:750;color:var(--accent);font-size:22px;margin-top:10px}
+
+/* ---------- FirstLight ---------- */
+.fl-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:32px;align-items:start}
+@media (max-width:900px){.fl-grid{grid-template-columns:1fr}}
+.fl-steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px;counter-reset:f}
+.fl-steps li{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start}
+.fl-steps li::before{counter-increment:f;content:counter(f);width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent-deep);font-family:var(--f-mono);font-size:13px;display:grid;place-items:center;font-weight:500}
+.fl-steps b{display:block}
+.fl-steps span{font-size:14.5px;color:var(--muted)}
+.rubric{margin-top:22px}
+.rubric-bar{display:flex;height:34px;border-radius:8px;overflow:hidden;margin-top:8px}
+.rubric-bar span{display:flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden}
+.rubric-bar span:nth-child(1){background:var(--f1);color:var(--f-ink-light)}
+.rubric-bar span:nth-child(2){background:var(--f2);color:var(--f-ink-light)}
+.rubric-bar span:nth-child(3){background:var(--f4);color:var(--f-ink-dark)}
+.rubric-bar span:nth-child(4){background:var(--f5);color:var(--f-ink-dark)}
+.rubric-key{display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;margin-top:10px;font-size:13.5px;color:var(--muted)}
+.rubric-key b{color:var(--ink);font-weight:600}
+.decisions{display:grid;gap:8px;margin-top:22px}
+.decisions div{border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;background:var(--surface);font-size:14.5px}
+.decisions b{display:block;font-size:15px}
+.sev{display:inline-flex;gap:4px;vertical-align:middle;margin-left:4px}
+.sev i{font-style:normal;font-family:var(--f-mono);font-size:11px;padding:1px 6px;border-radius:6px;border:1px solid}
+.sev i.h{color:var(--warm);border-color:var(--warm);background:var(--warm-soft)}
+.sev i.m{color:var(--mid);border-color:var(--mid);background:var(--mid-soft)}
+.sev i.l{color:var(--ok);border-color:var(--ok);background:var(--ok-soft)}
+.fl-shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fl-shots figure{margin:0}
+.fl-shots figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+.fl-shots .shot{background:#F4F4F5;box-shadow:var(--shadow)}
+@media (max-width:520px){.fl-shots{grid-template-columns:1fr}}
+.tech{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.tech span{font-size:13px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
 
 /* ---------- how I work ---------- */
 .loop{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:s}
-.loop > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;position:relative;min-width:0}
+.loop > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
 .loop > div::before{counter-increment:s;content:counter(s);font-family:var(--f-mono);font-size:12px;color:var(--accent);border:1px solid var(--accent);border-radius:50%;width:24px;height:24px;display:grid;place-items:center;margin-bottom:12px}
 .loop h3{font-size:19px;font-weight:700}
 .loop p{font-size:14.5px;color:var(--muted);margin-top:6px}
@@ -343,12 +413,11 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 @media (max-width:520px){.loop{grid-template-columns:1fr}}
 .lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
 @media (max-width:900px){.lessons{grid-template-columns:1fr}}
-.lesson{border-radius:var(--r);padding:20px;border:1px solid var(--line);background:var(--bg);min-width:0}
-.lesson .k{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warn)}
+.lesson{border-radius:var(--r);padding:20px;border:1px solid var(--line);background:var(--surface);min-width:0}
+.lesson .k{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--warm)}
 .lesson h3{font-size:18px;font-weight:700;margin:6px 0 8px}
 .lesson p{font-size:14.5px;color:var(--muted)}
 .lesson p b{color:var(--ink);font-weight:600}
-
 .kit{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
 @media (max-width:900px){.kit{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.kit{grid-template-columns:1fr}}
@@ -357,20 +426,10 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 .kit ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .kit li{font-size:13.5px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
 
-/* timeline */
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:8px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
-.timeline a{display:block;padding:16px 18px;text-decoration:none;color:var(--ink);border-left:1px solid var(--line);min-width:0}
-.timeline a:first-child{border-left:0}
-.timeline a:hover{background:var(--accent-soft)}
-.timeline .y{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
-.timeline .c{font-family:var(--f-display);font-weight:650;font-size:18px;margin-top:4px}
-.timeline .r{font-size:13.5px;color:var(--muted)}
-@media (max-width:760px){.timeline{grid-template-columns:1fr 1fr}.timeline a:nth-child(3){border-left:0}.timeline a:nth-child(n+3){border-top:1px solid var(--line)}}
-
-/* contact */
+/* ---------- contact ---------- */
 .contact{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
-.contact h2{font-size:clamp(30px,4vw,48px);font-weight:750}
+.contact h2{font-size:clamp(30px,4vw,46px);font-weight:750}
 .contact-list{display:grid;gap:10px}
 .contact-item{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:14px 16px;min-width:0}
 .contact-item .k{font-family:var(--f-mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -378,37 +437,162 @@ section.block.alt{background:var(--surface);border-block:1px solid var(--line)}
 footer{padding-block:30px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 
+/* ---------- presentation ---------- */
+#present{padding-block:28px 40px}
+.deck{max-width:1180px;margin:0 auto}
+.deck:fullscreen{max-width:none;background:var(--bg);padding:24px 32px;display:flex;flex-direction:column;justify-content:center}
+.deck:fullscreen .stage{width:min(100%,calc((100vh - 110px) * 16 / 9));margin:0 auto}
+.stage{container-type:inline-size;position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);aspect-ratio:16/9;overflow:hidden}
+.slide{position:absolute;inset:0;padding:5.2cqi 6cqi;display:flex;flex-direction:column;animation:slideIn .35s ease both}
+@keyframes slideIn{from{transform:translateX(12px)}to{transform:none}}
+.slide .tag{font-family:var(--f-mono);font-size:max(11px,1.25cqi);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.slide h2{font-size:clamp(22px,3.7cqi,52px);font-weight:750;margin-top:1.2cqi;max-width:28ch}
+.slide .sub{font-size:clamp(14px,1.75cqi,24px);color:var(--muted);margin-top:1.2cqi;max-width:52ch}
+.slide .body{flex:1;display:flex;align-items:center;min-height:0;margin-top:2.4cqi}
+.slide .foot{font-size:max(11.5px,1.3cqi);color:var(--muted);margin-top:1.6cqi}
+.s-cols{display:grid;grid-template-columns:1fr 1fr;gap:4cqi;width:100%;align-items:center}
+.big{font-family:var(--f-display);font-weight:750;color:var(--accent);line-height:1;font-size:clamp(40px,9cqi,130px)}
+.big-l{font-size:clamp(14px,1.9cqi,26px);margin-top:1cqi;max-width:22ch}
+.tiles{display:grid;grid-template-columns:repeat(var(--n,4),1fr);gap:1.6cqi;width:100%}
+.tile{border:1px solid var(--line);background:var(--bg);border-radius:1.4cqi;padding:2cqi;min-width:0}
+.tile .v{font-family:var(--f-display);font-weight:750;font-size:clamp(20px,3.4cqi,48px);color:var(--accent);line-height:1.05;white-space:nowrap}
+.tile .l{font-size:clamp(12px,1.45cqi,20px);margin-top:.8cqi;color:var(--ink);line-height:1.3}
+.tile .c{font-family:var(--f-mono);font-size:max(10.5px,1.05cqi);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:.8cqi}
+.hbars{display:grid;gap:1.6cqi;width:100%}
+.hbar{display:grid;grid-template-columns:34% 1fr;gap:1.6cqi;align-items:center;font-size:clamp(12px,1.55cqi,21px)}
+.hbar .t{height:clamp(22px,3.6cqi,48px);background:var(--sunk);border-radius:.8cqi;position:relative;overflow:hidden}
+.hbar .f{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:.8cqi;color:var(--accent-ink);display:flex;align-items:center;justify-content:flex-end;padding-right:1.2cqi;font-family:var(--f-mono);font-weight:500;font-size:clamp(11px,1.4cqi,19px)}
+.hbar .f.old{background:var(--line);color:var(--ink)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6cqi;width:100%;align-items:end}
+.tier{border-radius:1.4cqi;padding:2cqi;color:var(--f-ink-light);min-width:0}
+.tier:nth-child(1){background:var(--f4);color:var(--f-ink-dark);min-height:13cqi}
+.tier:nth-child(2){background:var(--f3);min-height:17cqi}
+.tier:nth-child(3){background:var(--f1);min-height:21cqi}
+.tier .k{font-family:var(--f-mono);font-size:max(10.5px,1.15cqi);letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.tier .h{font-family:var(--f-display);font-weight:700;font-size:clamp(15px,2.2cqi,30px);margin-top:.6cqi;line-height:1.15}
+.pipe{display:flex;flex-wrap:wrap;gap:1cqi;align-items:center;width:100%}
+.pipe span{font-size:clamp(12px,1.5cqi,20px);font-weight:600;padding:1.1cqi 1.6cqi;border-radius:1cqi;background:var(--accent-soft);color:var(--accent-deep)}
+.pipe span.gate{background:var(--mid-soft);color:var(--mid);outline:1.5px solid var(--mid)}
+.pipe i{font-style:normal;color:var(--muted);font-size:clamp(12px,1.6cqi,22px)}
+.cycle{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4cqi;width:100%;position:relative}
+.cycle div{border:1px solid var(--line);background:var(--bg);border-radius:1.4cqi;padding:2cqi;min-width:0;position:relative}
+.cycle div:nth-child(-n+3)::after{content:"→";position:absolute;right:-1.3cqi;top:50%;transform:translate(50%,-50%);color:var(--accent);font-size:clamp(14px,2cqi,26px);z-index:1}
+.cycle b{font-family:var(--f-display);font-size:clamp(15px,2.1cqi,28px);display:block;line-height:1.15}
+.cycle span{font-size:clamp(11.5px,1.4cqi,19px);color:var(--muted);display:block;margin-top:.6cqi}
+.cycle .n{font-family:var(--f-mono);font-size:max(10.5px,1.1cqi);color:var(--accent);display:block;margin-bottom:.6cqi}
+.loopback{grid-column:1/-1;text-align:center;font-family:var(--f-mono);font-size:max(11px,1.2cqi);color:var(--muted);border-top:1.5px dashed var(--line);padding-top:1cqi}
+.journey{display:grid;grid-template-columns:repeat(5,1fr);gap:1cqi;width:100%}
+.journey div{min-width:0}
+.journey .st{clip-path:polygon(0 0,90% 0,100% 50%,90% 100%,0 100%,10% 50%);padding:1.4cqi 1cqi 1.4cqi 2.6cqi;font-family:var(--f-display);font-weight:700;font-size:clamp(12px,1.6cqi,22px);line-height:1.15;min-height:6.4cqi;display:flex;align-items:center}
+.journey div:first-child .st{clip-path:polygon(0 0,90% 0,100% 50%,90% 100%,0 100%);padding-left:1.6cqi}
+.journey div:nth-child(1) .st{background:var(--f1);color:var(--f-ink-light)}
+.journey div:nth-child(2) .st{background:var(--f2);color:var(--f-ink-light)}
+.journey div:nth-child(3) .st{background:var(--f3);color:var(--f-ink-light)}
+.journey div:nth-child(4) .st{background:var(--f4);color:var(--f-ink-dark)}
+.journey div:nth-child(5) .st{background:var(--f5);color:var(--f-ink-dark)}
+.journey .pr{font-size:clamp(11.5px,1.35cqi,19px);margin-top:1cqi;padding-right:1cqi}
+.journey .pr b{display:block;font-family:var(--f-display);color:var(--accent);font-size:clamp(14px,2cqi,28px)}
+.journey .pr span{color:var(--muted)}
+.days{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4cqi;width:100%;margin-top:2.4cqi}
+.days div{border-top:3px solid var(--accent);padding-top:1cqi;font-size:clamp(12px,1.45cqi,20px)}
+.days b{font-family:var(--f-mono);font-size:max(11px,1.2cqi);color:var(--accent);display:block;letter-spacing:.06em}
+.slide .stack{display:grid;gap:2cqi;width:100%}
+.p-funnel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:3cqi;width:100%;align-items:center}
+.p-funnel .funnel{gap:.6cqi}
+.p-funnel .fl{min-height:6.2cqi;padding:.8cqi 10%}
+.p-funnel .fl .s{font-size:clamp(13px,1.8cqi,24px)}
+.p-funnel .fl .k{font-size:max(10.5px,1.15cqi)}
+.p-detail{min-width:0}
+.p-detail h3{font-size:clamp(18px,2.6cqi,36px)}
+.p-detail .need{color:var(--muted);font-size:clamp(12px,1.5cqi,20px);margin-top:.6cqi}
+.p-detail ul{list-style:none;margin:2cqi 0 0;padding:0;display:grid;gap:1.4cqi}
+.p-detail li{border-left:3px solid var(--accent);padding-left:1.4cqi;font-size:clamp(12.5px,1.55cqi,21px)}
+.p-detail li b{font-family:var(--f-display);color:var(--accent);font-size:clamp(16px,2.4cqi,32px);display:block;line-height:1.1}
+.p-detail li span{color:var(--muted)}
+.title-slide{justify-content:center}
+.title-slide h1{font-size:clamp(34px,6.4cqi,92px);font-weight:750;margin-top:1.2cqi}
+.title-slide .sub{font-size:clamp(16px,2.3cqi,32px);color:var(--ink);max-width:30ch}
+.title-slide .tiles{margin-top:4cqi}
+.title-slide .cos{font-family:var(--f-mono);font-size:max(11px,1.2cqi);color:var(--muted);margin-top:3cqi;letter-spacing:.06em}
+.thanks h2{font-size:clamp(30px,6cqi,86px)}
+.contact-row{display:flex;flex-wrap:wrap;gap:1.4cqi;margin-top:3cqi}
+.contact-row span{border:1px solid var(--line);border-radius:999px;padding:1cqi 2cqi;font-size:clamp(12px,1.6cqi,22px);background:var(--bg);user-select:all}
+.mini-shot{border-radius:1.2cqi;overflow:hidden;border:1px solid var(--line);max-height:30cqi}
+.mini-shot img{width:100%;height:auto}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;flex-wrap:wrap}
+.dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;flex:1}
+.dots button{all:unset;cursor:pointer;width:10px;height:10px;border-radius:50%;background:var(--line);transition:background .2s,width .2s}
+.dots button[aria-current="true"]{background:var(--accent);width:26px;border-radius:6px}
+.dots button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ctrl-group{display:flex;gap:8px;align-items:center}
+.counter{font-family:var(--f-mono);font-size:13px;color:var(--muted);min-width:5ch;text-align:center}
+.deck-hint{text-align:center;font-size:13px;color:var(--muted);margin-top:10px}
+.deck:fullscreen .deck-hint{display:none}
+@media (max-width:760px){
+  .stage{aspect-ratio:auto;container-type:normal;min-height:0}
+  .slide{position:relative;inset:auto;padding:22px 20px 26px}
+  .slide h2{font-size:24px}.slide .sub{font-size:15px}
+  .slide .body{margin-top:18px}
+  .s-cols,.p-funnel{grid-template-columns:1fr;gap:18px}
+  .tiles{grid-template-columns:1fr 1fr}
+  .tile{padding:12px;border-radius:12px}.tile .v{font-size:22px}.tile .l{font-size:13px}
+  .big{font-size:56px}.big-l{font-size:15px}
+  .tiers{grid-template-columns:1fr}.tier{min-height:0!important;padding:14px;border-radius:12px}.tier .h{font-size:17px}
+  .cycle{grid-template-columns:1fr 1fr;gap:10px}.cycle div{padding:12px;border-radius:12px}.cycle div::after{display:none}
+  .journey{grid-template-columns:1fr;gap:8px}.journey > div{display:grid;grid-template-columns:140px 1fr;gap:10px;align-items:center}
+  .journey .st,.journey div:first-child .st{clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%);padding:10px 16px 10px 10px;min-height:0;font-size:14px}
+  .journey .pr{margin:0;font-size:13px}.journey .pr b{font-size:17px}
+  .days{grid-template-columns:1fr;gap:10px;margin-top:16px}.days div{font-size:14px}
+  .pipe span{padding:8px 11px;font-size:13.5px;border-radius:8px}
+  .p-funnel .fl{min-height:56px}.p-funnel .fl .s{font-size:15px}
+  .p-detail h3{font-size:20px}.p-detail li{font-size:14px}.p-detail li b{font-size:19px}
+  .hbar{font-size:13px;grid-template-columns:40% 1fr}.hbar .t{height:26px}.hbar .f{font-size:12px}
+  .title-slide h1{font-size:40px}.title-slide .sub{font-size:18px}
+  .contact-row span{font-size:14px;padding:8px 14px}
+  .slide .foot{font-size:12.5px}
+}
+
 /* lightbox */
 dialog.lb{border:0;padding:0;background:transparent;max-width:min(92vw,980px);max-height:92vh}
-dialog.lb::backdrop{background:rgba(5,12,10,.82)}
+dialog.lb::backdrop{background:rgba(8,12,22,.84)}
 dialog.lb img{max-height:84vh;width:auto;max-width:100%;border-radius:12px;margin:0 auto}
-dialog.lb p{color:#e8efed;text-align:center;font-size:14px;margin-top:10px}
+dialog.lb p{color:#E8EDF6;text-align:center;font-size:14px;margin-top:10px}
 dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:calc(14px + env(safe-area-inset-right,0px));background:#fff;color:#111;border:0;border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer}
-
-button.zoom{padding:0;font:inherit;color:inherit;cursor:zoom-in;appearance:none;-webkit-appearance:none}
-button.shot{display:block;width:100%}
-.reveal{animation:rise .5s ease both}
+.reveal{animation:rise .45s ease both}
 @keyframes rise{from{transform:translateY(8px)}to{transform:none}}
 </style>
 </head>
 <body>
+
 <header class="bar">
   <div class="wrap">
-    <a class="brand" href="#top"><span class="mark" aria-hidden="true">SG</span>Shweta Gupta</a>
+    <a class="brand" href="#top" data-view-link="portfolio"><span class="mark" aria-hidden="true">SG</span>Shweta Gupta</a>
+    <div class="views" role="tablist" aria-label="View">
+      <button role="tab" id="tab-portfolio" aria-controls="portfolio" aria-selected="true">Portfolio</button>
+      <button role="tab" id="tab-present" aria-controls="present" aria-selected="false">Presentation</button>
+    </div>
     <nav class="nav" aria-label="Sections">
       <a href="#funnel">Impact</a>
       <a href="#cases">Case studies</a>
-      <a href="#shipped">Shipped screens</a>
+      <a href="#shipped">Screens</a>
       <a href="#earlier">Earlier roles</a>
-      <a href="#ai">AI products</a>
+      <a href="#ai">AI</a>
+      <a href="#firstlight">FirstLight</a>
       <a href="#how">How I work</a>
     </nav>
-    <a class="btn primary small cta" href="#contact">Contact</a>
+    <div class="bar-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme" title="Switch light / dark">
+        <svg class="theme-light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="theme-dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+      </button>
+      <a class="btn primary small contact-btn" href="#contact" data-view-link="portfolio">Contact</a>
+    </div>
   </div>
 </header>
 
-<main id="top">
-<!-- ================= HERO ================= -->
+<!-- =============================== PORTFOLIO VIEW =============================== -->
+<main id="portfolio" role="tabpanel" aria-labelledby="tab-portfolio">
+<span id="top"></span>
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -417,7 +601,7 @@ button.shot{display:block;width:100%}
       <p class="lede">12+ years building B2C products at Condé Nast, Victoria's Secret and Oneindia. I use user research and behavioural data to find where people drop off, run experiments to prove the fix, and ship it across web and mobile.</p>
       <div class="actions">
         <a class="btn primary" href="#funnel">See the impact</a>
-        <a class="btn ghost" href="#cases">Read case studies</a>
+        <button class="btn ghost" type="button" data-open-present>View the presentation</button>
       </div>
       <div class="who">
         <span><b>Based in</b> Bangalore, India</span>
@@ -451,20 +635,24 @@ button.shot{display:block;width:100%}
   </div>
 </section>
 
-<!-- ================= FUNNEL ================= -->
 <section class="block alt" id="funnel">
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">Impact across the consumer journey</div>
       <h2>Results at every stage of the funnel</h2>
-      <p>Pick a stage to see what users needed there, what I shipped, and what moved. All numbers come from A/B tests or before-and-after launch data.</p>
+      <p>Select a stage of the funnel to see what users needed there, what I shipped, and what moved. Numbers come from A/B tests or before-and-after launch data.</p>
     </div>
-    <div class="stages" role="tablist" aria-label="Funnel stages" id="stages"></div>
-    <div class="stage-panel" role="tabpanel" id="stagePanel" aria-live="polite"></div>
+    <div class="funnel-wrap">
+      <div>
+        <div class="funnel" role="tablist" aria-label="Funnel stages" id="funnelMain"></div>
+        <button class="ai-band" role="tab" aria-selected="false" id="aiBand"><span><b>Data &amp; AI</b> <span>· across every stage</span></span><span aria-hidden="true">→</span></button>
+        <p class="funnel-hint">Funnel widths are illustrative.</p>
+      </div>
+      <div class="stage-panel" role="tabpanel" id="stagePanel" aria-live="polite"></div>
+    </div>
   </div>
 </section>
 
-<!-- ================= CASE STUDIES ================= -->
 <section class="block" id="cases">
   <div class="wrap">
     <div class="head">
@@ -480,11 +668,10 @@ button.shot{display:block;width:100%}
       <button class="chip" role="tab" aria-selected="false" aria-controls="c-partner" id="t-partner">Partner platform</button>
     </div>
 
-    <!-- Checkout -->
     <article class="case" id="c-checkout" role="tabpanel" aria-labelledby="t-checkout">
       <div class="case-top">
         <div>
-          <div class="eyebrow">Acquisition · Product lead, end to end · INMA Award, Best Product Iteration</div>
+          <div class="eyebrow">Convert · Product lead, end to end · INMA Award, Best Product Iteration</div>
           <h3>Checkout 2.0: clarity beat persuasion</h3>
           <p class="sub">A rebuild of the offer page and payment flow across every brand, based on what users needed to know before buying.</p>
         </div>
@@ -520,11 +707,10 @@ button.shot{display:block;width:100%}
       </div>
     </article>
 
-    <!-- Propensity -->
     <article class="case" id="c-propensity" role="tabpanel" aria-labelledby="t-propensity" hidden>
       <div class="case-top">
         <div>
-          <div class="eyebrow">Personalisation · Product lead, end to end</div>
+          <div class="eyebrow">Convert · Personalisation · Product lead, end to end</div>
           <h3>Dynamic monetisation: the right ask for each visitor</h3>
           <p class="sub">A machine-learning score that decides, per visitor, whether to ask for a subscription, a free sign-up, or nothing at all.</p>
         </div>
@@ -558,26 +744,20 @@ button.shot{display:block;width:100%}
             </div>
             <label class="range-row" for="propRange"><span class="muted" style="font-size:13.5px">Likelihood to subscribe</span><input type="range" id="propRange" min="0" max="100" value="52"><output id="propOut" class="num">52</output></label>
             <div class="scale" aria-hidden="true"><span data-t="ads">Low · ads</span><span data-t="reg">Medium · sign-up</span><span data-t="pay">High · paywall</span></div>
-            <div class="mock">
-              <div class="lines"><i></i><i></i><i></i><i></i></div>
-              <div class="unit" id="propUnit"></div>
-            </div>
+            <div class="mock"><div class="lines"><i></i><i></i><i></i><i></i></div><div class="unit" id="propUnit"></div></div>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- Abandoned cart -->
     <article class="case" id="c-cart" role="tabpanel" aria-labelledby="t-cart" hidden>
       <div class="case-top">
         <div>
-          <div class="eyebrow">Personalisation · Retention of intent · Product lead</div>
+          <div class="eyebrow">Convert · Personalisation · Product lead</div>
           <h3>Bringing back people who left checkout</h3>
           <p class="sub">A native, on-site win-back experience for users who started checkout and dropped off, replacing a third-party vendor that was being switched off.</p>
         </div>
-        <div class="kpis">
-          <div class="kpi"><div class="v num">24% → 39%</div><div class="l">conversion contribution vs the vendor</div></div>
-        </div>
+        <div class="kpis"><div class="kpi"><div class="v num">24% → 39%</div><div class="l">conversion contribution vs the vendor</div></div></div>
       </div>
       <div class="case-body">
         <div class="story">
@@ -609,7 +789,6 @@ button.shot{display:block;width:100%}
       </div>
     </article>
 
-    <!-- Platform -->
     <article class="case" id="c-platform" role="tabpanel" aria-labelledby="t-platform" hidden>
       <div class="case-top">
         <div>
@@ -649,11 +828,10 @@ button.shot{display:block;width:100%}
       </div>
     </article>
 
-    <!-- Partner -->
     <article class="case" id="c-partner" role="tabpanel" aria-labelledby="t-partner" hidden>
       <div class="case-top">
         <div>
-          <div class="eyebrow">Revenue · Product lead, 0 to 1</div>
+          <div class="eyebrow">Acquire · Product lead, 0 to 1</div>
           <h3>Partner platform: build once, onboard many</h3>
           <p class="sub">Selling subscriptions inside a partner's own checkout, like Klarna or Verizon, instead of handing out coupon codes.</p>
         </div>
@@ -689,7 +867,6 @@ button.shot{display:block;width:100%}
   </div>
 </section>
 
-<!-- ================= GALLERY ================= -->
 <section class="block alt" id="shipped">
   <div class="wrap">
     <div class="gal-head">
@@ -708,7 +885,6 @@ button.shot{display:block;width:100%}
   </div>
 </section>
 
-<!-- ================= EARLIER ROLES ================= -->
 <section class="block" id="earlier">
   <div class="wrap">
     <div class="head">
@@ -722,7 +898,6 @@ button.shot{display:block;width:100%}
       <a href="#oneindia"><div class="y">2015 – 2018</div><div class="c">Oneindia</div><div class="r">Senior PM, mobile &amp; web</div></a>
       <a href="#inuxu"><div class="y">2014 – 2015</div><div class="c">Inuxu</div><div class="r">PM, ad platform</div></a>
     </div>
-
     <div style="margin-top:48px">
     <div class="role" id="vs">
       <div class="role-meta">
@@ -778,7 +953,6 @@ button.shot{display:block;width:100%}
         <div class="note">On product pages I worked on the core shopping modules: image gallery, ratings, price and pay-later options, colour and size pickers, add to bag, and delivery and returns info.</div>
       </div>
     </div>
-
     <div class="role" id="oneindia">
       <div class="role-meta">
         <h3>Oneindia</h3>
@@ -791,9 +965,7 @@ button.shot{display:block;width:100%}
           <div><div class="v num">250%+</div><div class="l">growth in monthly page views</div></div>
           <div><div class="v num">#130 → Top 3</div><div class="l">Play Store ranking</div></div>
         </div>
-        <div class="role-links">
-          <a href="https://www.60secondsnow.com/app/#features" target="_blank" rel="noopener">60secondsnow app ↗</a>
-        </div>
+        <div class="role-links"><a href="https://www.60secondsnow.com/app/#features" target="_blank" rel="noopener">60secondsnow app ↗</a></div>
       </div>
       <div class="role-main">
         <p><b>60secondsnow: news you can read in a minute.</b> A short-news app built for India's mobile users: every story in 60 to 70 words, in nine languages, light on data, and readable offline. I also rolled out PWA and AMP pages with personalised article delivery across 14 languages.</p>
@@ -809,7 +981,6 @@ button.shot{display:block;width:100%}
         </div>
       </div>
     </div>
-
     <div class="role" id="inuxu">
       <div class="role-meta">
         <h3>Inuxu Digital Media</h3>
@@ -825,7 +996,6 @@ button.shot{display:block;width:100%}
   </div>
 </section>
 
-<!-- ================= AI ================= -->
 <section class="block alt" id="ai">
   <div class="wrap">
     <div class="head">
@@ -835,7 +1005,7 @@ button.shot{display:block;width:100%}
     </div>
     <div class="ai-grid">
       <div class="karta">
-        <div class="tag eyebrow">Condé Nast · Product lead, 0 to 1</div>
+        <div class="eyebrow">Condé Nast · Product lead, 0 to 1</div>
         <h3 style="margin-top:8px">Karta: an AI agent platform for operations</h3>
         <p class="muted" style="margin-top:8px">Takes a business request through to an approved, recorded action, without people hopping across systems. Built on MCP with narrowly scoped tools.</p>
         <div class="pain">
@@ -876,24 +1046,59 @@ button.shot{display:block;width:100%}
           <button class="shot zoom" style="margin-top:14px" data-src="img/karta.gif" data-cap="Karta user guide: settings, workflows and agents" aria-label="Enlarge Karta screens"><img src="img/karta.gif" alt="Karta screens: settings, workflow editor, and agent list" loading="lazy" width="1920" height="995"></button>
         </div>
         <div class="card">
-          <div class="tag">Side project · Built solo</div>
-          <h3 style="margin-top:6px">FirstLight Careers</h3>
-          <p>A Next.js app on the Claude API that scores how well a CV matches a job, flags gaps and suggests rewrites. It runs its own MCP server, connected to Claude.ai as a custom tool.</p>
-          <div class="m">Shipped in about 4 days</div>
-          <p class="muted" style="font-size:13.5px">Built with Cursor, with no prior coding background.</p>
-        </div>
-        <div class="card">
           <div class="tag">Partnership</div>
           <h3 style="margin-top:6px">Paywall for AI-browser traffic</h3>
           <p>With Perplexity, designed a paywall strategy for readers arriving through its Comet browser, with a bigger free allowance, plus a commercial deal around it.</p>
         </div>
+        <a class="card" href="#firstlight" style="text-decoration:none;color:var(--ink);display:block">
+          <div class="tag">Side project · Built solo</div>
+          <h3 style="margin-top:6px">FirstLight Careers →</h3>
+          <p class="muted">A Claude API app I designed and shipped in about 4 days. See it below.</p>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= HOW I WORK ================= -->
-<section class="block" id="how">
+<section class="block" id="firstlight">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Built by me · Side project</div>
+      <h2>FirstLight Careers</h2>
+      <p>An AI job-prep tool I designed, built and shipped solo in about 4 days. It shows how I think about AI products: a clear rubric, honest gaps, and features released in phases.</p>
+    </div>
+    <div class="fl-grid">
+      <div>
+        <ol class="fl-steps">
+          <li><div><b>Paste a CV and a job description</b><span>No sign-up and no forms to fill in first.</span></div></li>
+          <li><div><b>Get a fit score out of 100</b><span>Scored against a fixed rubric, with a one-line reason for each part.</span></div></li>
+          <li><div><b>See strengths and gaps</b><span>Each gap is tagged by severity: <span class="sev"><i class="h">High</i><i class="m">Medium</i><i class="l">Low</i></span></span></div></li>
+          <li><div><b>Generate a prep package</b><span>Project charter, training plan for each gap, and a CV rewrite with a change log.</span></div></li>
+        </ol>
+        <div class="rubric">
+          <div class="demo-title">The scoring rubric</div>
+          <div class="rubric-bar" role="img" aria-label="Rubric weights: mandatory skills 40, experience 25, domain 20, project relevance 15">
+            <span style="width:40%">40</span><span style="width:25%">25</span><span style="width:20%">20</span><span style="width:15%">15</span>
+          </div>
+          <div class="rubric-key"><span><b>Mandatory skills</b> · 40</span><span><b>Experience level</b> · 25</span><span><b>Domain / industry</b> · 20</span><span><b>Project relevance</b> · 15</span></div>
+        </div>
+        <div class="decisions">
+          <div><b>A fixed rubric, not a vibe check</b>The model scores against set weights, so results are explainable and comparable across jobs.</div>
+          <div><b>Show the gaps honestly</b>Severity tags tell people what to fix first, instead of a single flattering number.</div>
+          <div><b>Ship in phases</b>3 of 4 prep tools are live. The day-by-day prep plan is marked "coming soon" rather than half-built.</div>
+        </div>
+        <div class="tech"><span>Next.js</span><span>Claude API</span><span>Own MCP server, connected to Claude.ai</span><span>Built with Cursor</span><span>Light &amp; dark mode</span></div>
+        <div class="role-links"><a href="https://github.com/shwetaguptagit" target="_blank" rel="noopener">GitHub ↗</a></div>
+      </div>
+      <div class="fl-shots">
+        <figure><button class="shot zoom" data-src="img/fl-fit-score.jpg" data-cap="FirstLight Careers: fit score with rubric breakdown" aria-label="Enlarge fit score screen"><img src="img/fl-fit-score.jpg" alt="FirstLight Careers fit score screen: 74 out of 100 with breakdown for skills, experience, domain and project relevance" loading="lazy" width="900" height="1238"></button><figcaption>Fit score with the rubric breakdown</figcaption></figure>
+        <figure><button class="shot zoom" data-src="img/fl-prep-package.jpg" data-cap="FirstLight Careers: preparation package" aria-label="Enlarge preparation package screen"><img src="img/fl-prep-package.jpg" alt="FirstLight Careers preparation package: project charter, training materials, CV rewrite, and a preparation plan marked coming soon" loading="lazy" width="900" height="1112"></button><figcaption>Strengths, gaps by severity, and the prep package</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="how">
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">How I work</div>
@@ -906,14 +1111,12 @@ button.shot{display:block;width:100%}
       <div><h3>Prove it</h3><p>A/B tests with a clean control, and guardrails so one metric doesn't win at another's cost.</p><p class="eg">Measured subscriptions, ads and sign-ups together.</p></div>
       <div><h3>Ship and scale</h3><p>Reusable components and self-serve tools, so one win reaches every brand and market.</p><p class="eg">Campaign launches went from 2 weeks to minutes.</p></div>
     </div>
-
     <h3 style="font-size:24px;margin-top:48px">What didn't work, and what I learned</h3>
     <div class="lessons">
       <div class="lesson"><div class="k">Reversed in production</div><h3>Pay button first on the paywall</h3><p>We put Apple Pay and Google Pay as the first thing users saw. Drop-off went up: people needed to know what they were buying. <b>We put the value first and payment second, and mobile conversion rose 21%.</b></p></div>
       <div class="lesson"><div class="k">Stopped</div><h3>Consent or pay</h3><p>We let readers share data instead of paying. Users disliked it, drop-offs rose, and it didn't make up the lost revenue. <b>The idea was built well; the assumption behind it was wrong, and data showed that fast.</b></p></div>
       <div class="lesson"><div class="k">Trade-off</div><h3>Gift subscriptions before the holidays</h3><p>International print gifting would have put the launch date at risk. Data showed it was a small group. <b>I launched without it, sent those users to a working legacy path, and the launch made $600K in about 8 weeks.</b></p></div>
     </div>
-
     <div class="kit">
       <div><h4>Growth &amp; experimentation</h4><ul><li>A/B testing</li><li>Funnel analysis</li><li>Personalisation</li><li>Pricing &amp; bundles</li><li>Retention &amp; churn</li><li>Lifecycle email</li></ul></div>
       <div><h4>Data &amp; analytics</h4><ul><li>Firebase</li><li>Treasure Data (CDP)</li><li>Databricks</li><li>Behavioural segments</li><li>Propensity models</li></ul></div>
@@ -923,8 +1126,7 @@ button.shot{display:block;width:100%}
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section class="block alt" id="contact">
+<section class="block" id="contact">
   <div class="wrap contact">
     <div>
       <div class="eyebrow">Let's talk</div>
@@ -939,9 +1141,190 @@ button.shot{display:block;width:100%}
     </div>
   </div>
 </section>
+<footer><div class="wrap"><span>© 2026 Shweta Gupta · Bangalore, India</span><span>Screens shown are from live products I worked on.</span></div></footer>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Shweta Gupta · Bangalore, India</span><span>Screens shown are from live products I worked on.</span></div></footer>
+<!-- =============================== PRESENTATION VIEW =============================== -->
+<main id="present" role="tabpanel" aria-labelledby="tab-present" hidden>
+  <div class="wrap">
+    <div class="deck" id="deck" aria-roledescription="presentation">
+      <div class="stage" id="stage">
+
+        <section class="slide title-slide" data-title="Introduction">
+          <div class="tag">Senior Product Manager · B2C Growth &amp; Subscriptions</div>
+          <h1>Shweta Gupta</h1>
+          <p class="sub">I turn first visits into daily habits and paying subscribers.</p>
+          <div class="tiles" style="--n:4">
+            <div class="tile"><div class="v">12+ yrs</div><div class="l">B2C consumer products</div></div>
+            <div class="tile"><div class="v">~$100M</div><div class="l">subscription business owned</div></div>
+            <div class="tile"><div class="v">3×</div><div class="l">YoY new subscribers</div></div>
+            <div class="tile"><div class="v">2.2M</div><div class="l">active subscribers</div></div>
+          </div>
+          <div class="cos">CONDÉ NAST · VICTORIA'S SECRET · ONEINDIA</div>
+        </section>
+
+        <section class="slide" data-title="The journey I own" hidden>
+          <div class="tag">01 · The journey I own</div>
+          <h2>One owner, from first visit to renewal</h2>
+          <div class="body">
+            <div class="p-funnel">
+              <div><div class="funnel" role="tablist" aria-label="Funnel stages" id="funnelDeck"></div></div>
+              <div class="p-detail" id="deckDetail" aria-live="polite"></div>
+            </div>
+          </div>
+          <div class="foot">Select a stage to see the proof.</div>
+        </section>
+
+        <section class="slide" data-title="Conversion" hidden>
+          <div class="tag">02 · Convert</div>
+          <h2>Clarity beat persuasion</h2>
+          <div class="body">
+            <div class="s-cols">
+              <div><div class="big">46%</div><p class="big-l">of users never scrolled far enough to see the button.</p><p class="sub" style="margin-top:2cqi">So we removed content instead of adding it.</p></div>
+              <div class="hbars" aria-label="Uplift after the redesign">
+                <div class="hbar"><span>Checkout conversion</span><div class="t"><div class="f" style="width:93%">+28%</div></div></div>
+                <div class="hbar"><span>Mobile paywall conversion</span><div class="t"><div class="f" style="width:70%">+21%</div></div></div>
+                <div class="hbar"><span>Card conversion</span><div class="t"><div class="f" style="width:63%">+19%</div></div></div>
+                <div class="hbar"><span>Post-purchase revenue</span><div class="t"><div class="f" style="width:53%">+16%</div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="foot">Checkout 2.0 · INMA Award, Best Product Iteration · bars to scale, 0–30%</div>
+        </section>
+
+        <section class="slide" data-title="Personalisation" hidden>
+          <div class="tag">03 · Personalise</div>
+          <h2>The right ask for each user</h2>
+          <p class="sub">An ML score picks what each visitor sees.</p>
+          <div class="body">
+            <div class="stack">
+              <div class="tiers">
+                <div class="tier"><div class="k">Low intent</div><div class="h">Ads only</div></div>
+                <div class="tier"><div class="k">Medium intent</div><div class="h">Free sign-up</div></div>
+                <div class="tier"><div class="k">High intent</div><div class="h">Subscription offer</div></div>
+              </div>
+              <div class="tiles" style="--n:2">
+                <div class="tile"><div class="v">+8%</div><div class="l">revenue, proven against a control campaign</div></div>
+                <div class="tile"><div class="v">24% → 39%</div><div class="l">abandoned-cart conversion, native vs vendor</div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Activation and habit" hidden>
+          <div class="tag">04 · Activate &amp; engage</div>
+          <h2>Show value fast, then build the habit</h2>
+          <div class="body">
+            <div class="s-cols">
+              <div class="hbars">
+                <p style="font-weight:600;font-size:clamp(13px,1.6cqi,22px)">After purchase: click-through to the product</p>
+                <div class="hbar"><span>Before</span><div class="t"><div class="f old" style="width:29%">28.8%</div></div></div>
+                <div class="hbar"><span>After</span><div class="t"><div class="f" style="width:76%">76%</div></div></div>
+                <p class="muted" style="font-size:clamp(12px,1.4cqi,19px)">Bounce rate fell from 61% to 27%.</p>
+              </div>
+              <div class="tiles" style="--n:2">
+                <div class="tile"><div class="v">+153%</div><div class="l">user retention</div><div class="c">Oneindia apps</div></div>
+                <div class="tile"><div class="v">60%+</div><div class="l">new user growth</div><div class="c">Oneindia apps</div></div>
+                <div class="tile"><div class="v">250%+</div><div class="l">monthly page views</div><div class="c">14 languages</div></div>
+                <div class="tile"><div class="v">#130 → 3</div><div class="l">Play Store rank</div><div class="c">Android &amp; iOS</div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Retention and revenue" hidden>
+          <div class="tag">05 · Retain &amp; grow</div>
+          <h2>Keep subscribers, grow their value</h2>
+          <div class="body">
+            <div class="tiles" style="--n:3">
+              <div class="tile"><div class="v">7%</div><div class="l">of failed-payment subscribers kept with auto-downgrade</div></div>
+              <div class="tile"><div class="v">+28.7%</div><div class="l">order value from a cross-brand bundle</div></div>
+              <div class="tile"><div class="v">+16%</div><div class="l">revenue from post-purchase upsell</div></div>
+              <div class="tile"><div class="v">$600K</div><div class="l">from gift subscriptions in ~8 weeks</div></div>
+              <div class="tile"><div class="v">$5M+</div><div class="l">partner pipeline (Klarna, Verizon)</div></div>
+              <div class="tile"><div class="v">−40%</div><div class="l">discount abuse from offer stacking</div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="AI products" hidden>
+          <div class="tag">06 · AI products</div>
+          <h2>AI does the work. People approve it.</h2>
+          <div class="body">
+            <div class="stack">
+              <div class="pipe" aria-label="Karta workflow">
+                <span>Request</span><i>→</i><span>Check policy</span><i>→</i><span>Pull live data</span><i>→</i><span>Prepare action</span><i>→</i><span class="gate">Person approves</span><i>→</i><span>Run &amp; log</span>
+              </div>
+              <div class="s-cols" style="align-items:start">
+                <div class="tile"><div class="c" style="margin:0 0 .8cqi">Karta · agent platform on MCP</div><div class="l" style="margin:0">Refund checks, win-back offers and campaign setup checks. Tested on live data. Presented to leadership.</div></div>
+                <div class="tile"><div class="c" style="margin:0 0 .8cqi">FirstLight Careers · built solo</div><div class="l" style="margin:0">Claude API app with a rubric-based fit score and its own MCP server. Shipped in ~4 days.</div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="How I work" hidden>
+          <div class="tag">07 · How I work</div>
+          <h2>Find the gap. Prove the fix. Scale it.</h2>
+          <div class="body">
+            <div class="cycle">
+              <div><span class="n">1</span><b>Find the gap</b><span>Data, interviews, reviews</span></div>
+              <div><span class="n">2</span><b>Decide</b><span>Size it, set metrics, cut scope</span></div>
+              <div><span class="n">3</span><b>Prove</b><span>A/B test with guardrails</span></div>
+              <div><span class="n">4</span><b>Scale</b><span>Reusable, self-serve</span></div>
+              <p class="loopback">↺ repeat · e.g. reversed "pay first" on the paywall → +21% mobile conversion</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide" data-title="Applying this to a learning app" hidden>
+          <div class="tag">08 · Applying this to a learning app</div>
+          <h2>Same journey, new learners</h2>
+          <div class="body">
+            <div class="stack">
+              <div class="journey">
+                <div><div class="st">Discover</div><div class="pr"><b>60%+</b><span>new users from an app rebuild</span></div></div>
+                <div><div class="st">First win</div><div class="pr"><b>28.8% → 76%</b><span>users taking the next step</span></div></div>
+                <div><div class="st">Daily practice</div><div class="pr"><b>+153%</b><span>retention from a daily habit</span></div></div>
+                <div><div class="st">Subscribe</div><div class="pr"><b>+28%</b><span>conversion from a clearer paywall</span></div></div>
+                <div><div class="st">Keep progressing</div><div class="pr"><b>+8%</b><span>revenue from personalised paths</span></div></div>
+              </div>
+              <div class="days">
+                <div><b>FIRST 30 DAYS</b>Learn the data and talk to learners.</div>
+                <div><b>BY 60</b>Find the biggest drop-off and test fixes.</div>
+                <div><b>BY 90</b>Scale wins with personalisation and AI.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide thanks" data-title="Thank you" hidden>
+          <div class="tag">Thank you</div>
+          <div class="body" style="align-items:center">
+            <div>
+              <h2>Questions?</h2>
+              <p class="sub">Happy to go deeper on any of this, including what didn't work.</p>
+              <div class="contact-row"><span>shwets.gpt1011@gmail.com</span><span>linkedin.com/in/shweta-gupta-5619b555</span><span>shwetaguptagit.github.io/pm-portfolio</span></div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <div class="controls">
+        <div class="ctrl-group">
+          <button class="btn ghost small" id="prevSlide" aria-label="Previous slide">← Prev</button>
+          <span class="counter" id="counter" aria-live="polite">1 / 9</span>
+          <button class="btn primary small" id="nextSlide" aria-label="Next slide">Next →</button>
+        </div>
+        <div class="dots" id="dots" aria-label="Slides"></div>
+        <div class="ctrl-group">
+          <button class="btn ghost small" id="fsBtn" type="button">Full screen</button>
+        </div>
+      </div>
+      <p class="deck-hint">Use ← → keys to move between slides. Press F for full screen.</p>
+    </div>
+  </div>
+</main>
 
 <dialog class="lb" id="lb"><button id="lbClose">Close</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
 
@@ -949,60 +1332,93 @@ button.shot{display:block;width:100%}
 (function(){
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const root=document.documentElement;
 
-/* ---------- Funnel stages ---------- */
+/* ---------- Theme ---------- */
+$("#themeBtn").addEventListener("click",()=>{
+  const cur=root.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+  const next=cur==="dark"?"light":"dark";
+  root.setAttribute("data-theme",next);
+  try{localStorage.setItem("theme",next);}catch(e){}
+});
+
+/* ---------- Funnel data ---------- */
 const STAGES=[
- {t:"Acquisition",need:"Need: more new users and new subscribers",wins:[
-  {m:"+28%",w:"Checkout conversion",d:"Rebuilt the offer page and payment flow around what users needed to know.",co:"Condé Nast",link:"checkout"},
-  {m:"+21%",w:"Mobile paywall conversion",d:"Value first, then one-tap Apple Pay, Google Pay and PayPal as a second step.",co:"Condé Nast"},
-  {m:"+55%",w:"Subscriptions recovered from abandoned carts",d:"Asked for email earlier in checkout so drop-offs could be followed up.",co:"Condé Nast",link:"checkout"},
-  {m:"60%+",w:"New user growth",d:"Rebuilt Android and iOS apps. Play Store rank went from #130 to Top 3.",co:"Oneindia",anchor:"oneindia"}]},
- {t:"Activation",need:"Need: show the value right after sign-up, and build engagement",wins:[
-  {m:"28.8% → 76%",w:"Click-through after purchase",d:"Revamped the confirmation page so new subscribers start using what they paid for. Bounce fell from 61% to 27%.",co:"Condé Nast"},
-  {m:"Owned",w:"Post-purchase emails",d:"Trigger logic, design and setup for purchase, trial and renewal emails, reminding people what they unlocked.",co:"Condé Nast"},
-  {m:"+153%",w:"User retention",d:"Short news, nine languages, offline reading and day/night modes built a daily reading habit.",co:"Oneindia",anchor:"oneindia"},
-  {m:"250%+",w:"Monthly page views",d:"Personalised article delivery across 14 languages on app, PWA and AMP.",co:"Oneindia",anchor:"oneindia"}]},
- {t:"Personalisation",need:"Need: adaptive, data-led experiences for each user",wins:[
+ {t:"Acquire",k:"60%+ new users",need:"Bring in new users and first-time subscribers",wins:[
+  {m:"60%+",w:"New user growth",d:"Rebuilt the Android and iOS apps. Play Store rank went from #130 to Top 3.",co:"Oneindia",anchor:"oneindia",key:1},
+  {m:"$5M+",w:"Partner pipeline unblocked",d:"Klarna and Verizon could sell subscriptions inside their own checkout, reaching new audiences.",co:"Condé Nast",link:"partner",key:1},
+  {m:"2×",w:"Advertiser conversion",d:"Dynamic remarketing based on what people had already viewed.",co:"Inuxu",anchor:"inuxu"},
+  {m:"3×",w:"YoY new subscribers",d:"Across a ~$100M subscription business, 9+ brands and 12+ markets.",co:"Condé Nast"}]},
+ {t:"Activate",k:"28.8% → 76% CTR",need:"Show the value right after sign-up",wins:[
+  {m:"28.8% → 76%",w:"Click-through after purchase",d:"Revamped the confirmation page so new subscribers start using what they paid for. Bounce fell from 61% to 27%.",co:"Condé Nast",key:1},
+  {m:"Owned",w:"Post-purchase emails",d:"Trigger logic, design and setup for purchase, trial and renewal emails, reminding people what they unlocked.",co:"Condé Nast",key:1},
+  {m:"Free gate",w:"Sign up, keep reading",d:"Medium-intent readers got a free registration gate instead of a hard stop, so they stayed and became known users.",co:"Condé Nast",link:"propensity"},
+  {m:"+54%",w:"FAQ readers moving forward",d:"Answering questions before people asked them kept new users moving.",co:"Condé Nast",link:"checkout"}]},
+ {t:"Engage",k:"+153% retention",need:"Build a habit so people come back",wins:[
+  {m:"+153%",w:"User retention",d:"Short news, nine languages, offline reading and day/night modes built a daily reading habit.",co:"Oneindia",anchor:"oneindia",key:1},
+  {m:"250%+",w:"Monthly page views",d:"Personalised article delivery across 14 languages on app, PWA and AMP.",co:"Oneindia",anchor:"oneindia",key:1},
+  {m:"7 days",w:"Fresh-content window",d:"Puzzles older than 7 days were gated, pushing play toward new games once people were hooked.",co:"Condé Nast"},
+  {m:"9 langs",w:"Multi-language alerts",d:"Notifications in the reader's chosen languages brought them back to the app.",co:"Oneindia",anchor:"oneindia"}]},
+ {t:"Convert",k:"+28% checkout",need:"Turn engaged users into paying subscribers",wins:[
+  {m:"+28%",w:"Checkout conversion",d:"Rebuilt the offer page and payment flow around what users needed to know.",co:"Condé Nast",link:"checkout",key:1},
+  {m:"+21%",w:"Mobile paywall conversion",d:"Value first, then one-tap Apple Pay, Google Pay and PayPal as a second step.",co:"Condé Nast",key:1},
   {m:"+8%",w:"Revenue from a propensity score",d:"Each visitor gets the right ask: ads, a free sign-up, or the paywall.",co:"Condé Nast",link:"propensity"},
-  {m:"24% → 39%",w:"Abandoned-cart conversion contribution",d:"Native retargeting from behaviour segments, beating the vendor it replaced.",co:"Condé Nast",link:"cart"},
-  {m:"2×",w:"Advertiser conversion",d:"Dynamic remarketing based on what people had already viewed.",co:"Inuxu",anchor:"inuxu"}]},
- {t:"Retention & LTV",need:"Need: lower churn and higher order value",wins:[
-  {m:"7%",w:"Failed-payment subscribers kept",d:"A legally compliant auto-downgrade moved them to a lower tier instead of cancelling.",co:"Condé Nast"},
-  {m:"Live",w:"Retention flow for cancellations",d:"Integrated Chargebee Retention to offer the right save option to people about to cancel.",co:"Condé Nast"},
-  {m:"+28.7%",w:"Average order value",d:"An All Access bundle across brands, offered at the point of sale.",co:"Condé Nast"},
-  {m:"Approved",w:"Email verification business case",d:"Used failed-send logs to justify adding an email checker, so renewal and trial notices reach people.",co:"Condé Nast"}]},
- {t:"Revenue",need:"Need: higher revenue per user, and new revenue streams",wins:[
-  {m:"$600K",w:"Gift subscriptions, in about 8 weeks",d:"A new digital and print gifting path, launched ahead of the holiday season.",co:"Condé Nast"},
-  {m:"$5M+",w:"Partner pipeline unblocked",d:"Klarna and Verizon could sell subscriptions inside their own checkout.",co:"Condé Nast",link:"partner"},
+  {m:"24% → 39%",w:"Abandoned-cart conversion",d:"Native retargeting from behaviour segments, beating the vendor it replaced.",co:"Condé Nast",link:"cart"}]},
+ {t:"Retain & grow",k:"7% churn saved",need:"Keep subscribers and grow their value",wins:[
+  {m:"7%",w:"Failed-payment subscribers kept",d:"A legally compliant auto-downgrade moved them to a lower tier instead of cancelling.",co:"Condé Nast",key:1},
+  {m:"+28.7%",w:"Average order value",d:"An All Access bundle across brands, offered at the point of sale.",co:"Condé Nast",key:1},
   {m:"+16%",w:"Post-purchase revenue",d:"Upsell and cross-sell right after the first purchase.",co:"Condé Nast"},
-  {m:"−40%",w:"Discount abuse",d:"Blocked people from cycling through intro offers across brands, protecting 14% of at-risk revenue.",co:"Condé Nast"}]},
- {t:"AI products",need:"Need: AI that does real work, safely",wins:[
-  {m:"3 workflows",w:"Karta agent platform",d:"Refund checks, win-back offers and campaign setup checks, with a person approving every change.",co:"Condé Nast",anchor:"ai"},
-  {m:"~4 days",w:"FirstLight Careers",d:"A Claude API app with a scoring engine and its own MCP server, built and shipped solo.",co:"Side project",anchor:"ai"}]}
+  {m:"$600K",w:"Gift subscriptions in ~8 weeks",d:"A new digital and print gifting path, launched ahead of the holiday season.",co:"Condé Nast"},
+  {m:"Live",w:"Retention flow for cancellations",d:"Integrated Chargebee Retention to offer the right save option to people about to cancel.",co:"Condé Nast"},
+  {m:"−40%",w:"Discount abuse",d:"Blocked people from cycling through intro offers across brands, protecting 14% of at-risk revenue.",co:"Condé Nast"}]}
 ];
-const stagesEl=$("#stages"), panel=$("#stagePanel");
-STAGES.forEach((s,i)=>{
-  const b=document.createElement("button");
-  b.className="stage"; b.setAttribute("role","tab"); b.id="st"+i;
-  b.setAttribute("aria-selected",i===0?"true":"false"); b.setAttribute("aria-controls","stagePanel");
-  b.innerHTML=`<span class="n">0${i+1}</span><span class="t">${esc(s.t)}</span>`;
-  b.addEventListener("click",()=>showStage(i));
-  stagesEl.appendChild(b);
-});
-stagesEl.addEventListener("keydown",e=>{
-  const tabs=$$(".stage",stagesEl), i=tabs.indexOf(document.activeElement);
-  if(i<0)return;
-  if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();const n=(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[n].focus();showStage(n);}
-});
+const AI={t:"Data & AI",need:"Personalisation and AI that work across every stage",wins:[
+  {m:"+8%",w:"Propensity-based experiences",d:"ML score decides the ask for each visitor, measured across three revenue lines.",co:"Condé Nast",link:"propensity"},
+  {m:"3 workflows",w:"Karta agent platform",d:"Refund checks, win-back offers and campaign setup checks, with a person approving every change.",co:"Condé Nast",anchor:"ai"},
+  {m:"~4 days",w:"FirstLight Careers",d:"A Claude API app with a rubric-based score and its own MCP server, built and shipped solo.",co:"Side project",anchor:"firstlight"},
+  {m:"Comet",w:"Paywall for AI-browser traffic",d:"A paywall strategy for readers arriving through Perplexity's Comet browser.",co:"Condé Nast",anchor:"ai"}]};
+
+function buildFunnel(el,onPick){
+  el.innerHTML=STAGES.map((s,i)=>`<button class="fl" role="tab" aria-selected="false" data-i="${i}"><span class="s">${esc(s.t)}</span><span class="k">${esc(s.k)}</span></button>`).join("");
+  const btns=$$(".fl",el);
+  btns.forEach((b,i)=>{
+    b.addEventListener("click",()=>onPick(i));
+    b.addEventListener("keydown",e=>{
+      if(["ArrowDown","ArrowRight","ArrowUp","ArrowLeft"].includes(e.key)){
+        e.preventDefault(); e.stopPropagation();
+        const n=(i+(e.key==="ArrowDown"||e.key==="ArrowRight"?1:-1)+btns.length)%btns.length; btns[n].focus(); onPick(n);
+      }
+    });
+  });
+  return btns;
+}
+function markFunnel(el,i){
+  el.classList.add("has-sel");
+  $$(".fl",el).forEach((b,j)=>{b.setAttribute("aria-selected",j===i?"true":"false");b.tabIndex=j===i||(i<0&&j===0)?0:-1;});
+}
+
+/* Portfolio funnel */
+const fMain=$("#funnelMain"), panel=$("#stagePanel"), aiBand=$("#aiBand");
 function showStage(i){
-  $$(".stage",stagesEl).forEach((b,j)=>{b.setAttribute("aria-selected",j===i?"true":"false");b.tabIndex=j===i?0:-1});
-  const s=STAGES[i];
-  panel.setAttribute("aria-labelledby","st"+i);
-  panel.innerHTML=`<div class="stage-need"><h3>${esc(s.t)}</h3><p>${esc(s.need)}</p></div>
-  <div class="wins" style="--cols:${s.wins.length}">${s.wins.map(w=>`<div class="win reveal"><div class="m num">${esc(w.m)}</div><div class="w">${esc(w.w)}</div><div class="d">${esc(w.d)}</div>${w.link?`<a class="more" href="#cases" data-case="${w.link}">Read the case study</a>`:w.anchor?`<a class="more" href="#${w.anchor}">See the work</a>`:""}<div class="co">${esc(w.co)}</div></div>`).join("")}</div>`;
+  const s=i<0?AI:STAGES[i];
+  markFunnel(fMain,i); aiBand.setAttribute("aria-selected",i<0?"true":"false");
+  if(i<0){fMain.classList.add("has-sel");}
+  panel.innerHTML=`<div class="stage-need"><div class="eyebrow">${i<0?"Across the funnel":"Stage "+(i+1)+" of 5"}</div><h3 style="margin-top:6px">${esc(s.t)}</h3><p>${esc(s.need)}</p></div>
+  <div class="wins">${s.wins.map(w=>`<div class="win reveal"><div class="m num">${esc(w.m)}</div><div class="w">${esc(w.w)}</div><div class="d">${esc(w.d)}</div><div class="co"><span>${esc(w.co)}</span>${w.link?`<a class="more" href="#cases" data-case="${w.link}">Case study</a>`:w.anchor?`<a class="more" href="#${w.anchor}">See the work</a>`:""}</div></div>`).join("")}</div>`;
   $$("a[data-case]",panel).forEach(a=>a.addEventListener("click",()=>openCase(a.dataset.case)));
 }
-showStage(0);
+buildFunnel(fMain,showStage);
+aiBand.addEventListener("click",()=>showStage(-1));
+showStage(3);
+
+/* Deck funnel */
+const fDeck=$("#funnelDeck"), deckDetail=$("#deckDetail");
+function showDeckStage(i){
+  markFunnel(fDeck,i); const s=STAGES[i];
+  deckDetail.innerHTML=`<h3>${esc(s.t)}</h3><p class="need">${esc(s.need)}</p><ul>${s.wins.filter(w=>w.key).map(w=>`<li><b>${esc(w.m)}</b>${esc(w.w)} <span>· ${esc(w.co)}</span></li>`).join("")}</ul>`;
+}
+buildFunnel(fDeck,showDeckStage);
+showDeckStage(0);
 
 /* ---------- Case tabs ---------- */
 const caseTabs=$$('#cases [role="tab"]');
@@ -1144,7 +1560,7 @@ const WF={
   res:"Result: no more piecing together scattered settings by hand to understand or debug a campaign."}
 };
 let wfKey="refund", wfTimer=null, wfAt=-1;
-const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 function renderWF(){
   const w=WF[wfKey]; $("#wfAsk").textContent=w.ask;
   $("#wfSteps").innerHTML=w.steps.map((s,i)=>`<li class="${s[2]?"gate":""} ${i<wfAt?"done":i===wfAt?"now":""}"><span class="dot">${i<wfAt?"✓":i+1}</span><div><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div></li>`).join("");
@@ -1170,17 +1586,91 @@ renderWF();
 $("#copyEmail").addEventListener("click",function(){
   const t=$("#emailText").textContent, btn=this;
   const done=m=>{btn.textContent=m;setTimeout(()=>btn.textContent="Copy",1600);};
+  const selectText=()=>{const r=document.createRange();r.selectNodeContents($("#emailText"));const s=getSelection();s.removeAllRanges();s.addRange(r);};
   try{navigator.clipboard.writeText(t).then(()=>done("Copied"),()=>{selectText();done("Selected");});}
   catch(e){selectText();done("Selected");}
-  function selectText(){const r=document.createRange();r.selectNodeContents($("#emailText"));const s=getSelection();s.removeAllRanges();s.addRange(r);}
 });
+
+/* ---------- Views (portfolio / presentation) ---------- */
+const views={portfolio:$("#portfolio"),present:$("#present")};
+const viewTabs={portfolio:$("#tab-portfolio"),present:$("#tab-present")};
+let view="portfolio";
+function setView(v,opts={}){
+  view=v;
+  Object.keys(views).forEach(k=>{views[k].hidden=k!==v;viewTabs[k].setAttribute("aria-selected",k===v?"true":"false");viewTabs[k].tabIndex=k===v?0:-1;});
+  document.body.classList.toggle("presenting",v==="present");
+  if(!opts.keepHash){
+    if(v==="present"){history.replaceState(null,"","#present");}
+    else if(location.hash==="#present"){history.replaceState(null,"",location.pathname+location.search);}
+  }
+  if(!opts.noScroll)window.scrollTo(0,0);
+  if(v==="present")go(cur,true);
+}
+viewTabs.portfolio.addEventListener("click",()=>setView("portfolio"));
+viewTabs.present.addEventListener("click",()=>setView("present"));
+$("#tab-portfolio").parentElement.addEventListener("keydown",e=>{
+  if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();const n=view==="portfolio"?"present":"portfolio";setView(n);viewTabs[n].focus();}
+});
+$$("[data-open-present]").forEach(b=>b.addEventListener("click",()=>setView("present")));
+/* Section links from the bar always land in the portfolio view */
+$$('[data-view-link="portfolio"], .nav a').forEach(a=>a.addEventListener("click",e=>{
+  if(view!=="portfolio"){setView("portfolio",{keepHash:true,noScroll:true});}
+}));
+
+/* ---------- Presentation ---------- */
+const slides=$$("#stage .slide"), dots=$("#dots"); let cur=0;
+slides.forEach((s,i)=>{
+  s.setAttribute("aria-roledescription","slide"); s.setAttribute("aria-label",(i+1)+" of "+slides.length+": "+s.dataset.title);
+  const d=document.createElement("button"); d.setAttribute("aria-label","Go to slide "+(i+1)+": "+s.dataset.title); d.title=s.dataset.title;
+  d.addEventListener("click",()=>go(i)); dots.appendChild(d);
+});
+function go(i,silent){
+  cur=Math.max(0,Math.min(slides.length-1,i));
+  slides.forEach((s,j)=>{s.hidden=j!==cur;});
+  $$("button",dots).forEach((d,j)=>d.setAttribute("aria-current",j===cur?"true":"false"));
+  $("#counter").textContent=(cur+1)+" / "+slides.length;
+  $("#prevSlide").disabled=cur===0; $("#nextSlide").disabled=cur===slides.length-1;
+  /* on phones the slide can be taller than the screen: bring its top back into view */
+  if(!silent){const top=$("#stage").getBoundingClientRect().top; if(top<0)window.scrollBy(0,top-90);}
+}
+$("#prevSlide").addEventListener("click",()=>go(cur-1));
+$("#nextSlide").addEventListener("click",()=>go(cur+1));
+const deck=$("#deck");
+function toggleFS(){
+  try{
+    if(document.fullscreenElement){document.exitFullscreen();}
+    else if(deck.requestFullscreen){deck.requestFullscreen().catch(()=>{});}
+  }catch(e){}
+}
+$("#fsBtn").addEventListener("click",toggleFS);
+document.addEventListener("fullscreenchange",()=>{$("#fsBtn").textContent=document.fullscreenElement?"Exit full screen":"Full screen";});
+if(!document.fullscreenEnabled)$("#fsBtn").hidden=true;
+document.addEventListener("keydown",e=>{
+  if(view!=="present"||e.altKey||e.ctrlKey||e.metaKey)return;
+  if(e.target.closest("input,textarea,select"))return;
+  const k=e.key;
+  if(k==="ArrowRight"||k==="PageDown"||(k===" "&&!e.target.closest("button"))){e.preventDefault();go(cur+1);}
+  else if(k==="ArrowLeft"||k==="PageUp"){e.preventDefault();go(cur-1);}
+  else if(k==="Home"){e.preventDefault();go(0);}
+  else if(k==="End"){e.preventDefault();go(slides.length-1);}
+  else if(k==="f"||k==="F"){e.preventDefault();toggleFS();}
+});
+/* swipe on touch screens */
+let tx=null;
+$("#stage").addEventListener("touchstart",e=>{tx=e.touches[0].clientX;},{passive:true});
+$("#stage").addEventListener("touchend",e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>60)go(cur+(dx<0?1:-1));tx=null;});
+go(0,true);
 
 /* ---------- Active nav ---------- */
 const links=$$(".nav a");
 if("IntersectionObserver" in window){
   const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id));}});},{rootMargin:"-45% 0px -50% 0px"});
-  ["funnel","cases","shipped","earlier","ai","how"].forEach(id=>{const el=document.getElementById(id);if(el)io.observe(el);});
+  ["funnel","cases","shipped","earlier","ai","firstlight","how"].forEach(id=>{const el=document.getElementById(id);if(el)io.observe(el);});
 }
+
+/* Open the right view from the link */
+if(location.hash==="#present")setView("present",{keepHash:true,noScroll:true});
+window.addEventListener("hashchange",()=>{if(location.hash==="#present")setView("present",{keepHash:true});});
 })();
 </script>
 </body>
