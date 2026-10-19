@@ -403,6 +403,11 @@ button.shot{display:block;width:100%}
 .tech span{font-size:13px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--bg)}
 
 /* ---------- how I work ---------- */
+.outcome-first{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--accent-soft);border:1px solid var(--accent);border-radius:var(--r);padding:20px;margin-bottom:12px}
+.outcome-first .n{font-family:var(--f-mono);font-size:12px;color:var(--accent);border:1px solid var(--accent);border-radius:50%;width:24px;height:24px;display:grid;place-items:center}
+.outcome-first h3{font-size:19px;font-weight:700}
+.outcome-first p{font-size:14.5px;color:var(--muted);margin-top:6px;max-width:75ch}
+.outcome-first .eg{font-size:13.5px;margin-top:10px;color:var(--ink);border-top:1px dashed var(--accent);padding-top:10px}
 .loop{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;counter-reset:s}
 .loop > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
 .loop > div::before{counter-increment:s;content:counter(s);font-family:var(--f-mono);font-size:12px;color:var(--accent);border:1px solid var(--accent);border-radius:50%;width:24px;height:24px;display:grid;place-items:center;margin-bottom:12px}
@@ -481,6 +486,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 .cycle em{display:block;font-style:normal;font-size:clamp(11px,1.2cqi,17px);color:var(--ink);margin-top:1cqi;padding-top:.8cqi;border-top:1px dashed var(--line);line-height:1.35}
 .cycle span{font-size:clamp(11.5px,1.4cqi,19px);color:var(--muted);display:block;margin-top:.6cqi}
 .cycle .n{font-family:var(--f-mono);font-size:max(10.5px,1.1cqi);color:var(--accent);display:block;margin-bottom:.6cqi}
+.slide.how .body{align-items:flex-start;margin-top:1.8cqi}
+@media (max-width:760px){.slide.how .body{margin-top:14px}}
+.slide.how .cycle div{padding:1.4cqi 1.6cqi}
+.slide.how .cycle em{margin-top:.7cqi;padding-top:.6cqi}
+.slide.how .loopback{padding-top:.7cqi}
+.ofirst{display:grid;grid-template-columns:auto 1fr;gap:1.4cqi;align-items:start;background:var(--accent-soft);border:1.5px solid var(--accent);border-radius:1.4cqi;padding:1.1cqi 1.8cqi;position:relative}
+.ofirst .n{font-family:var(--f-mono);font-size:max(10.5px,1.1cqi);color:var(--accent);border:1px solid var(--accent);border-radius:50%;width:2.4cqi;height:2.4cqi;min-width:20px;min-height:20px;display:grid;place-items:center}
+.ofirst b{font-family:var(--f-display);font-size:clamp(14px,1.75cqi,25px);display:block;line-height:1.15}
+.ofirst span:not(.n){display:block;font-size:clamp(11.5px,1.4cqi,19px);color:var(--muted);margin-top:.4cqi}
+.ofirst em{display:block;font-style:normal;font-size:clamp(11px,1.2cqi,17px);color:var(--ink);margin-top:.6cqi}
+.ofirst::after{content:"↓";position:absolute;left:50%;bottom:0;transform:translate(-50%,100%);color:var(--accent);font-size:clamp(14px,1.6cqi,22px);line-height:1.2}
 .loopback{grid-column:1/-1;text-align:center;font-family:var(--f-mono);font-size:max(11px,1.2cqi);color:var(--muted);border-top:1.5px dashed var(--line);padding-top:1cqi}
 .journey{display:grid;grid-template-columns:repeat(5,1fr);gap:1cqi;width:100%}
 .journey div{min-width:0}
@@ -1254,8 +1270,12 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">How I work</div>
-      <h2>Find the gap, prove the fix, then scale it</h2>
+      <h2>Outcome first, then find the gap, prove the fix and scale it</h2>
       <p>The same loop runs through all of my work, from a paywall test to a new platform.</p>
+    </div>
+    <div class="outcome-first">
+      <span class="n" aria-hidden="true">0</span>
+      <div><h3>Start with the outcome</h3><p>Before going deep on any problem, agree with leadership on the business outcome that matters most now, and how we'll measure it. Then go deep on that part of the funnel.</p><p class="eg">Goal: grow new starts, so we went deep on the paywall and checkout.</p></div>
     </div>
     <div class="loop">
       <div><h3>Find the gap</h3><p>Why build it? Funnel data, user research, support tickets and reviews.</p><p class="eg">46% never saw the button, so the fix was clarity, not more copy.</p></div>
@@ -1377,10 +1397,12 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
           <div class="foot">Pick a stage, then open a story · ↑ ↓ switch stages</div>
         </section>
 
-        <section class="slide" data-main data-title="How I work" hidden>
+        <section class="slide how" data-main data-title="How I work" hidden>
           <div class="tag">How I work</div>
-          <h2>Find the gap. Prove the fix. Scale it.</h2>
+          <h2 style="max-width:none">Outcome first. Find the gap. Prove the fix.</h2>
           <div class="body">
+            <div class="stack">
+            <div class="ofirst"><span class="n">0</span><div><b>Start with the outcome</b><span>Agree with leadership on the outcome that matters most now and how we'll measure it, then go deep on that part of the funnel.</span><em>Goal: grow new starts, so we went deep on the paywall and checkout</em></div></div>
             <div class="cycle" style="--n:6">
               <div><span class="n">1</span><b>Find the gap</b><span>Why build it? Data, research, reviews</span><em>46% never saw the button</em></div>
               <div><span class="n">2</span><b>Define &amp; design</b><span>What, for whom, how we measure it</span><em>Success metrics across 3 revenue lines</em></div>
@@ -1389,6 +1411,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
               <div><span class="n">5</span><b>Launch</b><span>Pilot, train teams, go to market</span><em>Klarna and Verizon pilots</em></div>
               <div><span class="n">6</span><b>Scale</b><span>Measure, improve, roll out everywhere</span><em>Campaign launches: 2 weeks → minutes</em></div>
               <p class="loopback">↺ Each launch shows the next gap</p>
+            </div>
             </div>
           </div>
         </section>
