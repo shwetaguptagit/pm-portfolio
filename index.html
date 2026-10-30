@@ -1230,14 +1230,12 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         <h3 style="margin-top:8px">Karta: an AI agent platform for operations</h3>
         <p class="muted" style="margin-top:8px">Takes a business request through to an approved, recorded action, without people hopping across systems. Built on MCP with narrowly scoped tools.</p>
         <div class="pain">
-          <div><span><b>Refunds:</b> one duplicate-charge check took 4 manual steps across the subscription, billing and payment systems, repeated for every case.</span></div>
-          <div><span><b>Win-back offers:</b> finding lapsed subscribers meant one dashboard, then building the offer in a separate system.</span></div>
+          <div><span><b>Offers and plans:</b> creating a new offer or plan in Chargebee was a manual, step-by-step setup.</span></div>
           <div><span><b>Campaign setup:</b> marketers had to piece together a campaign's scattered settings by hand to understand or debug it.</span></div>
         </div>
         <div class="demo-title">See a workflow run</div>
         <div class="wf-tabs" role="tablist" aria-label="Karta workflows" id="wfTabs">
-          <button class="chip" role="tab" aria-selected="true" data-w="refund">Refund check</button>
-          <button class="chip" role="tab" aria-selected="false" data-w="winback">Win-back offer</button>
+          <button class="chip" role="tab" aria-selected="true" data-w="offer">Offer and plan setup</button>
           <button class="chip" role="tab" aria-selected="false" data-w="campaign">Campaign setup check</button>
         </div>
         <div class="ask"><span class="who">Request</span><span id="wfAsk"></span></div>
@@ -1257,8 +1255,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
           <div class="tag">Karta · Results</div>
           <ul style="margin:10px 0 0;padding-left:18px;display:grid;gap:6px;font-size:15px">
             <li>Built end to end and tested on live data with early users.</li>
-            <li>Correctly flagged refund eligibility on every case tested.</li>
-            <li>Win-back offers: two manual steps became one approved flow.</li>
+            <li>Offers and plans created in Chargebee from one approved request.</li>
             <li>Campaign summaries delivered for setup checks and debugging.</li>
             <li>Owned model choice per use case, weighing quality, speed and cost.</li>
             <li>Presented to the Executive Leadership Team.</li>
@@ -1754,8 +1751,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
               <div class="pipe"><span>Request</span><i>→</i><span>Check policy</span><i>→</i><span>Pull live data</span><i>→</i><span>Prepare action</span><i>→</i><span class="gate">Person approves</span><i>→</i><span>Run &amp; log</span></div>
               <div class="d-grid">
                 <ul class="d-pts">
-                  <li><b>Refunds:</b> 4 manual steps across 3 systems became one request.</li>
-                  <li><b>Win-back offers:</b> find lapsed users and build the offer in one flow.</li>
+                  <li><b>Offers and plans:</b> created in Chargebee from one request.</li>
                   <li><b>Campaign checks:</b> scattered settings summarised for debugging.</li>
                   <li>Tested on live data; <b>presented to leadership</b>.</li>
                 </ul>
@@ -1877,7 +1873,7 @@ const STAGES=[
 ];
 const AI={t:"Data & AI",need:"Personalisation and AI that work across every stage",wins:[
   {m:"+8%",w:"Propensity-based experiences",d:"ML score decides the ask for each visitor, measured across three revenue lines.",co:"Condé Nast",link:"propensity"},
-  {m:"3 workflows",w:"Karta agent platform",d:"Refund checks, win-back offers and campaign setup checks, with a person approving every change.",co:"Condé Nast",anchor:"ai"},
+  {m:"2 workflows",w:"Karta agent platform",d:"Offers and plans created in Chargebee, and campaign setup checks, with a person approving every change.",co:"Condé Nast",anchor:"ai"},
   {m:"~4 days",w:"FirstLight Careers",d:"A Claude API app with a rubric-based score and its own MCP server, built and shipped solo.",co:"Side project",anchor:"firstlight"},
   {m:"Comet",w:"Paywall for AI-browser traffic",d:"A paywall strategy for readers arriving through Perplexity's Comet browser.",co:"Condé Nast",anchor:"ai"}]};
 
@@ -2028,22 +2024,14 @@ updOI();
 
 /* ---------- Karta workflows ---------- */
 const WF={
- refund:{ask:"A customer says they were charged twice for Vogue. Should we refund?",steps:[
-  ["Check policy","Pulls the duplicate-charge refund policy from the knowledge base."],
-  ["Pull live data","Gets the customer's subscription and payment history."],
-  ["Reason over it","Compares the charges against the policy. Two charges, same day, same plan."],
-  ["Prepare action","Drafts the refund, but does not run it."],
-  ["Person approves","A support agent reviews the evidence and approves.",1],
-  ["Run and record","Refund issued. Who approved, and why, is logged."]],
-  res:"Result: 4 manual lookups across three systems became one request and one approval."},
- winback:{ask:"Create a Vogue 20% digital win-back offer for lapsed subscribers.",steps:[
-  ["Check policy","Pulls the definition of \"lapsed\" and the discount rules."],
-  ["Pull live data","Finds the eligible lapsed subscribers and their count."],
-  ["Reason over it","Checks the discount is allowed and the audience size makes sense."],
-  ["Prepare action","Builds the offer, ready to create."],
-  ["Person approves","The marketing owner confirms the offer and audience.",1],
-  ["Run and record","Offer created in the subscription system. Run logged."]],
-  res:"Result: checking a dashboard, then building the offer elsewhere, became one approved flow."},
+ offer:{ask:"Create a Vogue 20% digital offer in Chargebee.",steps:[
+  ["Check policy","Pulls the pricing and discount rules from the knowledge base."],
+  ["Pull live data","Reads the existing Vogue plans and offers in Chargebee."],
+  ["Reason over it","Checks the discount is allowed and doesn't clash with a live offer."],
+  ["Prepare action","Drafts the offer and its plan settings, but does not create them."],
+  ["Person approves","The marketing owner reviews the offer and approves.",1],
+  ["Run and record","Offer and plan created in Chargebee. Run logged."]],
+  res:"Result: setting up an offer or plan in Chargebee became one request and one approval."},
  campaign:{ask:"Summarise the Vogue member-exclusive campaign and check its setup.",steps:[
   ["Check policy","Pulls how campaign targeting and priority rules work."],
   ["Pull live data","Collects the campaign's scattered settings: region, audience, content, traffic source, dates."],
@@ -2053,7 +2041,7 @@ const WF={
   ["Run and record","Summary and decision saved with the run."]],
   res:"Result: no more piecing together scattered settings by hand to understand or debug a campaign."}
 };
-let wfKey="refund", wfTimer=null, wfAt=-1;
+let wfKey="offer", wfTimer=null, wfAt=-1;
 const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 function renderWF(){
   const w=WF[wfKey]; $("#wfAsk").textContent=w.ask;
@@ -2246,7 +2234,7 @@ const HUBS=[
   ["Post-purchase upsell","+16% revenue","ordervalue"],
   ["Order-stacking detection","Discount abuse −40%","stacking"]]},
  {n:"06",t:"AI product",m:"Karta · FirstLight",need:"AI agents and LLM apps, across the funnel",ai:1,caps:[
-  ["Karta: MCP agents with scoped tools and human approval","Refunds, win-back offers, campaign checks","karta"],
+  ["Karta: MCP agents with scoped tools and human approval","Chargebee offers and plans, campaign checks","karta"],
   ["FirstLight Careers: Claude API app with a scoring engine","Built and shipped solo in about 4 days","firstlight"]]}
 ];
 const hubFunnel=$("#hubFunnel"), hubPanel=$("#hubPanel"); let hubSel=0;
