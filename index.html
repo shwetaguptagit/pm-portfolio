@@ -603,6 +603,37 @@ button.cap.visited .go{background:var(--ok);color:var(--surface)}
 .cap.static{border-style:dashed;padding-right:2cqi}
 .cap.static .cm{color:var(--muted)}
 
+/* ---------- presentation: work at a glance ---------- */
+.slide.glance{padding:3.6cqi 5cqi 3cqi}
+.glance h2{font-size:clamp(20px,3.2cqi,46px);max-width:none}
+.glance .body{align-items:flex-start;margin-top:2cqi}
+.glance .stack{gap:2.2cqi}
+.g-label{margin:0 0 .8cqi;font-family:var(--f-mono);font-size:max(10.5px,1.05cqi);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.g-scope{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1cqi}
+.g-scope span{background:var(--accent-soft);color:var(--accent-deep);border-radius:1cqi;padding:1.1cqi 1.6cqi;font-family:var(--f-display);font-weight:700;font-size:clamp(13px,1.6cqi,22px)}
+.g-prin{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2cqi}
+.g-prin div{border-left:3px solid var(--accent);padding:.2cqi 0 .2cqi 1.4cqi}
+.g-prin b{display:block;font-family:var(--f-display);font-size:clamp(13px,1.6cqi,22px);line-height:1.2}
+.g-prin span{display:block;font-size:clamp(11.5px,1.3cqi,18px);color:var(--muted);margin-top:.3cqi;line-height:1.35}
+.g-res{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1cqi}
+.g-win{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:flex;flex-direction:column;justify-content:flex-start;border:1px solid var(--line);background:var(--bg);border-radius:1.2cqi;padding:1.1cqi 1.4cqi;min-width:0;transition:border-color .15s,background .15s}
+.g-win b{display:block;font-family:var(--f-display);font-weight:750;color:var(--accent);font-size:clamp(15px,2cqi,28px);line-height:1.15;padding-right:3cqi}
+.g-win span{display:block;font-size:clamp(11px,1.2cqi,17px);color:var(--ink);margin-top:.3cqi;line-height:1.3}
+.g-win .go{position:absolute;top:1.1cqi;right:1.1cqi;width:2.2cqi;height:2.2cqi;min-width:20px;min-height:20px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:max(10px,1.1cqi);font-weight:700;font-style:normal}
+.g-win:hover{border-color:var(--accent);background:var(--accent-soft)}
+.g-win:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.g-win.visited .go{background:var(--ok);color:var(--surface)}
+@media (max-width:760px){
+  .slide.glance{padding:20px 18px 24px}
+  .glance h2{font-size:23px}
+  .glance .stack{gap:16px}
+  .g-label{font-size:11px;margin-bottom:6px}
+  .g-scope{grid-template-columns:1fr 1fr;gap:6px}.g-scope span{font-size:14px;padding:8px 10px;border-radius:8px}
+  .g-prin{grid-template-columns:1fr;gap:10px}.g-prin b{font-size:15px}.g-prin span{font-size:13px}
+  .g-res{grid-template-columns:1fr 1fr;gap:8px}.g-win{padding:10px;border-radius:10px}.g-win b{font-size:18px;padding-right:26px}.g-win span{font-size:12.5px}
+  .g-win .go{top:10px;right:10px}
+}
+
 /* ---------- presentation: career and Condé intro ---------- */
 .career{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.6cqi;width:100%;position:relative}
 .career::before{content:"";position:absolute;left:.9cqi;right:0;top:4.4cqi;height:2px;background:linear-gradient(90deg,var(--f5),var(--f1))}
@@ -1386,7 +1417,43 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
           <div class="foot">Every screen here sits in the funnel that follows.</div>
         </section>
 
-        <section class="slide hub" data-main data-hub data-title="The funnel" hidden>
+        <section class="slide glance" data-main data-hub data-title="My work at a glance" hidden>
+          <div class="tag">Condé Nast · Subscriptions · 2021 – 2026</div>
+          <h2>My work at Condé Nast, at a glance</h2>
+          <div class="body">
+            <div class="stack">
+              <div>
+                <p class="g-label">Scope</p>
+                <div class="g-scope"><span>Acquisition</span><span>Activation</span><span>Personalisation</span><span>Platform</span></div>
+              </div>
+              <div>
+                <p class="g-label">Principles · retention starts at acquisition</p>
+                <div class="g-prin">
+                  <div><b>Trust and transparency</b><span>Clear renewal terms from the first click. Easy to pause or cancel.</span></div>
+                  <div><b>Reasons to believe</b><span>Value-led selling points at every decision.</span></div>
+                  <div><b>Economic empathy</b><span>Short plans, pause, downgrade or discount before cancel.</span></div>
+                </div>
+              </div>
+              <div>
+                <p class="g-label">Results · open any for the story</p>
+                <div class="g-res">
+                  <button class="g-win" type="button" data-open="checkout"><b>+28%</b><span>checkout conversion · +16% post-purchase · +21% Quick Pay</span><i class="go" aria-hidden="true">→</i></button>
+                  <button class="g-win" type="button" data-open="propensity"><b>+8%</b><span>revenue from ML personalisation</span><i class="go" aria-hidden="true">→</i></button>
+                  <button class="g-win" type="button" data-open="cart"><b>24% → 39%</b><span>cart recovery, native vs vendor</span><i class="go" aria-hidden="true">→</i></button>
+                  <button class="g-win" type="button" data-open="gift"><b>$600K</b><span>new revenue, gift subscriptions (0 to 1)</span><i class="go" aria-hidden="true">→</i></button>
+                  <button class="g-win" type="button" data-open="stacking"><b>−40%</b><span>discount abuse, 14% of at-risk revenue kept</span><i class="go" aria-hidden="true">→</i></button>
+                  <button class="g-win" type="button" data-open="partner"><b>Klarna · Verizon</b><span>partner platform, a new revenue channel (0 to 1)</span><i class="go" aria-hidden="true">→</i></button>
+                  <button class="g-win" type="button" data-open="platform"><b>2 wks → mins</b><span>campaign launches · markets 2 mo → 1 wk</span><i class="go" aria-hidden="true">→</i></button>
+                  <button class="g-win" type="button" data-open="karta"><b>AI-native</b><span>platform strategy and MCP requirements</span><i class="go" aria-hidden="true">→</i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DRAFT: the previous funnel slide, kept out of the deck so it can be restored.
+             To bring it back: add data-main data-hub to this section, and remove them from the "glance" slide above. -->
+        <section class="slide hub" data-draft data-title="The funnel (draft)" hidden>
           <div class="tag">Condé Nast and earlier roles · B2C growth</div>
           <h2>Acquisition to retention &amp; revenue</h2>
           <p class="hub-sub">~$100M subscription business · 2.2M active subscribers · 12+ markets, 9+ brands · <button type="button" data-open="platform">How the platform works →</button></p>
@@ -1429,7 +1496,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
 
         <!-- ================= DETAIL SLIDES (open from a capsule) ================= -->
         <section class="slide detail" data-detail="checkout" data-title="Paywall &amp; checkout" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">01 Acquisition · Paywall &amp; checkout</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">01 Acquisition · Paywall &amp; checkout</span></div>
           <h2>Clarity beat persuasion</h2>
           <div class="body">
             <div class="d-grid">
@@ -1454,7 +1521,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="oneindia" data-title="Oneindia app rebuild" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">01 Acquisition · Oneindia app rebuild</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">01 Acquisition · Oneindia app rebuild</span></div>
           <h2>News in 60 seconds, in 9 languages</h2>
           <div class="body">
             <div class="d-grid">
@@ -1477,7 +1544,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="confirmation" data-title="Confirmation page revamp" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">02 Activation · Confirmation page</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">02 Activation · Confirmation page</span></div>
           <h2>Get new subscribers using what they paid for</h2>
           <div class="body">
             <div class="d-grid">
@@ -1501,7 +1568,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="emails" data-title="Post-purchase emails" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">02 Activation · Post-purchase emails</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">02 Activation · Post-purchase emails</span></div>
           <h2>Emails that remind people what they unlocked</h2>
           <div class="body">
             <div class="d-grid">
@@ -1519,7 +1586,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="propensity" data-title="ML propensity score" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">03 Personalisation · Dynamic monetisation</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">03 Personalisation · Dynamic monetisation</span></div>
           <h2>The right ask for each visitor</h2>
           <div class="body">
             <div class="stack">
@@ -1544,7 +1611,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="cart" data-title="Abandoned-cart retargeting" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">03 Personalisation · Abandoned cart</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">03 Personalisation · Abandoned cart</span></div>
           <h2>Win back people who left checkout</h2>
           <div class="body">
             <div class="d-grid">
@@ -1566,7 +1633,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="downgrade" data-title="Auto-downgrade" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">04 Retention &amp; LTV · Involuntary churn</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">04 Retention &amp; LTV · Involuntary churn</span></div>
           <h2>Keep subscribers when a payment fails</h2>
           <div class="body">
             <div class="stack">
@@ -1583,7 +1650,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="ordervalue" data-title="Bundle and upsell" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">04 Retention &amp; LTV · 05 Revenue growth</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">04 Retention &amp; LTV · 05 Revenue growth</span></div>
           <h2>Grow order value at the moment of purchase</h2>
           <div class="body">
             <div class="d-grid">
@@ -1604,7 +1671,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="gift" data-title="Gift subscriptions" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">05 Revenue growth · Gift subscriptions</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">05 Revenue growth · Gift subscriptions</span></div>
           <h2>Gifting, live before the holidays</h2>
           <div class="body">
             <div class="d-grid">
@@ -1620,7 +1687,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="partner" data-title="Partner platform" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">05 Revenue growth · Partners</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">05 Revenue growth · Partners</span></div>
           <h2>Sell inside a partner's own checkout</h2>
           <div class="body">
             <div class="stack">
@@ -1641,7 +1708,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="stacking" data-title="Order-stacking detection" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">05 Revenue growth · Order stacking</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">05 Revenue growth · Order stacking</span></div>
           <h2>Stop people cycling through intro offers</h2>
           <div class="body">
             <div class="stack">
@@ -1658,7 +1725,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="karta" data-title="Karta" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">06 AI product · Karta</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">06 AI product · Karta</span></div>
           <h2>AI does the work. People approve it.</h2>
           <div class="body">
             <div class="stack">
@@ -1678,7 +1745,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="firstlight" data-title="FirstLight Careers" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">06 AI product · FirstLight Careers</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">06 AI product · FirstLight Careers</span></div>
           <h2>Built and shipped solo in ~4 days</h2>
           <div class="body">
             <div class="d-grid">
@@ -1697,7 +1764,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </section>
 
         <section class="slide detail" data-detail="platform" data-title="Self-serve growth platform" hidden>
-          <div class="top"><button class="back" type="button">← Back to funnel</button><span class="tag">Platform · 0 to 1</span></div>
+          <div class="top"><button class="back" type="button">← Back</button><span class="tag">Platform · 0 to 1</span></div>
           <h2>One self-serve platform for 9+ brands</h2>
           <div class="body">
             <div class="d-grid">
@@ -1729,11 +1796,11 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
         </div>
         <div class="dots" id="dots" aria-label="Slides"></div>
         <div class="ctrl-group">
-          <button class="btn small" id="homeBtn" type="button">⌂ Funnel</button>
+          <button class="btn small" id="homeBtn" type="button">⌂ Overview</button>
           <button class="btn ghost small" id="fsBtn" type="button">Full screen</button>
         </div>
       </div>
-      <p class="deck-hint">← → move between slides · on a story slide, ← or Esc goes back to the funnel · F for full screen</p>
+      <p class="deck-hint">← → move between slides · on a story slide, ← or Esc goes back · F for full screen</p>
     </div>
   </div>
 </main>
@@ -2043,7 +2110,7 @@ function render(scroll){
   $("#prevSlide").disabled=cur===0; $("#nextSlide").disabled=cur===mainSlides.length-1;
   const home=$("#homeBtn");
   home.hidden=!detail&&cur===HUB;
-  home.textContent=detail?"← Back to funnel":"⌂ Funnel";
+  home.textContent=detail?"← Back":"⌂ Overview";
   home.classList.toggle("primary",!!detail); home.classList.toggle("ghost",!detail);
   /* on phones a slide can be taller than the screen: bring its top back into view */
   if(scroll){const top=stage.getBoundingClientRect().top; if(top<0)window.scrollBy(0,top-90);}
@@ -2058,7 +2125,7 @@ function openDetail(key,from){
 }
 function backToHub(){
   const k=detail; detail=null; cur=HUB; showHubStage(hubSel); render(true);
-  const c=k&&($('#hubPanel [data-open="'+k+'"]')||$('.hub-sub [data-open="'+k+'"]'));
+  const c=k&&$('.slide[data-hub] [data-open="'+k+'"]');
   (c||lastCap||{focus(){}}).focus({preventScroll:true});
 }
 stage.addEventListener("click",e=>{const c=e.target.closest("[data-open]");if(c&&stage.contains(c))openDetail(c.dataset.open,c);});
@@ -2085,14 +2152,14 @@ document.addEventListener("keydown",e=>{
     else if(k==="f"||k==="F"){e.preventDefault();toggleFS();}
     return;
   }
-  if(cur===HUB&&(k==="ArrowDown"||k==="ArrowUp")){e.preventDefault();showHubStage((hubSel+(k==="ArrowDown"?1:-1)+HUBS.length)%HUBS.length,true);return;}
+  if(cur===HUB&&mainSlides[HUB].contains(hubFunnel)&&(k==="ArrowDown"||k==="ArrowUp")){e.preventDefault();showHubStage((hubSel+(k==="ArrowDown"?1:-1)+HUBS.length)%HUBS.length,true);return;}
   if(k==="ArrowRight"||k==="PageDown"||(k===" "&&!e.target.closest("button"))){e.preventDefault();go(cur+1);}
   else if(k==="ArrowLeft"||k==="PageUp"){e.preventDefault();go(cur-1);}
   else if(k==="Home"){e.preventDefault();go(0);}
   else if(k==="End"){e.preventDefault();go(mainSlides.length-1);}
   else if(k==="f"||k==="F"){e.preventDefault();toggleFS();}
 });
-/* swipe on touch screens; on a story slide, swiping right goes back to the funnel */
+/* swipe on touch screens; on a story slide, swiping right goes back */
 let tx=null;
 stage.addEventListener("touchstart",e=>{tx=e.touches[0].clientX;},{passive:true});
 stage.addEventListener("touchend",e=>{
