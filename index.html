@@ -1436,7 +1436,9 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
           <div class="foot">Every screen here sits in the funnel that follows.</div>
         </section>
 
-        <section class="slide glance" data-main data-hub data-title="My work at a glance" hidden>
+        <!-- DRAFT: the "work at a glance" slide, kept out of the deck so it can be restored.
+             To bring it back: add data-main data-hub to this section, and remove them from the funnel slide below. -->
+        <section class="slide glance" data-draft data-title="My work at a glance (draft)" hidden>
           <div class="tag">Condé Nast · Subscriptions · 2021 – 2026</div>
           <h2>My work at Condé Nast, at a glance</h2>
           <div class="body">
@@ -1470,9 +1472,7 @@ dialog.lb button{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));ri
           </div>
         </section>
 
-        <!-- DRAFT: the previous funnel slide, kept out of the deck so it can be restored.
-             To bring it back: add data-main data-hub to this section, and remove them from the "glance" slide above. -->
-        <section class="slide hub" data-draft data-title="The funnel (draft)" hidden>
+        <section class="slide hub" data-main data-hub data-title="The funnel" hidden>
           <div class="tag">Condé Nast and earlier roles · B2C growth</div>
           <h2>Acquisition to retention &amp; revenue</h2>
           <p class="hub-sub">~$100M subscription business · 2.2M active subscribers · 12+ markets, 9+ brands · <button type="button" data-open="platform">How the platform works →</button></p>
